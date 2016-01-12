@@ -11,7 +11,6 @@ class routing{
 		$action = empty($array_uri[1])?"index":$array_uri[1];
 		unset($array_uri[1]);
 		$args = array_merge($array_uri, $_POST);
-
 		return ["c" => $controller, "a" => $action, "args" => $args];
 	}
 
