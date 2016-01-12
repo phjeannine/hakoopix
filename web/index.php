@@ -34,8 +34,7 @@ try{
     {
         throw new Exception("Le controller n'existe pas.");
     }
-}catch(Exception $e){
+} catch(Exception $e){
     $v = new view("404");
-    $v->assign("erreur", $e->getMessage());
-    
+    $v->assign("erreur", $e->getMessage()); 
 }
