@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	line-height: 1;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+a {
+	display: inline-block;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.navbar {
+	background-color: #12ba74;
+}
+
+.navbar .navbar-content h1 {
+	margin: 0;
+}
+
+.navbar .navbar-content h1 a {
+	color: #fff;
+}
+
+.navbar .navbar-content h1 a:hover {
+	opacity: .7;
+}
+
+.navbar .navbar-content .admin {
+	color: #12ba74;
+	background: #fff;
+    float: right;
+    margin: 13px 0;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    transition: all ease 300ms;
+}
+
+.navbar .navbar-content .admin:hover {
+	text-decoration: none;
+	background: transparent;
+	color: #fff;
+}
