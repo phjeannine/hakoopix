@@ -1,3 +1,4 @@
+<?php $uri = $_SERVER['REQUEST_URI']; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +14,16 @@
     <!-- CSS Stylesheets -->
     <!-- Bootstrap Core CSS -->
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
+    <?php if($uri != "/admin") { ?>
+      <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
+    <?php } ?>
 
     <!-- General Stylesheets -->
     <link href="../public/css/main.css" rel="stylesheet">
     <link href="../public/css/home.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="../public/fonts/opensans.css" rel="stylesheet">
 
 </head>
 <body cz-shortcut-listen="true">
@@ -25,23 +31,27 @@
     <div class="site-wrapper-inner">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container -->
-        </nav>
+        <?php if($uri != "/admin") { ?>
+          <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #12ba74;">
+            <div class="container">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="#">Logo</a>
+                  <span>Facebook Contest</span>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="#">About</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="javascript:void(0);" title="Administration">Administration</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+          </nav>
+        <?php } ?>
 
 		    <?php include $this->view; ?>
-   	      
+
         <div id="footer">
           <div class="inner"></div>
         </div>

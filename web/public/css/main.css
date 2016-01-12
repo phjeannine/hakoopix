@@ -1,0 +1,36 @@
+/* MAIN STYLESHEET */
+.navbar .navbar-header > a {
+	color: #fff;
+}
+
+.navbar .navbar-header > span {
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+
+.navbar .nav > li > a {
+	color: #fff;
+}
+
+.navbar .nav > li > a:focus, .nav > li > a:hover {
+	background: none;
+}
+
+.navbar .navbar-right > li > a {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	padding: 3px 10px;
+	margin-top: 11px;
+	margin-bottom: 11px;
+	transition: all ease 300ms;
+}
+
+.navbar .navbar-right > li > a:hover {
+	background-color: #fff;
+	color: #12ba74;
+}
