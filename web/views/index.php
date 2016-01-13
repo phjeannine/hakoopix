@@ -5,12 +5,10 @@
                 console.log('You are logged!');
                 console.log(response.authResponse);
 
-
-                window.location.href = "/index";
+                window.location.href = "/contest";
                 // Now refresh the page
                 //top.location.href = top.location;
             } else {
-            alert('User cancelled login or did not fully authorize.');
           }
         });
     return false;
@@ -18,9 +16,9 @@
 
     window.fbAsyncInit = function() {
         FB.init({
-            appId: "701370453324218",
+            appId: "959119600818575",
             cookie: true, // This is important
-            version: 'v2.3'
+            version: 'v2.5'
         });
     };
 

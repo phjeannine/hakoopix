@@ -11,11 +11,9 @@
 }
 
 #login-admin .login-admin-section {
-	position:absolute;
-    left: 30%;
-    top: 50%;
-    width: 500px;
-    margin-left: -100px;
-    margin-top: -100px;
+	position: absolute;
+	top: 40%;
+	margin-top: -100px;
     background: #fff;
+    padding-top: 20px;
 }
