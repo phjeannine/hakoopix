@@ -5,13 +5,14 @@
                 console.log('You are logged!');
                 console.log(response.authResponse);
 
-                window.location.href = "/contest";
-                // Now refresh the page
-                //top.location.href = top.location;
-            } else {
-          }
+                FB.api('/me?fields=id,last_name,first_name,picture', function(response) {
+                    console.log(response.picture.data.url);
+                });
+
+                window.location = "/contest";
+            } 
         });
-    return false;
+        return false;
     };
 
     window.fbAsyncInit = function() {
@@ -34,17 +35,14 @@
 
 <!-- Page Content -->
 
-
     <!-- Page Header -->
-  <div  class="body-header">
-    <div class="row">
-        <div class="col-md-offset-4 col-md-4 text-center">
-            <h1 class="">Concours de beaut&eacute;
-
-            </h1>
-        </div>
-    </div><!-- /.row -->
-    <br><br>
+    <div  class="body-header">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 text-center">
+                <h1 class="">Concours de beaut&eacute;</h1>
+            </div>
+        </div><!-- /.row -->
+        <br /><br />
     <!-- Projects Row -->
     <div class="row">
         <div class="col-md-offset-3 col-md-3 portfolio-item">

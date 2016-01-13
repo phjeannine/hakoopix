@@ -171,6 +171,9 @@
               <label for="exampleInputEmail1">Description</label>
               <textarea class="form-control" rows="3"></textarea>
             </div>
+            <div class="form-group col-md-12">
+              <label><input type="checkbox">&nbsp;Actif</label>
+            </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
               <button type="submit" class="btn btn-primary col-md-offset-4 col-md-3">Créer Concours</button>
