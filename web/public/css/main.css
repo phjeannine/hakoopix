@@ -1,4 +1,21 @@
 /* MAIN STYLESHEET */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+span {
+	display: inline-block;
+}
+
 .navbar .navbar-header > a {
 	color: #fff;
 }
@@ -34,3 +51,9 @@
 	background-color: #fff;
 	color: #12ba74;
 }
+
+/* General */
+.page-header {
+	color: #6d6c6c;
+}
+

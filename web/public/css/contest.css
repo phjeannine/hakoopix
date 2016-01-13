@@ -1,0 +1,49 @@
+/* CONTEST STYLESHEET */
+.portfolio-item .item-contest {
+	margin: 10px 0;
+	overflow: auto;
+}
+
+.portfolio-item .item-contest .like,
+.portfolio-item .item-contest .share {
+	padding: 0;
+}
+
+.portfolio-item .item-contest .item-contest-icon > span {
+    width: 19px;
+    height: 17px;
+    text-indent: -99999px;
+    display: inline-block;
+}
+
+.portfolio-item .item-contest .like > span {
+	background: url("../../public/images/like.svg") 0 2px no-repeat;
+	background-size: 100%;
+}
+
+.portfolio-item .item-contest .share > span {
+	background: url("../../public/images/share.svg") 0 2px no-repeat;
+	background-size: 100%;
+}
+
+.portfolio-item .item-title {
+	font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.portfolio-item .item-meta {
+	color: #6d6c6c;
+}
+
+.portfolio-item .item-description {
+	font-family: 'Open-Sans', Arial, sans-serif;
+	color: #6d6c6c;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

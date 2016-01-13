@@ -21,9 +21,11 @@
     <!-- General Stylesheets -->
     <link href="../public/css/main.css" rel="stylesheet">
     <link href="../public/css/home.css" rel="stylesheet">
+    <link href="../public/css/contest.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
+    <link href="../public/fonts/montserrat.css" rel="stylesheet">
 
 </head>
 <body cz-shortcut-listen="true">
@@ -35,7 +37,7 @@
           <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #12ba74;">
             <div class="container">
               <div class="navbar-header">
-                  <a class="navbar-brand" href="#">Logo</a>
+                  <a class="navbar-brand" href="/">Logo</a>
                   <span>Facebook Contest</span>
               </div>
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -43,7 +45,7 @@
                   <li><a href="#">About</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="javascript:void(0);" title="Administration">Administration</a></li>
+                  <li><a href="/admin" title="Administration">Administration</a></li>
                 </ul>
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
