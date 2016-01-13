@@ -13,8 +13,8 @@
 
     <!-- CSS Stylesheets -->
     <!-- Bootstrap Core CSS -->
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <?php if($uri != "/admin") { ?>
+    <link href="../public/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <?php if($uri != "/admin" && $uri != "/login") { ?>
       <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
@@ -22,6 +22,7 @@
     <link href="../public/css/main.css" rel="stylesheet">
     <link href="../public/css/home.css" rel="stylesheet">
     <link href="../public/css/contest.css" rel="stylesheet">
+    <link href="../public/css/login.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
@@ -33,7 +34,7 @@
     <div class="site-wrapper-inner">
 
         <!-- Navigation -->
-        <?php if($uri != "/admin") { ?>
+        <?php if($uri != "/admin" && $uri != "/login") { ?>
           <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #12ba74;">
             <div class="container">
               <div class="navbar-header">
