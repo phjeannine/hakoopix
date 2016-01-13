@@ -13,7 +13,7 @@
 
     <!-- CSS Stylesheets -->
     <!-- Bootstrap Core CSS -->
-    <link href="../public/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
     <?php if($uri != "/admin" && $uri != "/login") { ?>
       <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
