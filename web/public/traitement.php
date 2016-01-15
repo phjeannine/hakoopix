@@ -34,15 +34,16 @@ $fb = new Facebook\Facebook([
     if($data['user']==$userId){
       echo "Bienvenue ".$firstName." ".$lastName." !! Vous etes bien un admin !";
       $_SESSION["role"] = "admin";
-      
+
       exit();
     } else{
-      echo "Bienvenue ".$firstName." ".$lastName." !! Vous etes Utilisateur !<br>";
+      //echo "Bienvenue ".$firstName." ".$lastName." !! Vous etes Utilisateur !<br>";
       // On fera un SELECT * dans la table 'user' pour vérifier si le user n'est pas déjà inscrit avant d'inserer
       //$request = "INSERT INTO member VALUES(2, 'hbub', 'fnkes', 'hvhg@gmail.com')";
       //$result = pg_send_query($dbconn, $request);
       //$var = pg_send_query($dbconn, "SELECT firstname FROM member WHERE id_member = 1;");
       //echo $var;
+      $_SESSION["role"] = "user";
       echo "<script>window.location = '/contest'</script>";
       //
       exit();
