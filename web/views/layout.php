@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include("include/connexion.php");
 
@@ -52,9 +52,10 @@ $uri = $_SERVER['REQUEST_URI'];
                   <li><a href="#">About</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <?php if($_SESSION["role"] == "admin") { ?>
-                    <li><a href="/admin" title="Administration">Administration</a></li>
-                  <?php } ?>
+                  <?php if(!empty($_SESSION)){
+                          if($_SESSION["role"] == "admin") { ?>
+                            <li><a href="/admin" title="Administration">Administration</a></li>
+                  <?php } } ?>
                 </ul>
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
@@ -69,6 +70,6 @@ $uri = $_SERVER['REQUEST_URI'];
 
     </div><!-- /.site-wrapper-inner -->
   </div><!-- /.site-wrapper -->
-  
+
 </body>
 </html>
