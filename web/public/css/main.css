@@ -55,5 +55,8 @@ span {
 /* General */
 .page-header {
 	color: #6d6c6c;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 

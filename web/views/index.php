@@ -5,12 +5,14 @@
                 console.log('You are logged!');
                 console.log(response.authResponse);
 
-                FB.api('/me?fields=id,last_name,first_name,picture', function(response) {
-                    console.log(response.picture.data.url);
+              /*  FB.api('/959119600818575/roles?access_token=959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE', function(response) {
+                    console.log(response);
+                });  */
+                FB.api('/me?fields=id,last_name,first_name,picture', function(rep) {
+                    console.log(rep);
+                    window.location="../public/traitement.php?userId="+rep.id+"&lastName="+rep.last_name+"&firstName="+rep.first_name+"&token="+response.authResponse.accessToken;
                 });
-
-                window.location = "/contest";
-            } 
+            }
         });
         return false;
     };
@@ -39,40 +41,40 @@
     <div  class="body-header">
         <div class="row">
             <div class="col-md-offset-4 col-md-4 text-center">
-                <h1 class="">Concours de beaut&eacute;</h1>
+                <h1 class="site-title">Titre du concours</h1>
             </div>
         </div><!-- /.row -->
         <br /><br />
-    <!-- Projects Row -->
-    <div class="row">
-        <div class="col-md-offset-3 col-md-3 portfolio-item">
-            <a href="#" onClick="logInWithFacebook()">
-                <img class="img-responsive btn-vot" src="../public/images/btn-participe.png" alt="">
-            </a>
 
-        </div>
-        <div class="col-md-3 portfolio-item">
-            <a href="#" onClick="logInWithFacebook()">
-                <img class="img-responsive btn-vot" src="../public/images/btn-vote.png" alt="">
-            </a>
-        </div>
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-offset-3 col-md-3 portfolio-item">
+                <a href="#" onClick="logInWithFacebook()">
+                    <img class="img-responsive btn-vot" src="../public/images/btn-participe.png" alt="">
+                </a>
 
-    </div>
-  </div><!-- /.row -->
-  <div class="container">
+            </div>
+            <div class="col-md-3 portfolio-item">
+                <a href="#" onClick="logInWithFacebook()">
+                    <img class="img-responsive btn-vot" src="../public/images/btn-vote.png" alt="">
+                </a>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.body-header -->
+    <div class="container">
     <br>
+    
     <!-- Projects Row -->
     <div class="row">
         <div class="text-center col-md-12">
-            <h1 class="page-header">LOTS A GAGNER
-            </h1>
+            <h3 class="page-header">Lots à gagner</h3>
         </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
                 <img class="img-responsive imgLot" src="../public/images/lot1.jpg" alt="">
             </a>
             <h3 class="text-center">
-                <a href="#">LOT 1</a>
+                <a href="#">Lot 1</a>
             </h3>
         </div>
         <div class="col-md-4 portfolio-item">
@@ -80,7 +82,7 @@
                 <img class="img-responsive imgLot" src="../public/images/lot2.jpg" alt="">
             </a>
             <h3 class="text-center">
-                <a href="#">LOT 2</a>
+                <a href="#">Lot 2</a>
             </h3>
         </div>
         <div class="col-md-4 portfolio-item">
@@ -88,15 +90,14 @@
                 <img class="img-responsive imgLot" src="../public/images/lot1.jpg" alt="">
             </a>
             <h3 class="text-center">
-                <a href="#">LOT 3</a>
+                <a href="#">Lot 3</a>
             </h3>
         </div>
     </div>
     <br>
     <!-- Description -->
     <div class="text-center col-md-12">
-        <h1 class="page-header">DESCRIPTION
-        </h1>
+        <h3 class="page-header">Description</h3>
     </div>
     <p class="text-center">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
@@ -109,8 +110,7 @@
     <!-- Projects Row -->
     <div class="row">
       <div class="text-center col-md-12">
-          <h1 class="page-header">CONTRIBUTION
-          </h1>
+          <h3 class="page-header">Contribution</h3>
       </div>
         <div class="col-md-4 portfolio-item">
             <a href="#">
