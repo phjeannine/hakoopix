@@ -35,10 +35,8 @@
 </script>
 <!-- fin du code script -->
 
-<!-- Page Content -->
-
     <!-- Page Header -->
-    <div  class="body-header">
+    <div class="banner">
         <div class="row">
             <div class="col-md-offset-4 col-md-4 text-center">
                 <h1 class="site-title">Titre du concours</h1>
@@ -60,10 +58,10 @@
                 </a>
             </div>
         </div><!-- /.row -->
-    </div><!-- /.body-header -->
+    </div><!-- /.banner -->
+
+
     <div class="container">
-    <br>
-    
     <!-- Projects Row -->
     <div class="row">
         <div class="text-center col-md-12">

@@ -1,9 +1,13 @@
 /* HOME STYLESHEET */
-.body-header {
-    background: #eee;
-    padding: 4% 0 3% 0;
-    margin-top: -2%;
-  }
+.banner {
+  background: url(../../public/images/banners/wallpapers-4_5beGe33.jpg) no-repeat center fixed;
+  margin: 0;
+  padding: 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: block;
+  overflow: auto;
+}
   .imgLot {
     border: 0px solid gray;
     height: 280px;

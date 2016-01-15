@@ -18,17 +18,18 @@ $uri = $_SERVER['REQUEST_URI'];
     <title>Hakoopix | Concours Photo Facebook en ligne</title>
 
     <!-- CSS Stylesheets -->
-    <!-- Bootstrap Core CSS -->
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <?php if($uri != "/admin" && $uri != "/login") { ?>
-      <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
-    <?php } ?>
 
     <!-- General Stylesheets -->
     <link href="../public/css/main.css" rel="stylesheet">
     <link href="../public/css/home.css" rel="stylesheet">
     <link href="../public/css/contest.css" rel="stylesheet">
     <link href="../public/css/login.css" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+    <?php if($uri != "/admin" && $uri != "/login") { ?>
+      <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
+    <?php } ?>
 
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
