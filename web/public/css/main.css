@@ -4,6 +4,11 @@
 	padding: 0;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
 a {
 	text-decoration: none;
 }
@@ -14,6 +19,15 @@ img {
 
 span {
 	display: inline-block;
+}
+
+.navbar-fixed-top {
+	position: inherit;
+}
+
+.navbar {
+	margin: 0;
+	padding: 0;
 }
 
 .navbar .navbar-header > a {

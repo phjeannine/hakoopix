@@ -33,32 +33,24 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-<!-- fin du code script -->
 
-    <!-- Page Header -->
-    <div class="banner">
-        <div class="row">
-            <div class="col-md-offset-4 col-md-4 text-center">
-                <h1 class="site-title">Titre du concours</h1>
-            </div>
-        </div><!-- /.row -->
-        <br /><br />
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-offset-3 col-md-3 portfolio-item">
-                <a href="#" onClick="logInWithFacebook()">
-                    <img class="img-responsive btn-vot" src="../public/images/btn-participe.png" alt="">
-                </a>
-
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#" onClick="logInWithFacebook()">
-                    <img class="img-responsive btn-vot" src="../public/images/btn-vote.png" alt="">
-                </a>
-            </div>
-        </div><!-- /.row -->
-    </div><!-- /.banner -->
+<!-- Bannière & Title -->
+<div id="banner" class="container-fluid">
+    <div class="overlay">
+        <div class="banner-content row">
+            <div class="holder">
+                <div class="inner">
+                    <h1 class="contest-title">Titre du concours</h1>
+                    <p class="contest-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula. Duis quis consequat tellus. Etiam commodo congue sem in accumsan. </p>
+                    <div class="fb-connect-button">
+                        <span>Envie de jouer le jeu ?</span>
+                        <a href="#" onClick="logInWithFacebook()">Je participe</a>
+                    </div>
+                </div><!-- /.inner -->
+            </div><!-- /.holder -->
+        </div><!-- /.container -->
+    </div><!-- /.overlay -->
+</div><!-- /.banner -->
 
 
     <div class="container">
