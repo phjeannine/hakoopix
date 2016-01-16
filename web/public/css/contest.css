@@ -7,6 +7,7 @@
 .portfolio-item .item-contest .like,
 .portfolio-item .item-contest .share {
 	padding: 0;
+	font-size: 12px;
 }
 
 .portfolio-item .item-contest .item-contest-icon > span {
@@ -17,12 +18,12 @@
 }
 
 .portfolio-item .item-contest .like > span {
-	background: url("../../public/images/like.svg") 0 2px no-repeat;
+	background: url("../../public/images/like.svg") 0 1px no-repeat;
 	background-size: 100%;
 }
 
 .portfolio-item .item-contest .share > span {
-	background: url("../../public/images/share.svg") 0 2px no-repeat;
+	background: url("../../public/images/share.svg") 0 1px no-repeat;
 	background-size: 100%;
 }
 

@@ -88,3 +88,34 @@
   color: #444;
 }
 
+/* Homepage Content */
+#homepage {
+  margin-top: 30px;
+}
+
+#homepage .title {
+  text-align: center;
+  color: #6d6c6c;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+#homepage #prices .price-item h4 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+#homepage #prices .price-item p {
+  color: #6d6c6c;
+  text-align: center;
+}
+
+#homepage #gallery {
+  margin-top: 40px;
+}
+
