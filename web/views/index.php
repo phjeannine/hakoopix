@@ -34,6 +34,14 @@
     }(document, 'script', 'facebook-jssdk'));
 </script>
 
+<?php
+//$result = pg_query($db, "INSERT INTO memberfb(lastname, firstname, picture) VALUES ('Tutu', 'Jean', 'jean.tutu@gmail.com')");
+//if (!$result) {
+  //echo "Une erreur s'est produite.\n";
+  //exit;
+//
+?>
+
 <!-- Bannière & Title -->
 <div id="banner" class="container-fluid">
     <div class="overlay">

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include("include/connexion.php");
 
 $uri = $_SERVER['REQUEST_URI'];
