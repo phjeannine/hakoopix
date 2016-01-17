@@ -1,5 +1,5 @@
 <?php
 
-$dbconn = pg_pconnect("host=ec2-54-227-254-13.compute-1.amazonaws.com dbname=d56s4dlf857hdg user=djsrtxubpmzrta password=Z3D5hJKDJy6OF3fRPeCZ6tho7F");
-
+$dbconn = pg_connect("host=ec2-54-204-8-224.compute-1.amazonaws.com dbname=d5p9s6nvf6ggtq user=bjcjnkzygeqlza password=zmXSRzTXA2OWa_KOCJTbD53g82") 
+	or die('Connexion impossible : ' . pg_last_error());
 ?>

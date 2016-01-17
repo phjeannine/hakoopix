@@ -11,7 +11,7 @@ $uri = $_SERVER['REQUEST_URI'];
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,6 +33,10 @@ $uri = $_SERVER['REQUEST_URI'];
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
     <link href="../public/fonts/montserrat.css" rel="stylesheet">
+
+    <!-- SCRIPTS -->
+    <script src="../public/js/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script src="../public/js/bootstrap.min.js" type="text/javascript"></script>
 
 </head>
 <body cz-shortcut-listen="true">
@@ -70,6 +74,9 @@ $uri = $_SERVER['REQUEST_URI'];
 
     </div><!-- /.site-wrapper-inner -->
   </div><!-- /.site-wrapper -->
+
+  <!-- SCRIPTS -->
+  <script src="../public/js/script.js" type="text/javascript"></script>
 
 </body>
 </html>
