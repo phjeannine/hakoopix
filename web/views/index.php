@@ -10,7 +10,8 @@
                 });  */
                 FB.api('/me?fields=id,last_name,first_name,picture', function(rep) {
                     console.log(rep);
-                    window.location="../public/traitement.php?userId="+rep.id+"&lastName="+rep.last_name+"&firstName="+rep.first_name+"&token="+response.authResponse.accessToken;
+                    window.location="/contest";
+                    //window.location="../public/traitement.php?userId="+rep.id+"&lastName="+rep.last_name+"&firstName="+rep.first_name+"&token="+response.authResponse.accessToken;
                 });
             }
         });
