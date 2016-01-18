@@ -31,6 +31,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="../public/css/login.css" rel="stylesheet">
     <link href="../public/css/contestList.css" rel="stylesheet">
     <link href="../public/css/addAdmin.css" rel="stylesheet">
+    <link href="../public/css/participate.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
