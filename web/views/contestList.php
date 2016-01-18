@@ -17,7 +17,7 @@
             <h2>Liste de mes concours</h2>
             <div class="oneContest">
                 <div class="contestImg">
-                    <img src="../public/images/lot1.jpg" alt=""/>
+                    <img src="../public/images/photo_contest.jpg" alt=""/>
                 </div>
                 <div class="description">
                     <h3>Titre du concours</h3>
@@ -29,7 +29,7 @@
             </div>
             <div class="oneContest">
                 <div class="contestImg">
-                    <img src="../public/images/lot1.jpg" alt=""/>
+                    <img src="../public/images/photo_contest.jpg" alt=""/>
                 </div>
                 <div class="description">
                     <h3>Titre du concours</h3>
@@ -41,7 +41,7 @@
             </div>
             <div class="oneContest">
                 <div class="contestImg">
-                    <img src="../public/images/lot1.jpg" alt=""/>
+                    <img src="../public/images/photo_contest.jpg" alt=""/>
                 </div>
                 <div class="description">
                     <h3>Titre du concours</h3>

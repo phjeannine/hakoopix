@@ -20,7 +20,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <!-- CSS Stylesheets -->
     <!-- Bootstrap Core CSS -->
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <?php if($uri != "/admin" && $uri != "/login") { ?>
+    <?php if($uri != "/admin" && $uri != "/login" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
       <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
@@ -29,6 +29,8 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="../public/css/home.css" rel="stylesheet">
     <link href="../public/css/contest.css" rel="stylesheet">
     <link href="../public/css/login.css" rel="stylesheet">
+    <link href="../public/css/contestList.css" rel="stylesheet">
+    <link href="../public/css/addAdmin.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
@@ -44,7 +46,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <div class="site-wrapper-inner">
 
         <!-- Navigation -->
-        <?php if($uri != "/admin" && $uri != "/login") { ?>
+        <?php if($uri != "/admin" && $uri != "/login" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
           <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #12ba74;">
             <div class="container">
               <div class="navbar-header">
