@@ -20,7 +20,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <!-- CSS Stylesheets -->
     <!-- Bootstrap Core CSS -->
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <?php if($uri != "/admin" && $uri != "/login" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
+    <?php if($uri != "/addContest" && $uri != "/addAdmin" && "/contestList") { ?>
       <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
@@ -32,6 +32,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="../public/css/contestList.css" rel="stylesheet">
     <link href="../public/css/addAdmin.css" rel="stylesheet">
     <link href="../public/css/participate.css" rel="stylesheet">
+    <link href="../public/css/dashboard.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
@@ -47,7 +48,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <div class="site-wrapper-inner">
 
         <!-- Navigation -->
-        <?php if($uri != "/admin" && $uri != "/login" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
+        <?php if($uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
           <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #12ba74;">
             <div class="container">
               <div class="navbar-header">

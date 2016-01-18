@@ -5,9 +5,6 @@
                 console.log('You are logged!');
                 console.log(response.authResponse);
 
-              /*  FB.api('/959119600818575/roles?access_token=959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE', function(response) {
-                    console.log(response);
-                });  */
                 FB.api('/me?fields=id,last_name,first_name,picture', function(rep) {
                     console.log(rep);
                     //window.location="/contest";

@@ -6,9 +6,7 @@
  <div class="content-wrapper addAdmin">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
-            Ajouter un administrateur
-          </h1>
+          <h1>Ajouter un administrateur</h1>
           <br>
           <!-- general form elements -->
         </section>

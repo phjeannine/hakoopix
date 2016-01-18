@@ -27,18 +27,18 @@ $fb = new Facebook\Facebook([
   $response = $roles->getGraphEdge();
 
   foreach ($response as $data) {
-    if($data['user'] == $userId){
+    if ($data['role']=="administrators") {
       echo "Bienvenue ".$firstName." ".$lastName." !! Vous etes bien un admin !";
       $_SESSION["role"] = "admin";
       exit();
     } else {
       $_SESSION["role"] = "user";
-
-      $result = pg_query($db, "INSERT INTO memberfb(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
-      
-      echo "<script>window.location = '/contest'</script>";
+      echo("Bienvenue vous êtes un utilisateur");
+      //$result = pg_query($db, "INSERT INTO memberfb(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
+      //echo "<script>window.location = '/contest'</script>";
       exit();
     }
     //echo "userId : ".$data['user']." - statut : ".$data['role']."<br>";
   }
+
 ?>

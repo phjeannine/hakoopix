@@ -171,7 +171,7 @@
            immediately after the control sidebar -->
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
-
+</div>
     <!-- jQuery 2.1.4 -->
     <script src="../templates/admin/plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -209,5 +209,4 @@
     <script src="../templates/admin/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../templates/admin/dist/js/demo.js"></script>
-  </body>
-</html>
+

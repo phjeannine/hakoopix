@@ -1,9 +1,9 @@
 <?php
 
-class adminPageController{
+class addContestController {
 
 	public function indexAction($args){
-		$v = new view("adminPage");
+		$v = new view("addContest");
 		$v->assign("mesargs", $args);
 	}
 
