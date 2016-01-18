@@ -27,8 +27,6 @@
 .contestList button {
 	width: 90%;
 	padding: 20px;
-	color: #fff;
-	background-color: #367fa9;
 }
 
 .contestList .oneContest {
@@ -57,9 +55,4 @@
 
 .contestList p {
 	font-size: 12px;
-}
-
-.contestList button:hover {
-	background-color: #286090;
-	color: #fff;
 }

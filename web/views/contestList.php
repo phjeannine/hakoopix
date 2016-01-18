@@ -8,7 +8,7 @@
         <div class="col-lg-12">
             <h1 class="page-header">Application Concours Photos</h1>
 
-            <a href="/admin"><button type="button" class="btn btn-success"><i class="fa fa-plus fa-2x"></i> Créer un nouveau concours</button></a>
+            <a href="/admin"><button type="button" class="btn btn-primary"><i class="fa fa-plus fa-2x"></i> Créer un nouveau concours</button></a>
         </div>
     </div><!-- /.row -->
 
