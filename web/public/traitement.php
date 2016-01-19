@@ -34,7 +34,7 @@ $fb = new Facebook\Facebook([
     } else {
       $_SESSION["role"] = "user";
       echo("Bienvenue vous êtes un utilisateur");
-      //$result = pg_query($db, "INSERT INTO memberfb(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
+      //$result = pg_query($db, "INSERT INTO member(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
       //echo "<script>window.location = '/contest'</script>";
       exit();
     }

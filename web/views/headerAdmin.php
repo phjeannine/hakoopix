@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="../templates/admin/dist/css/AdminLTE.min.css">
+<link rel="stylesheet" href="../templates/admin/dist/css/AdminLTE.css">
 <link rel="stylesheet" href="../templates/admin/dist/css/skins/_all-skins.css">
 <link rel="stylesheet" href="../templates/admin/plugins/iCheck/flat/blue.css">
 <link rel="stylesheet" href="../templates/admin/plugins/morris/morris.css">
@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../templates/admin/plugins/daterangepicker/daterangepicker-bs3.css">
 <link rel="stylesheet" href="../templates/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-<div class="hold-transition skin-blue sidebar-mini">
+<div id="dashboard" class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
     <header class="main-header">
         <div class="logo">Logo</div>

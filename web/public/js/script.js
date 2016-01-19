@@ -1,20 +1,19 @@
 $(document).ready(function() {
 
-	/*
+	$(".display-errors").hide();
     $("#contest-form").on("submit", function(e) {
-		e.preventDefault();
-		$.ajax({
-			type: "POST",
-			url: "../data/insertContest.php",
-			data: $('#contest-form').serialize(),
-			success: function(data){
-				alert("INSERT SUCCESS !");
-			}
-		});
-	});
-*/
+    	var title = $("#contest-title").val();
+    	var date_begin = $("#date-first").val();
+    	var date_ending = $("#date-end").val();
+    	var description = $("#contest-description").val();
 
-	$(".date-first").datepicker();
-	$(".date-end").datepicker();
+		if(title == "" || date_begin == "" || date_ending == "" || description == "") {
+			e.preventDefault();
+ 			$(".display-errors").show();
+		}
+	});
+
+	$("#date-first").datepicker();
+	$("#date-end").datepicker();
 
 });
