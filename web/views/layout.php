@@ -20,19 +20,25 @@ $uri = $_SERVER['REQUEST_URI'];
     <!-- CSS Stylesheets -->
     <!-- Bootstrap Core CSS -->
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <?php if($uri != "/addContest" && $uri != "/addAdmin" && "/contestList") { ?>
+    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
       <link href="../public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
     <!-- General Stylesheets -->
-    <link href="../public/css/main.css" rel="stylesheet">
+    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
+      <link href="../public/css/main.css" rel="stylesheet">
+    <?php } ?>
     <link href="../public/css/home.css" rel="stylesheet">
     <link href="../public/css/contest.css" rel="stylesheet">
     <link href="../public/css/login.css" rel="stylesheet">
-    <link href="../public/css/contestList.css" rel="stylesheet">
     <link href="../public/css/addAdmin.css" rel="stylesheet">
     <link href="../public/css/participate.css" rel="stylesheet">
     <link href="../public/css/dashboard.css" rel="stylesheet">
+
+    <!-- SB Admin -->
+    <link href="../templates/sb-admin/css/sb-admin.css" rel="stylesheet">
+    <link href="../templates/sb-admin/css/plugins/morris.css" rel="stylesheet">
+    <link href="../templates/sb-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Fonts -->
     <link href="../public/fonts/opensans.css" rel="stylesheet">
@@ -48,7 +54,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <div class="site-wrapper-inner">
 
         <!-- Navigation -->
-        <?php if($uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
+        <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
           <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #12ba74;">
             <div class="container">
               <div class="navbar-header">
@@ -80,7 +86,12 @@ $uri = $_SERVER['REQUEST_URI'];
   </div><!-- /.site-wrapper -->
 
   <!-- SCRIPTS -->
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="../public/js/script.js" type="text/javascript"></script>
+  <script src="../public/js/jscolor.js" type="text/javascript"></script>
+  <script src="../templates/sb-admin/js/plugins/morris/raphael.min.js"></script>
+  <script src="../templates/sb-admin/js/plugins/morris/morris.min.js"></script>
+  <script src="../templates/sb-admin/js/plugins/morris/morris-data.js"></script>
 
 </body>
 </html>
