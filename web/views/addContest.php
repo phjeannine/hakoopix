@@ -18,7 +18,7 @@
                 <!-- Main content -->
                 <div class="form-content">
                 
-                  <form method="post" id="contest-form" action="../public/traitementContest.php" class="col-md-offset-1" enctype="multipart/form-data">
+                  <form method="post" id="contest-form" action="../public/data/insert_contest.php" class="col-md-offset-1" enctype="multipart/form-data">
                     <div class="box-body col-md-11">
 
                       <div class="row">

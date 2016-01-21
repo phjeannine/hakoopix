@@ -1,9 +1,9 @@
 <?php
 
-include("../include/connexion.php");
+include("../../include/connexion.php");
 
 function upload_logo() {
-	$dossier = 'images/logo/';
+	$dossier = '../images/logo/';
 	$fichier = basename($_FILES['logo']['name']);
 	$taille_maxi = 1000000000;
 	$taille = filesize($_FILES['logo']['tmp_name']);
