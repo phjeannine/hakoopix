@@ -18,7 +18,7 @@
                 <!-- Main content -->
                 <div class="form-content">
                 
-                  <form method="post" id="contest-form" action="../public/data/insert_contest.php" class="col-md-offset-1" enctype="multipart/form-data">
+                  <form method="post" id="add-contest" action="../public/data/insert_contest.php" class="col-md-offset-1" enctype="multipart/form-data">
                     <div class="box-body col-md-11">
 
                       <div class="row">
@@ -31,7 +31,7 @@
 
                       <div class="row">
                         <div class="form-group col-md-6">
-                          <label for="date-begin">Date debut :</label>
+                          <label for="date-begin">Date de commencement :</label>
                           <div class="input-group">
                             <div class="input-group-addon">
                               <i class="fa fa-calendar"></i>
@@ -40,7 +40,7 @@
                           </div><!-- /.input group -->
                         </div>
                         <div class="form-group col-md-6">
-                          <label for="date-ending">Date fin :</label>
+                          <label for="date-ending">Date de fin :</label>
                           <div class="input-group">
                             <div class="input-group-addon">
                               <i class="fa fa-calendar"></i>
@@ -69,6 +69,9 @@
                         <div class="form-group col-md-6">
                           <label for="logo">Logo</label>
                           <input type="file" name="logo" id="logo-theme">
+                          <div class="logo-size-error error">
+                            <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 150 x 100.</p>
+                          </div>
                           <input type="hidden" name="MAX_FILE_SIZE" value="100000">
                         </div>
                         <div class="form-group col-md-6">
@@ -84,7 +87,7 @@
                         </div>
                       </div>
 
-                      <div class="display-errors">
+                      <div class="fields-error error">
                         <p>Vous devez renseigner tous les champs</p>
                       </div>
 

@@ -44,6 +44,7 @@ include("dashboardHead.php");
                             <p class="description">Description : <?php echo $contest['description'] ?></p>
                             <p class="color-theme">Couleur du thème : <span style="background-color: <?php echo $contest['color_theme'] ?>"></span></p>
                         </div><!-- /.contest-informations -->
+                        <a href="/updateContest?id='.$contest['id'].'" class="update-contest">Modifier</a>
                     </div><!-- /.contest -->
                     <?php endforeach; ?>
                 </div><!-- /.row -->
