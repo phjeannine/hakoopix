@@ -92,8 +92,8 @@ $uri = $_SERVER['REQUEST_URI'];
   <script src="../public/js/script.js" type="text/javascript"></script>
   <script src="../public/js/jscolor.js" type="text/javascript"></script>
   <script src="../templates/sb-admin/js/plugins/morris/raphael.min.js"></script>
-  <script src="../templates/sb-admin/js/plugins/morris/morris.min.js"></script>
-  <script src="../templates/sb-admin/js/plugins/morris/morris-data.js"></script>
+  <!-- <script src="../templates/sb-admin/js/plugins/morris/morris.min.js"></script> -->
+  <!-- <script src="../templates/sb-admin/js/plugins/morris/morris-data.js"></script> -->
 
 </body>
 </html>

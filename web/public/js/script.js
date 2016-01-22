@@ -17,26 +17,51 @@ $(document).ready(function() {
 		}
 	});
 
+	// On vérifie les dimensions
+    // de l'image bannière à uploader
+    $(".banner-size-error").hide();
+	var _URL = window.URL || window.webkitURL;
+	$("#banner-theme").change(function(e) {
+		var file, img;
+
+		if ((file = this.files[0])) {
+	        img = new Image();
+	        img.onload = function() {
+	            if(this.width != 1250 && this.height != 400) {
+	            	$(".banner-size-error").addClass("animated bounceInRight").show().delay(3000).fadeOut("slow");
+	            	$("#banner-theme").val("");
+	            }
+	        };
+	        img.onerror = function() {
+	            alert("L'extension de votre fichier n'est pas valide : " + file.type);
+	            $("#banner-theme").val("");
+	        };
+	        img.src = _URL.createObjectURL(file);
+	    }
+	});
+    
+    // On vérifie les dimensions
+    // de l'image logo à uploader
     $(".logo-size-error").hide();
 	var _URL = window.URL || window.webkitURL;
-		$("#logo-theme").change(function(e) {
-    		var file, img;
+	$("#logo-theme").change(function(e) {
+		var file, img;
 
-    		if ((file = this.files[0])) {
-		        img = new Image();
-		        img.onload = function() {
-		            if(this.width > 150 && this.height > 100) {
-		            	$(".logo-size-error").show();
-		            	$("#logo-theme").val("");
-		            }
-		        };
-		        img.onerror = function() {
-		            alert("L'extension de votre fichier n'est pas valide : " + file.type);
-		            $("#logo-theme").val("");
-		        };
-		        img.src = _URL.createObjectURL(file);
-		    }
-		});
+		if ((file = this.files[0])) {
+	        img = new Image();
+	        img.onload = function() {
+	            if(this.width != 150 && this.height != 100) {
+	            	$(".logo-size-error").addClass("animated bounceInRight").show().delay(3000).fadeOut("slow");
+	            	$("#logo-theme").val("");
+	            }
+	        };
+	        img.onerror = function() {
+	            alert("L'extension de votre fichier n'est pas valide : " + file.type);
+	            $("#logo-theme").val("");
+	        };
+	        img.src = _URL.createObjectURL(file);
+	    }
+	});
 
     // Ajout d'un concours - Champs Date
 	$("#date-first").datepicker();

@@ -1,54 +1,92 @@
-#contest_list {
+.page-header {
+	margin: 70px 0 20px;
+}
+
+.form-control:focus {
+	outline: none;
+	box-shadow: none;
+	border-color: #000;
+}
+
+/*----------------------*/
+/*---- AJOUT ADMIN ----*/
+/*--------------------*/
+#add-contest .banner-size-error p {
+	color: red;
+}
+
+#add-contest input[type="submit"] {
+	margin: 0 0 30px 0;
+	background-color: #222;
+	width: 200px;
+	border: none;
+	padding: 8px;
+	transition: all ease 300ms;
+}
+
+/*-----------------------------*/
+/*---- LISTE DES CONCOURS ----*/
+/*---------------------------*/
+#contest-list {
 	margin: 0 auto;
 	padding-top: 30px;
 }
 
-#contest_list .fa-2x {
-	vertical-align: middle;
+#contest-list img {
+	width: 100%;
 }
 
-#contest_list p {
-	font-size: 12px;
-	font-family: 'Montserrat', Arial, sans-serif;
+#contest-list .contest {
+	margin-bottom: 20px;
 }
 
-#contest_list button {
-	width: 90%;
-	padding: 20px;
-}
-
-#contest_list .contest {
-	margin: 20px 0px;
+#contest-list .contest .contest-informations {
+	background: #eee;
+	padding: 10px;
 	overflow: auto;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 
-#contest_list .contest h3 {
+#contest-list .contest .contest-informations .logo img {
+	width: 60px;
+}
+
+#contest-list .contest .contest-informations h3 {
 	margin-top: 0;
-	font-size: 18px;
+	font-size: 15px;
 	font-family: 'Montserrat', Arial, sans-serif;
 }
 
-#contest_list .contest p {
+#contest-list .contest .contest-informations p {
+	font-size: 12px;
 	margin: 0 0 5px 0;
 }
 
-#contest_list .contest .description {
-	width: 250px;
-}
-
-#contest_list .contest .color-theme span {
+#contest-list .contest .contest-informations .color-theme span {
 	width: 15px;
     height: 15px;
     border-radius: 100%;
     display: inline-block;
 }
 
-#contest_list img {
-	max-width: 300px;
-	display: inline-block;
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	float; left;
+#contest-list .contest .contest-informations .contest-actions {
+	border-top: 1px solid #ccc;
+    padding-top: 8px;
+    margin-top: 10px;
 }
+
+#contest-list .contest .contest-informations .contest-actions a {
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #222;
+}
+
+#contest-list .contest .contest-informations .contest-actions a:hover {
+	text-decoration: none;
+}
+
 
 
