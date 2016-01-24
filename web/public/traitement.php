@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -28,13 +28,29 @@ $fb = new Facebook\Facebook([
 
   foreach ($response as $data) {
     if ($data['role']=="administrators") {
+<<<<<<< HEAD
       $_SESSION["role"] = "admin";
+=======
+      //echo "Bienvenue ".$firstName." ".$lastName." !! Vous etes bien un admin !";
+      $_SESSION["role"] = "admin";
+      $_SESSION["name"] = $firstName." ".$lastName;
+      $_SESSION["idUser"] = $userId;
+      $_SESSION["photo"] = $photo;
+>>>>>>> 5dbdce90bdc36907b5bb1a67d43120f9929f24fd
       echo "<script>window.location = '/contest'</script>";
       exit();
     } else {
       $_SESSION["role"] = "user";
+<<<<<<< HEAD
       echo("Bienvenue vous êtes un utilisateur");
       //$result = pg_query($db, "INSERT INTO member(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
+=======
+      $_SESSION["name"] = $firstName." ".$lastName;
+      $_SESSION["idUser"] = $userId;
+      $_SESSION["photo"] = $photo;
+      //echo("Bienvenue vous êtes un utilisateur");
+      $result = pg_query($db, "INSERT INTO member(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
+>>>>>>> 5dbdce90bdc36907b5bb1a67d43120f9929f24fd
       echo "<script>window.location = '/contest'</script>";
       exit();
     }

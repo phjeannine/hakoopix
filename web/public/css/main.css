@@ -74,3 +74,40 @@ span {
     text-transform: uppercase;
 }
 
+.navbar-right li {
+	margin-right: 2%;
+}
+
+.nameUsr {
+	color: #12ba74;
+	margin-left: 2%;
+}
+
+.imgUser{
+	border-radius: 26px;
+    margin-top: -26%;
+    margin-bottom: -25%;
+    width: 44px;
+}
+
+.dropdown, .dropdown-toggle{
+	border: 0px solid !important;
+}
+
+.dropdown-toggle:hover{
+	background: none !important;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    margin-top: -4px;
+    margin-right: 3px;
+
+}
+
+.navbar .navbar-right > li > a:hover, a:focus {
+    background-color: none;
+}
+
+.dropdown-menu>li>a:hover {
+	background: #eee;
+}
