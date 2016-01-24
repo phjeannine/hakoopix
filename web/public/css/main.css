@@ -21,6 +21,7 @@ span {
 	display: inline-block;
 }
 
+/* General */
 .navbar-fixed-top {
 	position: inherit;
 }
@@ -66,7 +67,10 @@ span {
 	color: #12ba74;
 }
 
-/* General */
+.navbar .navbar-right > li > a:hover, a:focus {
+    background-color: none !important;
+}
+
 .page-header {
 	color: #6d6c6c;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -78,36 +82,9 @@ span {
 	margin-right: 2%;
 }
 
-.nameUsr {
-	color: #12ba74;
-	margin-left: 2%;
+.user-picture-profile {
+	border-radius: 100%;
+	padding: 5px 0;
+	width: 38px;
 }
 
-.imgUser{
-	border-radius: 26px !important;
-    margin-top: -26% !important;
-    margin-bottom: -25% !important;
-    width: 44px !important;
-}
-
-.dropdown, .dropdown-toggle{
-	border: 0px solid !important;
-}
-
-.dropdown-toggle:hover{
-	background: none !important;
-}
-
-.navbar-nav>li>.dropdown-menu {
-    margin-top: -4px !important;
-    margin-right: 3px !important;
-
-}
-
-.navbar .navbar-right > li > a:hover, a:focus {
-    background-color: none !important;
-}
-
-.dropdown-menu>li>a:hover {
-	background: #eee !important;
-}

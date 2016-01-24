@@ -35,6 +35,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="../public/css/login.css" rel="stylesheet">
     <link href="../public/css/addAdmin.css" rel="stylesheet">
     <link href="../public/css/participate.css" rel="stylesheet">
+    <link href="../public/css/dashboard.css" rel="stylesheet">
 
     <!-- SB Admin -->
     <link href="../templates/sb-admin/css/sb-admin.css" rel="stylesheet">
@@ -63,27 +64,29 @@ $uri = $_SERVER['REQUEST_URI'];
                   <a class="navbar-brand" href="/">Logo</a>
                   <span>Facebook Contest</span>
               </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <li><a href="#">About</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
+
+              <div class="navbar-collapse collapse">
+                <?php  if(!empty($_SESSION)){ ?>
+                <ul class="nav navbar-nav pull-right">
+                  <li><img class="user-picture-profile" src="<?php echo $_SESSION['photo'];?>"/></li>
                   <li class="dropdown"> 
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      <?php  
-                      if(!empty($_SESSION)){ ?>
-                        <img class='imgUser' src="<?php echo $_SESSION['photo'];?>"/> 
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li class="nameUsr"> <?php echo $_SESSION["name"];?> </li><hr>
+                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><strong><?php echo $_SESSION["name"];?> </strong> <span class="caret"></span></a>
+                    <ul id="g-account-menu" class="dropdown-menu" role="menu">
                       <?php if($_SESSION["role"] == "admin") { ?>
-                            <li><a href="/dashboard" title="Administration">Administration </a></li>
-                      <?php } ?>
-                      <li class="deconnect"><a href="../public/data/disconnect.php">Deconnexion </a></li>
+                        <li><a href="/dashboard" title="Administration">Administration</a></li>
+                        <hr>
+                        <li><a href="../public/data/disconnect.php">Déconnexion</a></li>
+                      <?php } else { ?>
+                        <li><a href="/participate" title="Administration">Participer</a></li>
+                        <li><a href="/participate" title="Administration">Mes photos</a></li>
+                        <hr>
+                        <li><a href="../public/data/disconnect.php">Déconnexion</a></li>
                       <?php } ?>
                     </ul>
                   </li>
+                  <li><a href="../public/data/disconnect.php"><i class="fa fa-power-off"></i></a></li>
                 </ul>
+                <?php } ?>
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
           </nav>

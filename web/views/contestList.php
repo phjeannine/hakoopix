@@ -31,7 +31,6 @@ include("dashboardHead.php");
                                 <img src="../public/images/photo_contest.jpg" alt=""/>
                             </div>
                             <div class="contest-informations">
-                                <div class="logo"><img src="/public/images/logo/<?php echo $contest['logo'] ?>" alt="Logo" /></div>
                                 <h3><?php echo $contest['title'] ?></h3>
                                 <div class="date_contest">
                                     <p><i class="fa fa-calendar"></i> <?php echo $contest['date_begin'] ?> - <?php echo $contest['date_ending'] ?></p>
