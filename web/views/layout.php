@@ -1,5 +1,5 @@
 <?php
-
+session_start(); 
 include("include/connexion.php");
 
 $uri = $_SERVER['REQUEST_URI'];
@@ -69,10 +69,9 @@ $uri = $_SERVER['REQUEST_URI'];
                   <li><a href="#">About</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                 
                   <li class="dropdown"> 
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      <?php  session_start(); 
+                      <?php  
                       if(!empty($_SESSION)){ ?>
                         <img class='imgUser' src="<?php echo $_SESSION['photo'];?>"/> 
                     </a>
@@ -80,8 +79,9 @@ $uri = $_SERVER['REQUEST_URI'];
                       <li class="nameUsr"> <?php echo $_SESSION["name"];?> </li><hr>
                       <?php if($_SESSION["role"] == "admin") { ?>
                             <li><a href="/dashboard" title="Administration">Administration </a></li>
-                      <?php } } ?>
-                      <li class="deconnect"><a href="deconnxion.php" title="Administration">Deconnexion </a></li>
+                      <?php } ?>
+                      <li class="deconnect"><a href="../public/data/disconnect.php">Deconnexion </a></li>
+                      <?php } ?>
                     </ul>
                   </li>
                 </ul>

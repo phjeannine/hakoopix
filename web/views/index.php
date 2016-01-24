@@ -92,7 +92,7 @@
             <h3 class="title">Contributions</h3>
             <hr>
         </div>
-        <div class="col-md-4 portfolio-item">
+        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
             <div class="item-contest">
                 <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
@@ -103,7 +103,7 @@
             <hr>
             <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
-        <div class="col-md-4 portfolio-item">
+        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
             <div class="item-contest">
                 <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
@@ -114,7 +114,7 @@
             <hr>
             <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
-        <div class="col-md-4 portfolio-item">
+        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
             <div class="item-contest">
                 <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
@@ -125,7 +125,7 @@
             <hr>
             <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
-        <div class="col-md-4 portfolio-item">
+        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
             <div class="item-contest">
                 <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
@@ -136,7 +136,7 @@
             <hr>
             <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
-        <div class="col-md-4 portfolio-item">
+        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
             <div class="item-contest">
                 <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
@@ -147,7 +147,7 @@
             <hr>
             <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
-        <div class="col-md-4 portfolio-item">
+        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
             <div class="item-contest">
                 <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
