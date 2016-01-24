@@ -68,7 +68,6 @@ $uri = $_SERVER['REQUEST_URI'];
                   <li><a href="#">About</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                 
                   <li class="dropdown"> 
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                       <?php  
