@@ -1,5 +1,9 @@
 .page-header {
-	margin: 70px 0 20px;
+	font-family: 'Montserrat', Arial, sans-serif;
+    margin: 70px 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
 }
 
 .form-control:focus {
