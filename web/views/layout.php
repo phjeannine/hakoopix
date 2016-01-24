@@ -18,6 +18,8 @@ $uri = $_SERVER['REQUEST_URI'];
     <title>Hakoopix | Concours Photo Facebook en ligne</title>
 
     <!-- CSS Stylesheets -->
+    <link href="../public/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="../public/css/animate.min.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList") { ?>
@@ -35,8 +37,6 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="../public/css/participate.css" rel="stylesheet">
     <link href="../public/css/dashboard.css" rel="stylesheet">
 
-    <link href="../public/css/animate.min.css" rel="stylesheet">
-
     <!-- SB Admin -->
     <link href="../templates/sb-admin/css/sb-admin.css" rel="stylesheet">
     <link href="../templates/sb-admin/css/plugins/morris.css" rel="stylesheet">
@@ -48,6 +48,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
     <!-- SCRIPTS -->
     <script src="../public/js/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script src="../public/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="../public/js/bootstrap.min.js" type="text/javascript"></script>
 
 </head>
@@ -99,10 +100,10 @@ $uri = $_SERVER['REQUEST_URI'];
   </div><!-- /.site-wrapper -->
 
   <!-- SCRIPTS -->
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="../public/js/script.js" type="text/javascript"></script>
   <script src="../public/js/jscolor.js" type="text/javascript"></script>
   <script src="../templates/sb-admin/js/plugins/morris/raphael.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
   <!-- <script src="../templates/sb-admin/js/plugins/morris/morris.min.js"></script> -->
   <!-- <script src="../templates/sb-admin/js/plugins/morris/morris-data.js"></script> -->
 

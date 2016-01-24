@@ -11,8 +11,8 @@
       <a class="navbar-brand" href="index.html">SB Admin</a>
   </div>
   <!-- Top Menu Items -->
-  <ul class="nav navbar-right top-nav">
-    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith</b></a></li>
+  <ul class="nav navbar-right top-nav admin-infos">
+    <li><i class="fa fa-user"></i> John Smith</b></li>
   </ul>
 
   <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->

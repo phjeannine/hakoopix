@@ -1,3 +1,48 @@
+//Highcharts
+$(function () {
+    $('#statistics-chart').highcharts({
+        chart: {
+            type: 'areaspline',
+        },
+        title: {
+            text: null
+        },
+        xAxis: {
+            categories: [
+                'Lun. 25 janv.',
+                'Mard. 26 janv.',
+                'Mercr. 27 janv.',
+                'Jeud. 28 janv.',
+                'Vend. 29 janv.',
+                'Sam. 30 janv.',
+                'Dim. 01 févr.',
+                'Lun. 02 févr.'
+            ],
+        },
+        yAxis: {
+            title: {
+                text: null
+            }
+        },
+        tooltip: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Jours',
+            color: '#c2c2c2',
+            data: [150, 167, 55, 78, 109, 25, 89, 101],
+            marker: {
+                fillColor: 'white',
+                lineWidth: 2,
+                lineColor: '#999'
+            }
+        }]
+    });
+});
+
 $(document).ready(function() {
 
 	// Si un des champs dul  formulaire d'ajout d'un concours

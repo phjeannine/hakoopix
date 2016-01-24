@@ -111,7 +111,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #222;
+        background-color: #2c2e43;
         bottom: 0;
         overflow-x: hidden;
         padding-bottom: 40px;
@@ -159,6 +159,24 @@ ul.alert-dropdown {
 
 .huge {
     font-size: 40px;
+}
+
+.panel-violet {
+    border-color: #603cba;
+}
+
+.panel-violet > .panel-heading {
+    border-color: #603cba;
+    color: #fff;
+    background-color: #603cba;
+}
+
+.panel-violet > a {
+    color: #603cba;
+}
+
+.panel-violet > a:hover {
+    color: #3d8b3d;
 }
 
 .panel-green {
@@ -212,5 +230,23 @@ ul.alert-dropdown {
 }
 
 .panel-yellow > a:hover {
+    color: #df8a13;
+}
+
+.panel-blue {
+    border-color: #2d89ef;
+}
+
+.panel-blue > .panel-heading {
+    border-color: #2d89ef;
+    color: #fff;
+    background-color: #2d89ef;
+}
+
+.panel-blue > a {
+    color: #2d89ef;
+}
+
+.panel-blue > a:hover {
     color: #df8a13;
 }
