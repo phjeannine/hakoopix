@@ -27,38 +27,21 @@ $fb = new Facebook\Facebook([
   $response = $roles->getGraphEdge();
 
   foreach ($response as $data) {
-<<<<<<< HEAD
     if ($data['user']==$userId) {
-=======
-    if ($data['role']=="administrators") {
-<<<<<<< HEAD
-      $_SESSION["role"] = "admin";
-=======
->>>>>>> origin/master
       //echo "Bienvenue ".$firstName." ".$lastName." !! Vous etes bien un admin !";
       $_SESSION["role"] = "admin";
       $_SESSION["name"] = $firstName." ".$lastName;
       $_SESSION["idUser"] = $userId;
       $_SESSION["photo"] = $photo;
->>>>>>> 5dbdce90bdc36907b5bb1a67d43120f9929f24fd
       echo "<script>window.location = '/contest'</script>";
       exit();
     } else {
       $_SESSION["role"] = "user";
-<<<<<<< HEAD
-      echo("Bienvenue vous êtes un utilisateur");
-      //$result = pg_query($db, "INSERT INTO member(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
-=======
       $_SESSION["name"] = $firstName." ".$lastName;
       $_SESSION["idUser"] = $userId;
       $_SESSION["photo"] = $photo;
       //echo("Bienvenue vous êtes un utilisateur");
-<<<<<<< HEAD
       //$result = pg_query($db, "INSERT INTO member(lastname, firstname, title, description, picture,user_id) VALUES ('".$lastName."', '".$firstName."', '"test title"', '"test description"', '".$photo."', '".$userId."')");
-=======
-      $result = pg_query($db, "INSERT INTO member(id_member, lastname, firstname, picture) VALUES ('".$userId."', '".$lastName."', '".$firstName."', '".$photo."')");
->>>>>>> 5dbdce90bdc36907b5bb1a67d43120f9929f24fd
->>>>>>> origin/master
       echo "<script>window.location = '/contest'</script>";
       exit();
     }
