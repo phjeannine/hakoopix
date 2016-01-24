@@ -35,7 +35,6 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="../public/css/login.css" rel="stylesheet">
     <link href="../public/css/addAdmin.css" rel="stylesheet">
     <link href="../public/css/participate.css" rel="stylesheet">
-    <link href="../public/css/dashboard.css" rel="stylesheet">
 
     <!-- SB Admin -->
     <link href="../templates/sb-admin/css/sb-admin.css" rel="stylesheet">
