@@ -17,11 +17,11 @@
             <h3 class="box-title"></h3>
           </div><!-- /.box-header -->
           <!-- form start -->
-          <form role="form" class="col-md-offset-1">
+          <form role="form" class="col-md-offset-1" method="POST" action="../public/traitementParticipate.php">
             <div class="box-body col-md-11">
               <div class="form-group col-md-12">
                 <label for="exampleInputEmail1">Titre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter title...">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter title..." name="title">
               </div>
               
               <div class="form-group">
@@ -38,7 +38,7 @@
 
             <div class="form-group col-md-12">
               <label for="exampleInputEmail1">Description</label>
-              <textarea class="form-control" rows="3"></textarea>
+              <textarea class="form-control" rows="3" name="description"></textarea>
             </div>
             
             </div><!-- /.box-body -->

@@ -11,41 +11,63 @@ $fb = new Facebook\Facebook([
   'app_id' => '959119600818575',
   'app_secret' => '9f0062f110ea6d3589e7debcb04c2268',
   'default_graph_version' => 'v2.5',
-]);
+  ]);
 
-  $userId = $_GET['userId'];
-  $lastName = $_GET['lastName'];
-  $firstName = $_GET['firstName'];
-  $token = $_GET['token'];
+$userId = $_GET['userId'];
+$lastName = $_GET['lastName'];
+$firstName = $_GET['firstName'];
+$token = $_GET['token'];
 
-  $var = $fb->get('/me?fields=picture', $token);
-  $obj = $var->getGraphNode();
-  $picture = $obj['picture'];
-  $photo = $picture['url'];
+$var = $fb->get('/me?fields=picture', $token);
+$obj = $var->getGraphNode();
+$picture = $obj['picture'];
+$photo = $picture['url'];
 
-  $roles = $fb->get('/959119600818575/roles', '959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE');
-  $response = $roles->getGraphEdge();
+$roles = $fb->get('/959119600818575/roles', '959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE');
+$response = $roles->getGraphEdge();
 
-  foreach ($response as $data) {
-    if ($data['user']==$userId) {
-      //echo "Bienvenue ".$firstName." ".$lastName." !! Vous etes bien un admin !";
-      $_SESSION["role"] = "admin";
-      $_SESSION["name"] = $firstName." ".$lastName;
-      $_SESSION["idUser"] = $userId;
-      $_SESSION["photo"] = $photo;
-      echo "<script>window.location = '/contest'</script>";
-      exit();
-    } else {
-      $_SESSION["role"] = "user";
-      $_SESSION["name"] = $firstName." ".$lastName;
-      $_SESSION["idUser"] = $userId;
-      $_SESSION["photo"] = $photo;
-      //echo("Bienvenue vous êtes un utilisateur");
-      //$result = pg_query($db, "INSERT INTO member(lastname, firstname, title, description, picture,user_id) VALUES ('".$lastName."', '".$firstName."', '"test title"', '"test description"', '".$photo."', '".$userId."')");
-      echo "<script>window.location = '/contest'</script>";
-      exit();
-    }
-    //echo "userId : ".$data['user']." - statut : ".$data['role']."<br>";
+
+//On vérifie si il est admin ou pas
+foreach($response as $data){
+  if($userId == $data['user']) {
+    $_SESSION["role"] = "admin";
+    $_SESSION["name"] = $firstName." ".$lastName;
+    $_SESSION["idUser"] = $userId;
+    $_SESSION["photo"] = $photo;
+    header('Location: /contest');
   }
+}
 
-?>
+//On liste les user inscrits
+$verif = $db->prepare("SELECT user_id FROM member");
+$verif->execute();
+
+$result = $verif->fetchAll(PDO::FETCH_ASSOC);
+//print_r($result);
+
+//Si le tableau est vide on enregistre le user
+if(!$result) {
+  $_SESSION["name"] = $firstName." ".$lastName;
+  $_SESSION["idUser"] = $userId;
+  $_SESSION["photo"] = $photo;
+  $insertUser = $db->prepare("INSERT INTO member(lastname, firstname, picture, user_id) VALUES ('".$lastName."','".$firstName."','".$photo."','".$userId."')");
+  $insertUser->execute();
+}
+
+//On parcoure le tableau
+foreach($result as $count) {
+
+  if($userId != $result) {
+    //echo "on enregistre pas<br>";
+    header('Location: /contest');
+  } else {
+    //echo "on enregistre";
+    $_SESSION["name"] = $firstName." ".$lastName;
+    $_SESSION["idUser"] = $userId;
+    $_SESSION["photo"] = $photo;
+    $insertUser = $db->prepare("INSERT INTO member(lastname, firstname, picture, user_id) VALUES ('".$lastName."','".$firstName."','".$photo."','".$userId."')");
+    $insertUser->execute();
+    header('Location: /contest');
+  }
+}
+
