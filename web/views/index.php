@@ -38,6 +38,21 @@
   //echo "Une erreur s'est produite.\n";
   //exit;
 //
+
+// Sélection du concours actif
+$selectContest = "SELECT * FROM contest WHERE is_active = true"; 
+$result = $db->prepare($selectContest); 
+$result->execute(); 
+$contestResult = $result->fetch();
+
+$idContest = $contestResult['id_contest'];
+
+// Sélection des images liées au concours
+$selectPicture = "SELECT * FROM picture WHERE id_contest = '".$idContest."'"; 
+$result = $db->prepare($selectPicture); 
+$result->execute(); 
+$contestPicture = $result->fetchAll();
+
 ?>
 
 <!-- Bannière & Title -->
@@ -46,8 +61,8 @@
         <div class="banner-content row">
             <div class="holder">
                 <div class="inner">
-                    <h1 class="contest-title">Titre du concours</h1>
-                    <p class="contest-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula. Duis quis consequat tellus. Etiam commodo congue sem in accumsan.</p>
+                    <h1 class="contest-title"><?php echo $contestResult['title'] ?></h1>
+                    <p class="contest-description"><?php echo $contestResult['description'] ?></p>
                     <div class="fb-connect-button">
                         <span>Envie de jouer le jeu ?</span>
                         <a href="#" onClick="logInWithFacebook()">Je participe</a>
@@ -60,7 +75,6 @@
 
 <!-- Homepage Content -->
 <div id="homepage" class="container">
-
     <!-- Prices -->
     <div id="prices" class="row">
         <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
@@ -92,72 +106,19 @@
             <h3 class="title">Contributions</h3>
             <hr>
         </div>
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
+        <?php foreach($contestPicture as $picture) : ?>
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
+                <div class="item-contest">
+                    <div class="like item-contest-icon col-md-9"><span>like</span> <?php echo $picture['nb_like']; ?></div>
+                    <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
+                </div>
+                <h3 class="item-title" style="color: #12ba74"><?php echo $picture['title']; ?></h3>
+                <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74"><?php echo $picture['date']; ?></span></p>
+                <hr>
+                <p class="item-description"><?php echo $picture['description']; ?></p>
             </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
+        <?php endforeach; ?>
     </div><!-- /.row -->
 
 </div><!-- /.container -->

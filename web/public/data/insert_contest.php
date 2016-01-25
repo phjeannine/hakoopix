@@ -18,7 +18,7 @@ if(empty($title) OR empty($date_begin) OR empty($date_ending) OR empty($descript
     echo '<font color="red">Attention, les champs doivent être remplis !</font>'; 
 } else {
 	// On insère dans la BDD
-	$insertContest = $db->prepare("INSERT INTO contest(title, date_begin, date_ending, description, color_theme, logo) VALUES ('".$title."', '".$date_begin."', '".$date_ending."', '".$description."', '".$color_theme."', '".$logo."')");
+	$insertContest = $db->prepare("INSERT INTO contest(title, date_begin, date_ending, description, color_theme, logo, is_active) VALUES ('".$title."', '".$date_begin."', '".$date_ending."', '".$description."', '".$color_theme."', '".$logo."', true)");
 	$insertContest->execute();
 	
 	upload_logo();

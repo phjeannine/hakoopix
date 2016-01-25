@@ -95,7 +95,7 @@ $(document).ready(function() {
 		if ((file = this.files[0])) {
 	        img = new Image();
 	        img.onload = function() {
-	            if(this.width != 150 && this.height != 100) {
+	            if(this.width != 200 && this.height != 200) {
 	            	$(".logo-size-error").addClass("animated bounceInRight").show().delay(3000).fadeOut("slow");
 	            	$("#logo-theme").val("");
 	            }
@@ -111,5 +111,7 @@ $(document).ready(function() {
     // Ajout d'un concours - Champs Date
 	$("#date-first").datepicker();
 	$("#date-end").datepicker();
+
+    $( ".selector" )
 
 });

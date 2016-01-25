@@ -24,6 +24,9 @@ include("dashboardHead.php");
             </div><!-- /.row -->
 
             <div id="contest-list">
+                <div class="row">
+                    <div class="add-contest"><a href="/addContest" title="Ajouter un concours">Ajouter un nouveau concours</a></div>
+                </div>
                 <div class="row list">
                     <?php foreach($contestResult as $contest) :?>
                         <div class="contest col-md-4 .col-sm-2 col-xs-12">
