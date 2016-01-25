@@ -52,6 +52,7 @@ if(!$result) {
   $_SESSION["photo"] = $photo;
   $insertUser = $db->prepare("INSERT INTO member(lastname, firstname, picture, user_id) VALUES ('".$lastName."','".$firstName."','".$photo."','".$userId."')");
   $insertUser->execute();
+  header('Location: /contest');
 }
 
 //On parcoure le tableau
