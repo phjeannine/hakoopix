@@ -112,20 +112,20 @@ $(document).ready(function() {
 	$("#date-first").datepicker();
 	$("#date-end").datepicker();
 
-    $( ".selector" )
+    // ADD PRICES
+    // Affichage du formulaire d'ajout de prix
+    $('#add-prices').hide();
+    var contestName = $('#select-contest-name');
 
-    // ADD PRICE
-    // Calcul du nombre de caractères restants
-    // pour la description d'un prix
-    var maxchars = 10;
-    $('.max-char').keyup(function () {
-        var tlength = $(this).val().length;
-        $(this).val($(this).val().substring(0, maxchars));
-        var tlength = $(this).val().length;
-        remain = maxchars - parseInt(tlength);
-        $('.remain-first').text(remain);
-        $('.remain-second').text(remain);
-        $('.remain-third').text(remain);
+    $(contestName).on('change', function() {
+        var value = $(this).val();
+        if(value != 'no-value') {
+            $('#add-prices').show();
+        }
+
+        if(value == 'no-value') {
+            $('#add-prices').hide();
+        }
     });
 
 });

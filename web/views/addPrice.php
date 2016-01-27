@@ -28,7 +28,7 @@ $contestResult = $result->fetchAll();
                   <form method="post" id="search-contest" class="col-md-6">
                     <div class="box-body">
                         <label>Sélectionnez l'application afin d'ajouter un lot de prix</label>
-                        <select name="select">
+                        <select id="select-contest-name">
                             <option value="no-value"></option>
                             <?php foreach($contestResult as $contest) : ?>
                                 <option value="<?php echo $contest['title'] ?>"><?php echo $contest['title'] ?></option>
@@ -50,14 +50,14 @@ $contestResult = $result->fetchAll();
                             </div><!-- /.row -->
                             <div class="row">
                                 <div class="form-group">
-                                    <input type="file" name="first-price-img" id="first-price-img">
+                                    <input type="file" name="first-price-img" id="first-price-img" onchange="readURL(this);">
+                                    <img id="blah" src="#" alt="your image" />
                                     <input type="hidden" name="MAX_FILE_SIZE" value="100000">
                                 </div>
                             </div><!-- /.row -->
                             <div class="row">
                                 <div class="form-group">
                                     <textarea name="first-price-desc" placeholder="Description du prix" class="max-char"></textarea>
-                                    <p class="char-remain"><span class="remain-first">100</span> caractères restants</p>
                                 </div>
                             </div><!-- /.row -->
                         </div><!-- /.price-form -->
@@ -78,7 +78,6 @@ $contestResult = $result->fetchAll();
                             <div class="row">
                                 <div class="form-group">
                                     <textarea name="second-price-desc" placeholder="Description du prix" class="max-char"></textarea>
-                                    <p class="char-remain"><span class="remain-second">100</span> caractères restants</p>
                                 </div>
                             </div><!-- /.row -->
                         </div><!-- /.price-form -->
@@ -99,7 +98,6 @@ $contestResult = $result->fetchAll();
                             <div class="row">
                                 <div class="form-group">
                                     <textarea name="third-price-desc" placeholder="Description du prix" class="max-char"></textarea>
-                                    <p class="char-remain"><span class="remain-third">100</span> caractères restants</p>
                                 </div>
                             </div><!-- /.row -->
                         </div><!-- /.price-form -->
