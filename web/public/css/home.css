@@ -1,6 +1,5 @@
 /* HOME STYLESHEET */
 #banner {
-  background: url(../../public/images/banner/fanta_wallpaper_hd.jpg) no-repeat center fixed;
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
   background-position: center center !important;
@@ -10,7 +9,6 @@
 }
 
 #banner .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
   width: 100%;
@@ -38,7 +36,7 @@
   width: 100%;
 }
 
-#banner .overlay .banner-content .holder .inner .contest-title   {
+#banner .overlay .banner-content .holder .inner .contest-title {
   font-family: 'Montserrat', Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -46,11 +44,15 @@
   color: #fff;
 }
 
-#banner .overlay .banner-content .holder .inner .contest-description   {
+#banner .overlay .banner-content .holder .inner .contest-description {
   font-family: 'Open Sans', Arial, sans-serif;
   width: 450px;
   text-align: center;
   margin: 0 auto 40px;
+  color: #fff;
+}
+
+#banner .overlay .banner-content .holder .inner .contest-description a {
   color: #fff;
 }
 

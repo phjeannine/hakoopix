@@ -19,7 +19,6 @@
                 <div class="form-content">
                   <form method="post" id="add-contest" action="../public/data/insert_contest.php" class="col-md-offset-1" enctype="multipart/form-data">
                     <div class="box-body col-md-11">
-
                       <div class="row">
                         <div class="form-group col-md-6">
                           <label for="title">Titre</label>

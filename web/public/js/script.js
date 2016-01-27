@@ -114,4 +114,18 @@ $(document).ready(function() {
 
     $( ".selector" )
 
+    // ADD PRICE
+    // Calcul du nombre de caractères restants
+    // pour la description d'un prix
+    var maxchars = 10;
+    $('.max-char').keyup(function () {
+        var tlength = $(this).val().length;
+        $(this).val($(this).val().substring(0, maxchars));
+        var tlength = $(this).val().length;
+        remain = maxchars - parseInt(tlength);
+        $('.remain-first').text(remain);
+        $('.remain-second').text(remain);
+        $('.remain-third').text(remain);
+    });
+
 });

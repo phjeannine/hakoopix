@@ -1,8 +1,8 @@
 <?php
 
-class addAdminController {
+class addPriceController {
 	public function indexAction($args){
-		$v = new view("addAdmin");
+		$v = new view("addPrice");
 		$v->assign("mesargs", $args);
 	}
 }

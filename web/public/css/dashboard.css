@@ -59,6 +59,11 @@
 	text-align: center;
 }
 
+.form-content {
+	overflow: auto;
+    clear: both;
+}
+
 /*----------------------*/
 /*---- DATE PICKER ----*/
 /*--------------------*/
@@ -222,5 +227,36 @@
     border-radius: 100%;
     display: block;
     margin: 0 auto;
+}
+
+/*-----------------------------*/
+/*-------- ADD PRICES --------*/
+/*---------------------------*/
+#search-contest select {
+    border-radius: inherit;
+    outline: none;
+    margin-top: 5px;
+    height: 35px;
+    width: 150px;
+}
+
+#add-prices {
+    margin-top: 50px;
+    overflow: auto;
+}
+
+#add-prices .form-control {
+	width: 90%;
+}
+
+#add-prices textarea {
+	padding: 5px;
+	resize: none;
+	height: 100px;
+	width: 90%;
+}
+
+#add-prices textarea:focus {
+	outline: none;
 }
 

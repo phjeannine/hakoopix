@@ -56,13 +56,14 @@ $contestPicture = $result->fetchAll();
 ?>
 
 <!-- Bannière & Title -->
-<div id="banner" class="container-fluid">
-    <div class="overlay">
+<?php if(isset($idContest)) { ?>
+<div id="banner" class="container-fluid" style="background: url(../../public/images/banner/<?php echo $contestResult['banner'] ?>) no-repeat center fixed;">
+    <div class="overlay" style="background-color: rgba(0, 0, 0, 0.7)">
         <div class="banner-content row">
             <div class="holder">
                 <div class="inner">
-                    <h1 class="contest-title"><?php echo $contestResult['title'] ?></h1>
-                    <p class="contest-description"><?php echo $contestResult['description'] ?></p>
+                        <h1 class="contest-title"><?php echo $contestResult['title'] ?></h1>
+                        <p class="contest-description"><?php echo $contestResult['description'] ?></p>
                     <div class="fb-connect-button">
                         <span>Envie de jouer le jeu ?</span>
                         <a href="#" onClick="logInWithFacebook()">Je participe</a>
@@ -72,6 +73,22 @@ $contestPicture = $result->fetchAll();
         </div><!-- /.container -->
     </div><!-- /.overlay -->
 </div><!-- /.banner -->
+<?php } else { ?>
+<div id="banner" class="container-fluid" style="background: url(../../public/images/banner/banner_default.jpg) no-repeat center fixed;">
+    <div class="overlay" style="background-color: rgba(0, 0, 0, 0.2)">
+        <div class="banner-content row">
+            <div class="holder">
+                <div class="inner">
+                    <h1 class="contest-title">Hakoopix <br /> Concours photo de qualité</h1>
+                    <?php if($_SESSION["role"] == "admin") { ?>
+                        <p class="contest-description">Aucun concours de créés ou d'actifs. <a href="/addContest" title="Créer un concours">Lancez-vous!</a></p>
+                    <?php } ?>
+                </div><!-- /.inner -->
+            </div><!-- /.holder -->
+        </div><!-- /.container -->
+    </div><!-- /.overlay -->
+</div><!-- /.banner -->
+<?php } ?>
 
 <!-- Homepage Content -->
 <div id="homepage" class="container">
