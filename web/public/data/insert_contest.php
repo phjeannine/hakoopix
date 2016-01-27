@@ -4,6 +4,9 @@ include("../../include/connexion.php");
 
 include("../../include/functions.php");
 
+error_reporting(E_ALL); 
+ini_set("display_errors", 1); 
+
 // On récupère nos valeurs
 $title = $_POST['title'];
 $date_begin = $_POST['begin'];

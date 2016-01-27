@@ -39,7 +39,7 @@ function upload_logo() {
 
 // Dashboard => fonction d'upload bannière 
 function upload_banner() {
-	$dossier = '../images/logo/';
+	$dossier = '../images/banner/';
 	$fichier = basename($_FILES['banner']['name']);
 	$taille_maxi = 1000000000;
 	$taille = filesize($_FILES['banner']['tmp_name']);
