@@ -88,7 +88,7 @@
 
                       <div class="row">
                         <div class="form-group col-md-12">
-                          <label><input type="checkbox">&nbsp;Actif</label>
+                          <label><input type="checkbox" name="active-contest" id="active-contest">&nbsp;Actif</label>
                         </div>
                       </div>
 
