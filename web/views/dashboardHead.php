@@ -1,4 +1,5 @@
 <!-- Navigation -->
+<?php session_start(); ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="navbar-header">
       <a class="navbar-brand" href="index.html">Logo</a>
@@ -8,9 +9,9 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
           <div id="admin-bar">
-            <img src="../public/images/img_user.png" alt="Photo profil" />
-            <p class="admin-name">John Smith</p>
-            <p class="admin-role">Administrateur</p>
+            <img src="<?php echo $_SESSION['photo'];?>" class="user-picture-profile"  alt="Photo profil" />
+            <p class="admin-name"><?php echo $_SESSION["name"];?></p>
+            <p class="admin-role">( Administrateur )</p>
           </div>
           <li><a href="/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
           <li><a href="/contestList"><i class="fa fa-fw fa-bar-chart-o"></i> Mes concours</a></li>
