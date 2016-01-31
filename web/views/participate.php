@@ -27,12 +27,12 @@
               <div class="form-group">
                   <div class="col-md-6">
                     <label for="exampleInputFile">Votre image</label>
-                    <input type="file"  class="btn btn-default" id="exampleInputFile">
+                    <input type="file"  class="btn btn-default" id="inputImage" name="mon_fichier">
                     <p class="help-block">Importer une image ou sélectionnez-la parmi vos photos</p>
                   </div>
 
                   <div class="col-md-6">
-                    <div class="uploaded_img"></div>
+                    <div class="uploaded_img"><img id="blah" src="#" alt="image"></div>
                   </div>
                 </div>
 
@@ -52,3 +52,21 @@
 
 
 </div><!-- /container -->
+
+<script type="text/javascript">
+ function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#inputImage").change(function(){
+        readURL(this);
+    });
+</script>

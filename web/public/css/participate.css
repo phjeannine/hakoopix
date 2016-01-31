@@ -1,6 +1,6 @@
 .participate .uploaded_img {
 	height: 250px;
-	width: 90%;
+	width: 100%;
 	border: 1px solid #ddd;
 	border-radius: 6px;
 	margin: 0 auto;
@@ -8,4 +8,13 @@
 
 .participate p {
 	font-size: 12px;
+}
+
+.participate .uploaded_img {
+	overflow: hidden;
+}
+
+.participate #blah {
+	max-width: 350px;
+	max-height: 350px;
 }
