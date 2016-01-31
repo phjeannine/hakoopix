@@ -123,7 +123,7 @@ $contestPicture = $result->fetchAll();
             <h3 class="title">Contributions</h3>
             <hr>
         </div>
-        <?php foreach($contestPicture as $picture) : ?>
+       <!-- <?php foreach($contestPicture as $picture) : ?>
             <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
                 <div class="item-contest">
@@ -135,7 +135,7 @@ $contestPicture = $result->fetchAll();
                 <hr>
                 <p class="item-description"><?php echo $picture['description']; ?></p>
             </div>
-        <?php endforeach; ?>
+        <?php endforeach; ?>  -->
     </div><!-- /.row -->
 
 </div><!-- /.container -->
