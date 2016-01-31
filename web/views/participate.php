@@ -1,4 +1,7 @@
 <!-- Page Content -->
+<?php
+session_start();
+?>
 <div class="container participate">
 
     <!-- Page Header -->
