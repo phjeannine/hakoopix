@@ -12,7 +12,7 @@
     <div class="row">
         <!-- Portfolio Item -->
         <?php  
-            $results = $db->query("SELECT * FROM picture WHERE id_contest='".$_SESSION['idContest']."'");
+            $results = $db->query("SELECT * FROM picture WHERE id_contest='".$_SESSION['idContest']."' ORDER BY id_picture");
             $tabResults = $results->fetchAll();
 
             foreach ($tabResults as $res) {
