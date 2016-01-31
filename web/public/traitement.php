@@ -72,4 +72,5 @@ foreach($result as $count) {
   }
 }
 
+?>
 

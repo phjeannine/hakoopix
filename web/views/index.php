@@ -46,7 +46,7 @@ $result->execute();
 $contestResult = $result->fetch();
 
 $idContest = $contestResult['id_contest'];
-
+$_SESSION['idContest'] = $idContest;
 // Sélection des images liées au concours
 $selectPicture = "SELECT * FROM picture WHERE id_contest = '".$idContest."'"; 
 $result = $db->prepare($selectPicture); 
