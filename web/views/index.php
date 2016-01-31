@@ -106,13 +106,13 @@ $contestPicture = $result->fetchAll();
 
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <img class="img-responsive" src="../public/images/price.jpg" alt="">
-            <h4 style="color: #12ba74">Premier prix</h4>
+            <h4 style="color: #12ba74">Deuxième prix</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
         </div><!-- /.price-item -->
 
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <img class="img-responsive" src="../public/images/price.jpg" alt="">
-            <h4 style="color: #12ba74">Premier prix</h4>
+            <h4 style="color: #12ba74">Troisième prix</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
         </div><!-- /.price-item -->
     </div><!-- /.row -->
