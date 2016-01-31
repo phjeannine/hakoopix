@@ -61,8 +61,8 @@ $uri = $_SERVER['REQUEST_URI'];
           <nav class="navbar navbar-fixed-top" role="navigation" style="background-color: #12ba74;">
             <div class="container">
               <div class="navbar-header">
-                  <a class="navbar-brand" href="/">Logo</a>
-                  <span>Facebook Contest</span>
+                  <a class="navbar-brand" href="/">Home</a>
+                  <span> Facebook Contest</span>
               </div>
 
               <div class="navbar-collapse collapse">
