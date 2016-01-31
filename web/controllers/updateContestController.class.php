@@ -2,8 +2,8 @@
 
 
 class updateContestController {
-	public function indexAction($args){
+	public function idAction($args){
 		$v = new view("updateContest");
-		$v->assign("mesargs", $args);
+		$v->assign("id", $args);
 	}
 }
