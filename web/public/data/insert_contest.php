@@ -15,7 +15,10 @@ $description = $_POST['description'];
 $color_theme = $_POST['color-theme'];
 $logo = $_FILES['logo']['name'];
 $banner = $_FILES['banner']['name'];
-$active_contest = $_POST['active-contest'];
+
+if(isset($active_contest)) {
+	$active_contest = $_POST['active-contest'];
+}
 
 // On vérifie si tous les champs ne sont pas null
 if(empty($title) OR empty($date_begin) OR empty($date_ending) OR empty($description))  {
@@ -42,7 +45,7 @@ if(empty($title) OR empty($date_begin) OR empty($date_ending) OR empty($descript
 	upload_logo();
 	upload_banner();
 
-	header("Location: /contestList");
+	//header("Location: /contestList");
 }
 
 ?>

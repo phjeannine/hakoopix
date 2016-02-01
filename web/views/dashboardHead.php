@@ -15,9 +15,10 @@
           </div>
           <li><a href="/dashboard"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
           <li><a href="/contestList"><i class="fa fa-fw fa-bar-chart-o"></i> Mes concours</a></li>
-          <li><a href="/contestList"><i class="fa fa-fw fa-bar-chart-o"></i> Utilisateurs</a></li>
           <li><a href="/addContest"><i class="fa fa-fw fa-table"></i> Créer un concours</a></li>
+          <li><a href="/updateContest"><i class="fa fa-fw fa-table"></i> Modifier un concours</a></li>
           <li><a href="/addPrice"><i class="fa fa-fw fa-table"></i> Ajouter des prix</a></li>
+          <li><a href="/contestList"><i class="fa fa-fw fa-bar-chart-o"></i> Utilisateurs</a></li>
           <li><a href="forms.html"><i class="fa fa-fw fa-calendar"></i> Calendrier</a></li>
       </ul>
   </div>

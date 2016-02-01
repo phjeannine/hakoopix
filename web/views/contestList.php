@@ -1,9 +1,8 @@
 <?php 
 
-$selectContest = $db->prepare("SELECT * FROM contest;");
-$selectContest->execute();
- 
-$contestResult = $selectContest->fetchAll();
+$selectContestList = $db->prepare("SELECT * FROM contest ORDER BY title ASC");
+$selectContestList->execute();
+$contestListResult = $selectContestList->fetchAll();
 
 include("dashboardHead.php");
 
@@ -28,7 +27,7 @@ include("dashboardHead.php");
                     <div class="add-contest"><a href="/addContest" title="Ajouter un concours">Ajouter un nouveau concours</a></div>
                 </div>
                 <div class="row list">
-                    <?php foreach($contestResult as $contest) :?>
+                    <?php foreach($contestListResult as $contest) :?>
                         <div class="contest col-md-4 .col-sm-2 col-xs-12">
                             <div class="contest_img">
                                 <img src="../public/images/photo_contest.jpg" alt=""/>
@@ -40,10 +39,6 @@ include("dashboardHead.php");
                                 </div>
                                 <p class="description"><strong>Description :</strong> <?php echo $contest['description'] ?></p>
                                 <p class="color-theme"><strong>Couleur du thème :</strong> <span style="background-color: <?php echo $contest['color_theme'] ?>"></span></p>
-                                <div class="contest-actions">
-                                    <a href="/updateContest?id='.$contest['id'].'" class="update-contest col-md-4"><i class="fa fa-pencil"></i> Modifier</a>
-                                    <a href="/updateContest?id='.$contest['id'].'" class="delete-contest col-md-4"><i class="fa fa-trash-o"></i> Supprimer</a>
-                                </div>
                             </div><!-- /.contest-informations -->
                         </div><!-- /.contest -->
                     <?php endforeach; ?>

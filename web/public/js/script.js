@@ -81,6 +81,6 @@ $(document).ready(function() {
         if(value == 'no-value') {
             $('#add-prices').hide();
         }
-    });
+    });    
 
 });

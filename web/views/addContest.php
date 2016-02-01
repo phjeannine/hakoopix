@@ -95,7 +95,7 @@
                         <p>Vous devez renseigner tous les champs</p>
                       </div>
 
-                      <input type="submit" class="btn btn-primary col-md-6">
+                      <input type="submit" class="btn btn-primary col-md-6" name="submit-contest">
                     </div><!-- /.box-body -->
                   </form>
                 </div><!-- /.form-content -->

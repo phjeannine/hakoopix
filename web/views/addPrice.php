@@ -25,7 +25,7 @@ $contestResult = $result->fetchAll();
                 <!-- /.row -->
 
                 <div class="form-content">
-                  <form method="post" id="search-contest" class="col-md-6">
+                  <form method="post" class="search-contest col-md-6">
                     <div class="box-body">
                         <label>Sélectionnez l'application afin d'ajouter un lot de prix</label>
                         <select id="select-contest-name">
