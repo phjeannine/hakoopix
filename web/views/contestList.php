@@ -44,7 +44,6 @@ include("dashboardHead.php");
                                     <a href="/updateContest/id/<?php echo $contest['id_contest']?>" class="update-contest col-md-4"><i class="fa fa-pencil"></i> Modifier</a>
                                     <a href="/updateContest/id/<?php echo $contest['id_contest']?>" class="delete-contest col-md-4"><i class="fa fa-trash-o"></i> Supprimer</a>
                                 </div>
-                                <?php var_dump($contest['id_contest']); ?>
                             </div><!-- /.contest-informations -->
                         </div><!-- /.contest -->
                     <?php endforeach; ?>
