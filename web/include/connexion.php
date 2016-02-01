@@ -22,4 +22,6 @@ catch(PDOException $e) {
 
 //session_start();
 
+define("__ROOT__", __DIR__ ."/");
+
 ?>
