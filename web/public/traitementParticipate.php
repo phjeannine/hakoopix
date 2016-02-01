@@ -11,19 +11,39 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 	$description = $_POST['description'];
 	$idUser = $_SESSION['idUser'];
 
-	echo "Votre userId est : ".$_SESSION['idUser'];
 
-	/*$selectContest = "SELECT * FROM contest WHERE is_active = true"; 
+	//On récupère l'id du concours
+	$selectContest = "SELECT * FROM contest WHERE is_active = true"; 
 	$result = $db->prepare($selectContest); 
 	$result->execute(); 
 	$contestResult = $result->fetch();
-	$idContest = $contestResult['id_contest'];*/
+	$idContest = $contestResult['id_contest'];
 
-	//$insertParticipation = $db->prepare("UPDATE member SET title='$title', description='$description' WHERE id_member=429");
-	//$insertParticipation = $db->prepare("INSERT INTO picture(title, description) VALUES ('".$title."', '".$description."')");
-	//$insertParticipation->execute();
-	//echo "<div class='success'>Merci pour votre inscription</div>";
+	//Je vérifie si l'user n'a pas déjà participé au concours
+		$verif = $db->prepare("SELECT id_member, id_contest FROM picture");
+		$verif->execute();
+		$result = $verif->fetchAll(PDO::FETCH_ASSOC);
+
+		//Si le tableau est vide on enregistre la 1ère participation
+		if(count($result)==0){
+			$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."')");
+				$insertParticipation->execute();
+				header('Location: /contest');
+		}
+
+		//On parcoure le tableau
+		foreach($result as $count){
+			if(($idUser === $count['id_member']) && ($idContest === $count['id_contest'])) {
+				header('Location: /contest');
+				exit();
+			} else {
+				//On ajoute à la BDD la participation du membre
+				$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."')");
+				$insertParticipation->execute();
+				header('Location: /contest');
+			}
+		}
 
 }else {
-	echo "<div class='error'>Attention, tous les champs doivent être remplis !</div>";
+	echo "<p>Attention, tous les champs doivent être remplis !</p>";
 }
