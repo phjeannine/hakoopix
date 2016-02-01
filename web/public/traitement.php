@@ -35,6 +35,7 @@ foreach($response as $data){
     $_SESSION["idUser"] = $userId;
     $_SESSION["photo"] = $photo;
     header('Location: /contest');
+    exit();
   }
 }
 
@@ -43,10 +44,11 @@ $verif = $db->prepare("SELECT id_member FROM member");
 $verif->execute();
 
 $result = $verif->fetchAll(PDO::FETCH_ASSOC);
-print_r($result);
 
 //Si le tableau est vide on enregistre le user
 if(count($result)==0) {
+
+   $_SESSION["role"] = "user";
   $_SESSION["name"] = $firstName." ".$lastName;
   $_SESSION["idUser"] = $userId;
   $_SESSION["photo"] = $photo;
@@ -58,16 +60,21 @@ if(count($result)==0) {
 //On parcoure le tableau
 foreach($result as $count) {
 
-  if($userId != $result) {
-    //echo "on enregistre pas<br>";
-    header('Location: /contest');
-  } else {
-    //echo "on enregistre";
+   $_SESSION["role"] = "user";
     $_SESSION["name"] = $firstName." ".$lastName;
     $_SESSION["idUser"] = $userId;
     $_SESSION["photo"] = $photo;
+
+
+  if($userId != $count['id_member']) {
+    
+    //echo "on enregistre"
     $insertUser = $db->prepare("INSERT INTO member(id_member, lastname, firstname, picture) VALUES ('".$userId."','".$lastName."','".$firstName."','".$photo."')");
     $insertUser->execute();
+    header('Location: /contest');
+
+  } else {
+   //echo "on enregistre pas<br>";
     header('Location: /contest');
   }
 }

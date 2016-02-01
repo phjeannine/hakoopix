@@ -4,12 +4,14 @@ session_start();
 
 include("../include/connexion.php");
 
+include("../include/functions.php");
 
 //On récupère nos valeurs
-if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['title']) && !empty($_POST['description'])) {
+if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_FILES['imgParticipation'])) {
 	$title = $_POST['title'];
 	$description = $_POST['description'];
 	$idUser = $_SESSION['idUser'];
+	$participation = $_FILES['imgParticipation']['name'];
 
 
 	//On récupère l'id du concours
@@ -26,8 +28,10 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 
 		//Si le tableau est vide on enregistre la 1ère participation
 		if(count($result)==0){
-			$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."')");
+			$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member, image_link) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."', '".$participation."')");
 				$insertParticipation->execute();
+
+				upload_participation();
 				header('Location: /contest');
 		}
 
@@ -38,12 +42,17 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 				exit();
 			} else {
 				//On ajoute à la BDD la participation du membre
-				$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."')");
+				$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member, image_link) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."', '".$participation."')");
 				$insertParticipation->execute();
 				header('Location: /contest');
+				upload_participation();
+
 			}
 		}
 
 }else {
 	echo "<p>Attention, tous les champs doivent être remplis !</p>";
 }
+
+
+?>

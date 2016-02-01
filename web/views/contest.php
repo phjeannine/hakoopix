@@ -18,7 +18,7 @@
             foreach ($tabResults as $res) {
         ?>
         <div class="col-md-4 col-sm-4 portfolio-item">
-            <a href="#"><?php echo '<img class="img-responsive" src="../public/images/'.$res["image_link"].'" alt="">'; ?></a>
+            <a href="#"><?php echo '<img class="img-responsive" src="../public/images/participation/'.$res["image_link"].'" alt="">'; ?></a>
             <div class="item-contest">
                 <div class="col-md-9"><?php echo '<a href="../public/data/updateLike.php?image='.$res["id_picture"].'&nbLike='.$res["nb_like"].'" class="like item-contest-icon"> <span>like</span></a> '; echo ''.$res["nb_like"];?></div>
                 <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
