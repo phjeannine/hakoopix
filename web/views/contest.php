@@ -11,82 +11,27 @@
     <!-- Projects Row -->
     <div class="row">
         <!-- Portfolio Item -->
-        <div class="col-md-4 portfolio-item">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <!-- Portfolio Item -->
-        <div class="col-md-4 portfolio-item">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <!-- Portfolio Item -->
-        <div class="col-md-4 portfolio-item">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-    </div><!-- /.row -->
+        <?php  
+            $results = $db->query("SELECT * FROM picture WHERE id_contest='".$_SESSION['idContest']."' ORDER BY id_picture");
+            $tabResults = $results->fetchAll();
 
-    <!-- Projects Row -->
-    <div class="row">
-        <!-- Portfolio Item -->
-        <div class="col-md-4 portfolio-item">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
+            foreach ($tabResults as $res) {
+        ?>
+        <div class="col-md-4 col-sm-4 portfolio-item">
+            <a href="#"><?php echo '<img class="img-responsive" src="../public/images/'.$res["image_link"].'" alt="">'; ?></a>
             <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
+                <div class="col-md-9"><?php echo '<a href="../public/data/updateLike.php?image='.$res["id_picture"].'&nbLike='.$res["nb_like"].'" class="like item-contest-icon"> <span>like</span></a> '; echo ''.$res["nb_like"];?></div>
                 <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
             </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
+            <h3 class="item-title" style="color: #12ba74"> <?php echo $res['title']; ?></h3>
             <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
             <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <p class="item-description"><?php echo $res['description']; ?></p>
         </div>
-        <!-- Portfolio Item -->
-        <div class="col-md-4 portfolio-item">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <!-- Portfolio Item -->
-        <div class="col-md-4 portfolio-item">
-            <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-            <div class="item-contest">
-                <div class="like item-contest-icon col-md-9"><span>like</span> 12</div>
-                <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-            </div>
-            <h3 class="item-title" style="color: #12ba74">Titre de la photo</h3>
-            <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74">{date}</span></p>
-            <hr>
-            <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-    </div>
+        <?php  
+            };
+        ?>
+    </div><!-- /.row -->
 
     <hr>
 

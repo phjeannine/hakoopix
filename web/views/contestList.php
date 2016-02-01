@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $selectContestList = $db->prepare("SELECT * FROM contest ORDER BY title ASC");
 $selectContestList->execute();
@@ -39,6 +39,13 @@ include("dashboardHead.php");
                                 </div>
                                 <p class="description"><strong>Description :</strong> <?php echo $contest['description'] ?></p>
                                 <p class="color-theme"><strong>Couleur du thème :</strong> <span style="background-color: <?php echo $contest['color_theme'] ?>"></span></p>
+<<<<<<< HEAD
+=======
+                                <div class="contest-actions">
+                                    <a href="/updateContest/id/<?php echo $contest['id_contest']?>" class="update-contest col-md-4"><i class="fa fa-pencil"></i> Modifier</a>
+                                    <a href="/updateContest/id/<?php echo $contest['id_contest']?>" class="delete-contest col-md-4"><i class="fa fa-trash-o"></i> Supprimer</a>
+                                </div>
+>>>>>>> c6ddd2fbb7e4a889da5486c571af6846512e00d8
                             </div><!-- /.contest-informations -->
                         </div><!-- /.contest -->
                     <?php endforeach; ?>

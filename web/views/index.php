@@ -46,7 +46,7 @@ $result->execute();
 $contestResult = $result->fetch();
 
 $idContest = $contestResult['id_contest'];
-
+$_SESSION['idContest'] = $idContest;
 // Sélection des images liées au concours
 $selectPicture = "SELECT * FROM picture WHERE id_contest = '".$idContest."'"; 
 $result = $db->prepare($selectPicture); 
@@ -106,13 +106,13 @@ $contestPicture = $result->fetchAll();
 
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <img class="img-responsive" src="../public/images/price.jpg" alt="">
-            <h4 style="color: #12ba74">Premier prix</h4>
+            <h4 style="color: #12ba74">Deuxième prix</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
         </div><!-- /.price-item -->
 
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <img class="img-responsive" src="../public/images/price.jpg" alt="">
-            <h4 style="color: #12ba74">Premier prix</h4>
+            <h4 style="color: #12ba74">Troisième prix</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
         </div><!-- /.price-item -->
     </div><!-- /.row -->
@@ -123,7 +123,7 @@ $contestPicture = $result->fetchAll();
             <h3 class="title">Contributions</h3>
             <hr>
         </div>
-        <?php foreach($contestPicture as $picture) : ?>
+       <!-- <?php foreach($contestPicture as $picture) : ?>
             <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
                 <div class="item-contest">
@@ -135,7 +135,7 @@ $contestPicture = $result->fetchAll();
                 <hr>
                 <p class="item-description"><?php echo $picture['description']; ?></p>
             </div>
-        <?php endforeach; ?>
+        <?php endforeach; ?>  -->
     </div><!-- /.row -->
 
 </div><!-- /.container -->
