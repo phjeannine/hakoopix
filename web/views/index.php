@@ -62,7 +62,7 @@ $contestObj = new contestModel();
 $contestObj->getOneByActive(true);
 $title = $contestObj->getTitle();
 $description = $contestObj->getDescription();
-$id_contest = $contestObj->getIdContest();
+$id_contest = $contestObj->getId();
             
 if(!empty($id_contest)) { ?>
 
