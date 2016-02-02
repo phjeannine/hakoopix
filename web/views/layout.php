@@ -1,6 +1,4 @@
 <?php
-session_start(); 
-include("include/connexion.php");
 
 $uri = $_SERVER['REQUEST_URI'];
 
@@ -18,45 +16,45 @@ $uri = $_SERVER['REQUEST_URI'];
     <title>Hakoopix | Concours Photo Facebook en ligne</title>
 
     <!-- CSS Stylesheets -->
-    <link href="<?php __ROOT__ ?>/public/css/jquery-ui.min.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/public/css/animate.min.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/animate.min.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest") { ?>
-      <link href="<?php __ROOT__ ?>/public/css/3-col-portfolio.css" rel="stylesheet">
+      <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
     <!-- General Stylesheets -->
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest") { ?>
-      <link href="<?php __ROOT__ ?>/public/css/main.css" rel="stylesheet">
-      <link href="<?php __ROOT__ ?>/public/css/bootstrap.min.css" rel="stylesheet">
-      <link href="<?php __ROOT__ ?>/public/css/3-col-portfolio.css" rel="stylesheet">
+      <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
+      <link href="<?php APPLICATION_PATH ?>/public/css/bootstrap.min.css" rel="stylesheet">
+      <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
     <!-- General Stylesheets -->
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest") { ?>
-      <link href="<?php __ROOT__ ?>/public/css/main.css" rel="stylesheet">
+      <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
     <?php } ?>
-    <link href="<?php __ROOT__ ?>/public/css/home.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/public/css/contest.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/public/css/login.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/public/css/addAdmin.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/public/css/participate.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/public/css/dashboard.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/home.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/contest.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/login.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/addAdmin.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/participate.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/dashboard.css" rel="stylesheet">
 
     <!-- SB Admin -->
-    <link href="<?php __ROOT__ ?>/templates/sb-admin/css/sb-admin.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/templates/sb-admin/css/plugins/morris.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/templates/sb-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/sb-admin.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/plugins/morris.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Fonts -->
-    <link href="<?php __ROOT__ ?>/public/fonts/opensans.css" rel="stylesheet">
-    <link href="<?php __ROOT__ ?>/public/fonts/montserrat.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/fonts/opensans.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/fonts/montserrat.css" rel="stylesheet">
 
     <!-- SCRIPTS -->
-    <script src="<?php __ROOT__ ?>/public/js/jquery-1.12.0.min.js" type="text/javascript"></script>
-    <script src="<?php __ROOT__ ?>/public/js/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="<?php __ROOT__ ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php APPLICATION_PATH ?>/public/js/jquery-1.12.0.min.js" type="text/javascript"></script>
+    <script src="<?php APPLICATION_PATH ?>/public/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="<?php APPLICATION_PATH ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
 
 </head>
 <body cz-shortcut-listen="true">
@@ -87,11 +85,11 @@ $uri = $_SERVER['REQUEST_URI'];
                         <li><a href="/participate" title="Administration">Participer</a></li>
                         <li><a href="/participate" title="Administration">Mes photos</a></li>
                         <hr>
-                        <li><a href="<?php __ROOT__ ?>/public/data/disconnect.php">Déconnexion</a></li>
+                        <li><a href="<?php APPLICATION_PATH ?>/public/data/disconnect.php">Déconnexion</a></li>
                       <?php } ?>
                     </ul>
                   </li>
-                  <li><a href="<?php __ROOT__ ?>/public/data/disconnect.php"><i class="fa fa-power-off"></i></a></li>
+                  <li><a href="<?php APPLICATION_PATH ?>/public/data/disconnect.php"><i class="fa fa-power-off"></i></a></li>
                 </ul>
                 <?php } ?>
               </div><!-- /.navbar-collapse -->
@@ -109,10 +107,10 @@ $uri = $_SERVER['REQUEST_URI'];
   </div><!-- /.site-wrapper -->
 
   <!-- SCRIPTS -->
-  <script src="<?php __ROOT__ ?>/public/js/script.js" type="text/javascript"></script>
-  <script src="<?php __ROOT__ ?>/public/js/functions.js" type="text/javascript"></script>
-  <script src="<?php __ROOT__ ?>/public/js/jscolor.js" type="text/javascript"></script>
-  <script src="<?php __ROOT__ ?>/templates/sb-admin/js/plugins/morris/raphael.min.js"></script>
+  <script src="<?php APPLICATION_PATH ?>/public/js/script.js" type="text/javascript"></script>
+  <script src="<?php APPLICATION_PATH ?>/public/js/functions.js" type="text/javascript"></script>
+  <script src="<?php APPLICATION_PATH ?>/public/js/jscolor.js" type="text/javascript"></script>
+  <script src="<?php APPLICATION_PATH ?>/templates/sb-admin/js/plugins/morris/raphael.min.js"></script>
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <!-- <script src="../templates/sb-admin/js/plugins/morris/morris.min.js"></script> -->
   <!-- <script src="../templates/sb-admin/js/plugins/morris/morris-data.js"></script> -->

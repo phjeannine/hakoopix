@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 define('APPLICATION_PATH',realpath(dirname(__FILE__)));
 

@@ -1,66 +1,66 @@
 <?php
-class usersModel extends basesql{
+class pictureModel extends basesql{
 
 	protected $id;
-	protected $name;
-	protected $surname;
-	protected $email;
-	protected $pwd;
-	protected $status;
+	protected $title;
+	protected $description;
+	protected $nb_like;
+	protected $image_link;
+	protected $id_contest;
+	protected $id_member;
 
-	public function __construct($id=-1, $name="", $surname="", $email="", $pwd="", $status=0){
+	public function __construct($title="", $description="", $nb_like=0, $image_link="", $id_contest="", $id_member=""){
 		
 		parent::__construct();
 
-		$this->setId($id);
-    	$this->setName($name);
-    	$this->setSurname($surname);
-    	$this->setEmail($email);
-    	$this->setPwd($pwd);
-    	$this->setStatus($status);
+    	$this->setTitle($title);
+    	$this->setDescription($description);
+    	$this->setNbLike($nb_like);
+    	$this->setImageLink($image_link);
+    	$this->setIdContest($id_contest);
+    	$this->setIdMember($id_member);
 	}
 
 
 	// SETTERS
-	public function setId($id){
-		if(!is_numeric($id)) die();
-		$this->id = $id;
+	public function setTitle($title){
+		$this->title = trim($title);
 	}
-	public function setName($name){
-		$this->name = trim($name);
+	public function setDescription($description){
+		$this->description = trim($description);
 	}
-	public function setSurname($surname){
-		$this->surname = trim($surname);
+	public function setNbLike($nb_like){
+		$this->nb_like = $nb_like;
 	}
-	public function setEmail($email){
-		$this->email = trim($email);
+	public function setImageLink($image_link){
+		$this->image_link = $image_link;
 	}
-	public function setPwd($pwd){
-		$this->pwd = md5($pwd);
+	public function setIdContest($id_contest){
+		$this->id_contest = $id_contest;
 	}
-	public function setStatus($status){
-		$this->status = $status;
+	public function setIdMember($id_member){
+		$this->id_member = $id_member;
 	}
 
 
 	// GETTERS
-	public function getId(){
-		return $this->id;
+	public function getTitle(){
+		return $this->title;
 	}
-	public function getName(){
-		return $this->name;
+	public function getDescription(){
+		return $this->description;
 	}
-	public function getSurname(){
-		return $this->surname;
+	public function getNbLike(){
+		return $this->nb_like;
 	}
-	public function getEmail(){
-		return $this->email;
+	public function getImageLink(){
+		return $this->image_link;
 	}
-	public function getPwd(){
-		return $this->pwd;
+	public function getIdContest(){
+		return $this->id_contest;
 	}
-	public function getStatus(){
-		return $this->status;
+	public function getIdMember(){
+		return $this->id_member;
 	}
 
 

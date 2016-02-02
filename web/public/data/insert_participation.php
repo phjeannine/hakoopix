@@ -1,14 +1,18 @@
 <?php
 
 session_start();
+$title = $_POST['title'];
+$description = $_POST['description'];
+$idUser = $_SESSION['idUser'];
+$participation = $_FILES['imgParticipation']['name'];
 
-include("../../include/connexion.php");
-
-include("../../include/functions.php");
+$participateObj = new pictureModel("title", "description", "nb_like", "image_link", 1, 2);
+$participateObj->save();
 
 //On récupère nos valeurs
+/*
 if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['title']) && !empty($_POST['description'])) {
-	$title = $_POST['title'];
+	$title = $_POST['title']²;
 	$description = $_POST['description'];
 	$idUser = $_SESSION['idUser'];
 	$participation = $_FILES['imgParticipation']['name'];
@@ -52,6 +56,6 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 }else {
 	echo "<p>Attention, tous les champs doivent être remplis !</p>";
 }
-
+*/
 
 ?>

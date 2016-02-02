@@ -48,14 +48,18 @@ class basesql{
 
 		}else{
 			// "Insert";
+			unset($child_vars[0]);
 			$sql = "INSERT INTO ".$this->table." 
 					( " . implode(",", $child_vars) . ") 
 					VALUES ( :" . implode(",:", $child_vars) . ");";
+					echo $sql;
 			$query = $this->pdo->prepare($sql);
 
 			foreach ($child_vars as $var) {
 				$array_to_execute[$var] = $this->$var;
 			}
+
+			print_r($array_to_execute);
 
 			$query->execute($array_to_execute);
 

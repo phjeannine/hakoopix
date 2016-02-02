@@ -1,6 +1,15 @@
 <!-- Page Content -->
 <div class="container participate">
+<?php
 
+  require_once __DIR__ . '/../public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
+$fb = new Facebook\Facebook([
+    'app_id' => '1009248699126286',
+    'app_secret' => 'f54e20be246eb9e9ec5b13ea64c1e46c',
+    'default_graph_version' => 'v2.5',
+    ]);
+
+?>
     <!-- Page Header -->
     <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -17,7 +26,7 @@
             <h3 class="box-title"></h3>
           </div><!-- /.box-header -->
           <!-- form start -->
-          <form role="form" class="col-md-offset-1 ol-sm-offset-1" method="POST" action="../public/data/insert_participation.php" enctype="multipart/form-data">
+          <form role="form" class="col-md-offset-1 ol-sm-offset-1" method="POST" action="/participate/insert" enctype="multipart/form-data">
             <div class="box-body col-md-11">
               <div class="form-group col-md-12">
                 <label for="exampleInputEmail1">Titre</label>
@@ -29,6 +38,8 @@
                     <label for="exampleInputFile">Votre image</label>
                     <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
                     <p class="help-block">Importer une image ou sélectionnez-la parmi vos photos</p>
+
+                    
                   </div>
 
                   <div class="col-md-6 col-sm-6">
