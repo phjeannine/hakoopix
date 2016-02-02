@@ -7,7 +7,6 @@ class participateController{
 		$v->assign("mesargs", $args);
 	}
 
-
 	public function insertAction($args){
 		$title = $_POST['title'];
 		$description = $_POST['description'];

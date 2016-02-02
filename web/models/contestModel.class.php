@@ -1,7 +1,7 @@
 <?php
 class contestModel extends basesql{
 
-	protected $id_contest;
+	protected $id;
 	protected $title;
 	protected $date_begin;
 	protected $date_ending;
@@ -10,13 +10,13 @@ class contestModel extends basesql{
 	protected $banner;
 	protected $logo;
 	protected $is_active;
-	protected $id_picture;
+	protected $is_delete;
 
-	public function __construct($id_contest=-1, $title="", $date_begin="", $date_ending="", $description="", $color_theme="", $banner="", $logo="", $is_active=false, $id_picture=0){
+	public function __construct($id=-1, $title="", $date_begin="", $date_ending="", $description="", $color_theme="", $banner="", $logo="", $is_active=false, $is_delete=false){
 		
 		parent::__construct();
 
-		$this->setIdContest($id_contest);
+		$this->setId($id);
     	$this->setTitle($title);
     	$this->setDateBegin($date_begin);
     	$this->setDateEnding($date_ending);
@@ -25,14 +25,13 @@ class contestModel extends basesql{
     	$this->setBanner($banner);
     	$this->setLogo($logo);
     	$this->setActive($is_active);
-    	$this->setIdPicture($id_picture);
+    	$this->setDelete($is_delete);
 	}
 
 
 	// SETTERS
-	public function setIdContest($id_contest){
-		if(!is_numeric($id_contest)) die();
-		$this->id_contest = $id_contest;
+	public function setId($id){
+		$this->id = $id;
 	}
 	public function setTitle($title){
 		$this->title = trim($title);
@@ -58,15 +57,14 @@ class contestModel extends basesql{
 	public function setActive($is_active){
 		$this->is_active = trim($is_active);
 	}
-	public function setIdPicture($id_picture){
-		if(!is_numeric($id_picture)) die();
-		$this->id_picture = $id_picture;
+	public function setDelete($is_delete){
+		$this->is_delete = trim($is_delete);
 	}
 
 
 	// GETTERS
-	public function getIdContest(){
-		return $this->id_contest;
+	public function getId(){
+		return $this->id;
 	}
 	public function getTitle(){
 		return $this->title;
@@ -86,20 +84,15 @@ class contestModel extends basesql{
 	public function getBanner(){
 		return $this->banner;
 	}
-	public function getLogo()){
+	public function getLogo(){
 		return $this->logo;
 	}
 	public function getActive(){
 		return $this->is_active;
 	}
-	public function getIdPicture(){
-		return $this->id_picture;
+	public function getDelete(){
+		return $this->is_delete;
 	}
 
-
 }
-
-
-
-
 

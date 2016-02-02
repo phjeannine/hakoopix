@@ -1,16 +1,16 @@
 <?php
 class usersModel extends basesql{
 
-	protected $id_member;
+	protected $id;
 	protected $lastname;
 	protected $firstname;
 	protected $picture;
 
-	public function __construct($id_member=-1, $lastname="", $firstname="", $picture=""){
+	public function __construct($id=-1, $lastname="", $firstname="", $picture=""){
 
 		parent::__construct();
 
-		  $this->setIdMember($id_member);
+		$this->setIdMember($id_member);
     	$this->setLastame($lastname);
     	$this->setFirstname($firstname);
     	$this->setPicture($picture);
@@ -18,9 +18,9 @@ class usersModel extends basesql{
 
 
 	// SETTERS
-	public function setIdMember($id_member){
-		if(!is_numeric($id_member)) die();
-		$this->id_member = $id_member;
+	public function setId($id){
+		if(!is_numeric($id)) die();
+		$this->id = $id;
 	}
 	public function setLastame($lastname){
 		$this->lastname = trim($lastname);
@@ -34,8 +34,8 @@ class usersModel extends basesql{
 
 
 	// GETTERS
-	public function getIdMember(){
-		return $this->id_member;
+	public function getId(){
+		return $this->id;
 	}
 	public function getLastname(){
 		return $this->lastname;

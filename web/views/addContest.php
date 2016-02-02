@@ -8,20 +8,20 @@ include("dashboardHead.php");
     <div id="page-wrapper">
         <div class="container-fluid">
             <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">Ajouter un concours</h1>
-                        <ol class="breadcrumb">
-                            <li><i class="fa fa-dashboard"></i>  <a href="/dashboard">Dashboard</a></li>
-                            <li class="active"><i class="fa fa-edit"></i> Ajouter un concours</li>
-                        </ol>
-                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Ajouter un concours</h1>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-dashboard"></i>  <a href="/dashboard">Dashboard</a></li>
+                        <li class="active"><i class="fa fa-edit"></i> Ajouter un concours</li>
+                    </ol>
                 </div>
-                <!-- /.row -->
+            </div>
+            <!-- /.row -->
 
                 <!-- Main content -->
                 <div class="form-content">
-                  <form method="post" id="add-contest" action="../public/data/insert_contest.php" class="col-md-offset-1" enctype="multipart/form-data">
+                  <form method="post" id="add-contest" action="/addContest/insert" class="col-md-offset-1" enctype="multipart/form-data">
                     <div class="box-body col-md-11">
                       <div class="row">
                         <div class="form-group col-md-6">
