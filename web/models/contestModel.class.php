@@ -12,11 +12,10 @@ class contestModel extends basesql{
 	protected $is_active;
 	protected $is_delete;
 
-	public function __construct($id=-1, $title="", $date_begin="", $date_ending="", $description="", $color_theme="", $banner="", $logo="", $is_active=false, $is_delete=false){
+	public function __construct($title="", $date_begin="", $date_ending="", $description="", $color_theme="", $banner="", $logo="", $is_active=false, $is_delete=false){
 		
 		parent::__construct();
 
-		$this->setId($id);
     	$this->setTitle($title);
     	$this->setDateBegin($date_begin);
     	$this->setDateEnding($date_ending);
@@ -30,9 +29,6 @@ class contestModel extends basesql{
 
 
 	// SETTERS
-	public function setId($id){
-		$this->id = $id;
-	}
 	public function setTitle($title){
 		$this->title = trim($title);
 	}
