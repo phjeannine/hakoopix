@@ -1,72 +1,50 @@
 <?php
 class usersModel extends basesql{
 
-	protected $id;
-	protected $name;
-	protected $surname;
-	protected $email;
-	protected $pwd;
-	protected $status;
+	protected $id_member;
+	protected $lastname;
+	protected $firstname;
+	protected $picture;
 
-	public function __construct($id=-1, $name="", $surname="", $email="", $pwd="", $status=0){
-		
+	public function __construct($id_member=-1, $lastname="", $firstname="", $picture=""){
+
 		parent::__construct();
 
-		$this->setId($id);
-    	$this->setName($name);
-    	$this->setSurname($surname);
-    	$this->setEmail($email);
-    	$this->setPwd($pwd);
-    	$this->setStatus($status);
+		  $this->setIdMember($id_member);
+    	$this->setLastame($lastname);
+    	$this->setFirstname($firstname);
+    	$this->setPicture($picture);
 	}
 
 
 	// SETTERS
-	public function setId($id){
-		if(!is_numeric($id)) die();
-		$this->id = $id;
+	public function setIdMember($id_member){
+		if(!is_numeric($id_member)) die();
+		$this->id_member = $id_member;
 	}
-	public function setName($name){
-		$this->name = trim($name);
+	public function setLastame($lastname){
+		$this->lastname = trim($lastname);
 	}
-	public function setSurname($surname){
-		$this->surname = trim($surname);
+	public function setFirstname($firstname){
+		$this->firstname = trim($firstname);
 	}
-	public function setEmail($email){
-		$this->email = trim($email);
-	}
-	public function setPwd($pwd){
-		$this->pwd = md5($pwd);
-	}
-	public function setStatus($status){
-		$this->status = $status;
+	public function setPicture($picture){
+		$this->picture = trim($picture);
 	}
 
 
 	// GETTERS
-	public function getId(){
-		return $this->id;
+	public function getIdMember(){
+		return $this->id_member;
 	}
-	public function getName(){
-		return $this->name;
+	public function getLastname(){
+		return $this->lastname;
 	}
-	public function getSurname(){
-		return $this->surname;
+	public function getFirstname(){
+		return $this->firstname;
 	}
-	public function getEmail(){
-		return $this->email;
+	public function getPicture(){
+		return $this->picture;
 	}
-	public function getPwd(){
-		return $this->pwd;
-	}
-	public function getStatus(){
-		return $this->status;
-	}
-
 
 }
-
-
-
-
-
