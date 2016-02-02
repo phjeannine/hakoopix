@@ -1,5 +1,4 @@
 <!-- Navigation -->
-<?php session_start(); ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="navbar-header">
       <a class="navbar-brand" href="index.html">Logo</a>

@@ -1,4 +1,8 @@
-<?php include("dashboardHead.php"); ?>
+<?php 
+
+include("dashboardHead.php");
+
+?>
 
 <div id="wrapper">
     <div id="page-wrapper">

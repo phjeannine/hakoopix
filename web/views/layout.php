@@ -34,7 +34,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <?php } ?>
 
     <!-- General Stylesheets -->
-    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice") { ?>
+    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest") { ?>
       <link href="<?php __ROOT__ ?>/public/css/main.css" rel="stylesheet">
     <?php } ?>
     <link href="<?php __ROOT__ ?>/public/css/home.css" rel="stylesheet">
