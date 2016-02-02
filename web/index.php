@@ -8,8 +8,14 @@ function includeCore($class){
     }
 }
 
-spl_autoload_register("includeCore");
+function includeModel($class){
+    if(file_exists("models/".$class.".class.php")){
+        include "models/".$class.".class.php";
+    }
+}
 
+spl_autoload_register("includeCore");
+spl_autoload_register("includeModel");
 
 $route = routing:: getRouting();
 
