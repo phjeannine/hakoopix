@@ -31,10 +31,12 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 			$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member, image_link) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."', '".$participation."')");
 				$insertParticipation->execute();
 
-				upload_participation();
-				header('Location: /contest');
+				//upload_participation();
+				//header('Location: /contest');
+				//exit();
+				echo "noo";
 		}
-
+/*
 		//On parcoure le tableau
 		foreach($result as $count){
 			if(($idUser === $count['id_member']) && ($idContest === $count['id_contest'])) {
@@ -44,11 +46,12 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 				//On ajoute à la BDD la participation du membre
 				$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member, image_link) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."', '".$participation."')");
 				$insertParticipation->execute();
-				header('Location: /contest');
 				upload_participation();
+				header('Location: /contest');
+				exit();
 
 			}
-		}
+		}*/
 
 }else {
 	echo "<p>Attention, tous les champs doivent être remplis !</p>";

@@ -21,13 +21,13 @@
             <div class="box-body col-md-11">
               <div class="form-group col-md-12">
                 <label for="exampleInputEmail1">Titre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter title..." name="title">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter title..." name="title" required>
               </div>
               
               <div class="form-group">
                   <div class="col-md-6 col-sm-6">
                     <label for="exampleInputFile">Votre image</label>
-                    <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation">
+                    <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
                     <p class="help-block">Importer une image ou sélectionnez-la parmi vos photos</p>
                   </div>
 

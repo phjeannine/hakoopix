@@ -7,7 +7,7 @@ include("../../include/connexion.php");
 include("../../include/functions.php");
 
 //On récupère nos valeurs
-if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['title']) && !empty($_POST['description']) && !empty($_FILES['imgParticipation'])) {
+if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['title']) && !empty($_POST['description'])) {
 	$title = $_POST['title'];
 	$description = $_POST['description'];
 	$idUser = $_SESSION['idUser'];
@@ -30,7 +30,6 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 		if(count($result)==0){
 			$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member, image_link) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."', '".$participation."')");
 				$insertParticipation->execute();
-				
 				upload_participation();
 				header('Location: /contest');
 		}
@@ -44,8 +43,8 @@ if(isset($_POST['title']) && isset($_POST['description']) && !empty($_POST['titl
 				//On ajoute à la BDD la participation du membre
 				$insertParticipation = $db->prepare("INSERT INTO picture(title, description, id_contest, id_member, image_link) VALUES ('".$title."', '".$description."', '".$idContest."', '".$idUser."', '".$participation."')");
 				$insertParticipation->execute();
-				header('Location: /contest');
 				upload_participation();
+				header('Location: /contest');
 
 			}
 		}
