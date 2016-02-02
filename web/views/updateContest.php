@@ -6,12 +6,6 @@ $selectContestList = $db->prepare("SELECT * FROM contest");
 $selectContestList->execute();
 $contestListResult = $selectContestList->fetchAll();
 
-/*
-$selectContest = $db->prepare('SELECT * FROM contest');
-$selectContest->execute();
-$contestResult = $selectContest->fetchAll();
-*/
-
 ?>
 
 <div id="wrapper">

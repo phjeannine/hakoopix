@@ -23,7 +23,7 @@ span {
 
 /* General */
 .navbar-fixed-top {
-	position: inherit;
+	position: fixed;
 }
 
 .navbar {
