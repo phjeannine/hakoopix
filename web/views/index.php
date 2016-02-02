@@ -40,7 +40,7 @@
 //
 
 // Sélection du concours actif
-$selectContest = "SELECT * FROM contest WHERE is_active = true"; 
+/*$selectContest = "SELECT * FROM contest WHERE is_active = true"; 
 $result = $db->prepare($selectContest); 
 $result->execute(); 
 $contestResult = $result->fetch();
@@ -51,19 +51,28 @@ $_SESSION['idContest'] = $idContest;
 $selectPicture = "SELECT * FROM picture WHERE id_contest = '".$idContest."'"; 
 $result = $db->prepare($selectPicture); 
 $result->execute(); 
-$contestPicture = $result->fetchAll();
+$contestPicture = $result->fetchAll();*/
 
 ?>
 
 <!-- Bannière & Title -->
-<?php if(isset($idContest)) { ?>
+<?php 
+
+$contestObj = new contestModel();
+$contestObj->getOneByActive(true);
+$title = $contestObj->getTitle();
+$description = $contestObj->getDescription();
+$id_contest = $contestObj->getIdContest();
+            
+if(!empty($id_contest)) { ?>
+
 <div id="banner" class="container-fluid" style="background: url(../../public/images/banner/<?php echo $contestResult['banner'] ?>) no-repeat center fixed;">
     <div class="overlay" style="background-color: rgba(0, 0, 0, 0.7)">
         <div class="banner-content row">
             <div class="holder">
                 <div class="inner">
-                        <h1 class="contest-title"><?php echo $contestResult['title'] ?></h1>
-                        <p class="contest-description"><?php echo $contestResult['description'] ?></p>
+                        <h1 class="contest-title"><?php echo $title ?></h1>
+                        <p class="contest-description"><?php echo $description ?></p>
                     <div class="fb-connect-button">
                         <span>Envie de jouer le jeu ?</span>
                         <a href="#" onClick="logInWithFacebook()">Je participe</a>
@@ -122,6 +131,7 @@ $contestPicture = $result->fetchAll();
         <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
             <h3 class="title">Contributions</h3>
             <hr>
+           
         </div>
        <!-- <?php foreach($contestPicture as $picture) : ?>
             <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">

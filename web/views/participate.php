@@ -39,7 +39,11 @@ $fb = new Facebook\Facebook([
                     <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
                     <p class="help-block">Importer une image ou sélectionnez-la parmi vos photos</p>
 
-                    
+                    <?php
+
+                      $response = $fb->get('/'.$idUser.'?fields=albums');
+
+                    ?>
                   </div>
 
                   <div class="col-md-6 col-sm-6">
