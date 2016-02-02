@@ -2,9 +2,9 @@
 class basesql{
 
 	private $pdo;
-	private $connect = "mysql:host=localhost;dbname=projetmvc";
-	private $user_sql = "root";
-	private $pwd_sql = "root";
+	private $connect = "pgsql:host=ec2-54-204-8-224.compute-1.amazonaws.com;dbname=d5p9s6nvf6ggtq";
+	private $user_sql = "bjcjnkzygeqlza";
+	private $pwd_sql = "zmXSRzTXA2OWa_KOCJTbD53g82";
 	private $table;
 	private $class;
 
@@ -17,20 +17,17 @@ class basesql{
 	}
 
 
-	public function connect(){
+	public function connect() {
 		try{
 			$this->pdo = new PDO($this->connect, $this->user_sql, $this->pwd_sql);	
-		}catch(Exception $e)
-		{
+		} catch(Exception $e) {
 			die("Erreur SQL ".$e->getMessage());
 		}
 	}
 
 	public function save(){
-		echo "je sauvegarde dans la table : ";
-		echo $this->table;
 
-		//Je récupère toutes les variables de la classe users
+		//Je récupère toutes les variables
 		$all_vars = array_keys(get_object_vars($this));
 		$pdo_vars = array_keys(get_class_vars(get_class()));
 		$child_vars = array_diff($all_vars, $pdo_vars);
