@@ -2,18 +2,17 @@
 class usersModel extends basesql{
 
 	protected $id;
-	protected $name;
-	protected $surname;
-	protected $email;
-	protected $pwd;
-	protected $status;
+	protected $rank;
+	protected $title;
+	protected $image_link;
+	protected $id_contest;
 
-	public function __construct($id=-1, $name="", $surname="", $email="", $pwd="", $status=0){
+	public function __construct($id=-1, $rank="", $title="", $image_link="", $id_contest=""){
 		
 		parent::__construct();
 
 		$this->setId($id);
-    	$this->setName($name);
+    	$this->setRank($rank);
     	$this->setSurname($surname);
     	$this->setEmail($email);
     	$this->setPwd($pwd);

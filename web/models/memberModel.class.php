@@ -1,5 +1,5 @@
 <?php
-class usersModel extends basesql{
+class memberModel extends basesql{
 
 	protected $id;
 	protected $lastname;
@@ -10,7 +10,7 @@ class usersModel extends basesql{
 
 		parent::__construct();
 
-		$this->setIdMember($id_member);
+		$this->setId($id);
     	$this->setLastame($lastname);
     	$this->setFirstname($firstname);
     	$this->setPicture($picture);

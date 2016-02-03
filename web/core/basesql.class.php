@@ -31,7 +31,6 @@ class basesql{
 		$all_vars = array_keys(get_object_vars($this));
 		$pdo_vars = array_keys(get_class_vars(get_class()));
 		$child_vars = array_diff($all_vars, $pdo_vars);
-		//id, name, surname, email, pwd, status
 		//Via PDO je fais un prepare
 		if(is_numeric($this->id) && $this->id>0)
 		{
@@ -42,11 +41,8 @@ class basesql{
 			}
 			$sql = "UPDATE ".$this->table." SET ".implode(",", $set_sql)." WHERE id=:id;";
 			$query = $this->pdo->prepare($sql);
-
 			$query->execute($array_to_execute);
-
-
-		}else{
+		} else {
 			// "Insert";
 			unset($child_vars[0]);
 			$sql = "INSERT INTO ".$this->table." 
@@ -62,15 +58,32 @@ class basesql{
 			print_r($array_to_execute);
 
 			$query->execute($array_to_execute);
+		}
+	}
 
+	public function updateCurActive(){
+		$all_vars = array_keys(get_object_vars($this));
+		$pdo_vars = array_keys(get_class_vars(get_class()));
+		$child_vars = array_diff($all_vars, $pdo_vars);
+
+		foreach ($child_vars as $var) {
+			$array_to_execute[$var] = $this->$var;
+			$set_sql[]= $var."=:".$var;
 		}
 
+		$sql = "UPDATE ".$this->table." SET ".implode(",", $set_sql)." WHERE is_active=true;";
+		$query = $this->pdo->prepare($sql);
+		$query->execute($array_to_execute);
 	}
 
-	public function delete(){
-		
+	public function countRow() {
+		$sql = "SELECT count(*) FROM ".$this->table;
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+		//$query->setFetchMode(PDO::FETCH_ASSOC);
+		$data = $query->fetchColumn();
+		return $data;
 	}
-
 
 	public function getOneBy($value, $column = "id"){
 		$sql = "SELECT * FROM ".$this->table." WHERE ".$column."=:".$column." limit 1";

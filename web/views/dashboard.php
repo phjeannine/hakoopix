@@ -2,23 +2,17 @@
 
 include("dashboardHead.php"); 
 
-// Contests number
-$contestNumber = "SELECT count(*) FROM contest"; 
-$result = $db->prepare($contestNumber); 
-$result->execute(); 
-$contestResultNumber = $result->fetchColumn();
+/* Count Member */
+$memberCountObj = new memberModel();
+$nbMember = $memberCountObj->countRow();
 
-// Members number
-$memberNumber = "SELECT count(*) FROM member"; 
-$result = $db->prepare($memberNumber); 
-$result->execute(); 
-$memberResultNumber = $result->fetchColumn(); 
+/* Count Picture */
+$pictureCountObj = new pictureModel();
+$nbPicture = $pictureCountObj->countRow();
 
-// Pictures number
-$pictureNumber = "SELECT count(*) FROM picture"; 
-$result = $db->prepare($pictureNumber); 
-$result->execute(); 
-$pictureResultNumber = $result->fetchColumn(); 
+/* Count Contest */
+$contestCountObj = new contestModel();
+$nbContest = $contestCountObj->countRow();
 
 ?>
 
@@ -47,7 +41,7 @@ $pictureResultNumber = $result->fetchColumn();
                                         <i class="fa fa-trophy fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo $contestResultNumber ?></div>
+                                        <div class="huge"><?php echo $nbContest; ?></div>
                                         <div>concours créés</div>
                                     </div>
                                 </div>
@@ -62,7 +56,7 @@ $pictureResultNumber = $result->fetchColumn();
                                         <i class="fa fa-file-image-o fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo $pictureResultNumber ?></div>
+                                        <div class="huge"><?php echo $nbPicture; ?></div>
                                         <div>photos ajoutées</div>
                                     </div>
                                 </div>
@@ -77,7 +71,7 @@ $pictureResultNumber = $result->fetchColumn();
                                         <i class="fa fa-users fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo $memberResultNumber ?></div>
+                                        <div class="huge"><?php echo $nbMember; ?></div>
                                         <div>membres Hakoopix</div>
                                     </div>
                                 </div>
