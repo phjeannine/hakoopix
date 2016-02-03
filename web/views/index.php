@@ -32,29 +32,6 @@
     }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<?php
-//$result = pg_query($db, "INSERT INTO memberfb(lastname, firstname, picture) VALUES ('Tutu', 'Jean', 'jean.tutu@gmail.com')");
-//if (!$result) {
-  //echo "Une erreur s'est produite.\n";
-  //exit;
-//
-
-// Sélection du concours actif
-/*$selectContest = "SELECT * FROM contest WHERE is_active = true"; 
-$result = $db->prepare($selectContest); 
-$result->execute(); 
-$contestResult = $result->fetch();
-
-$idContest = $contestResult['id_contest'];
-$_SESSION['idContest'] = $idContest;
-// Sélection des images liées au concours
-$selectPicture = "SELECT * FROM picture WHERE id_contest = '".$idContest."'"; 
-$result = $db->prepare($selectPicture); 
-$result->execute(); 
-$contestPicture = $result->fetchAll();*/
-
-?>
-
 <!-- Bannière & Title -->
 <?php 
 
@@ -63,16 +40,17 @@ $contestObj->getOneByActive(true);
 $title = $contestObj->getTitle();
 $description = $contestObj->getDescription();
 $id_contest = $contestObj->getId();
+$banner = $contestObj->getBanner();
             
 if(!empty($id_contest)) { ?>
 
-<div id="banner" class="container-fluid" style="background: url(../../public/images/banner/<?php echo $contestResult['banner'] ?>) no-repeat center fixed;">
+<div id="banner" class="container-fluid" style="background: url(../../public/images/banner/<?php echo $banner; ?>) no-repeat center fixed;">
     <div class="overlay" style="background-color: rgba(0, 0, 0, 0.7)">
         <div class="banner-content row">
             <div class="holder">
                 <div class="inner">
-                        <h1 class="contest-title"><?php echo $title ?></h1>
-                        <p class="contest-description"><?php echo $description ?></p>
+                        <h1 class="contest-title"><?php echo $title; ?></h1>
+                        <p class="contest-description"><?php echo $description; ?></p>
                     <div class="fb-connect-button">
                         <span>Envie de jouer le jeu ?</span>
                         <a href="#" onClick="logInWithFacebook()">Je participe</a>
