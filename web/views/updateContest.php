@@ -2,9 +2,8 @@
 
 include("dashboardHead.php");
 
-$selectContestList = $db->prepare("SELECT * FROM contest");
-$selectContestList->execute();
-$contestListResult = $selectContestList->fetchAll();
+$contestListObj = new contestModel();
+$contests = $contestListObj->getAllContest();
 
 ?>
 
@@ -28,7 +27,7 @@ $contestListResult = $selectContestList->fetchAll();
                         <label>Sélectionnez l'application pour modifier ses informations</label>
                         <select name="contest-name" id="select-contest-name">
                             <option value="no-value"></option>
-                            <?php foreach($contestListResult as $contest) : ?>
+                            <?php foreach($contests as $contest) : ?>
                                 <option value="<?php echo $contest['title'] ?>"><?php echo $contest['title'] ?></option>
                             <?php endforeach; ?>
                         </select>
@@ -40,9 +39,10 @@ $contestListResult = $selectContestList->fetchAll();
             <?php
                 if(isset($_POST['choose-contest-name'])) {
                     $selected_contest = $_POST['contest-name'];
-                    $selectContest = $db->prepare("SELECT * FROM contest WHERE title = '".$selected_contest."'");
-                    $selectContest->execute();
-                    $contestResult = $selectContest->fetch();
+
+                    $contestObj = new contestModel();
+                    $contestResult = $contestObj->getOneContest($selected_contest);
+                    
                 }
             ?>
 
