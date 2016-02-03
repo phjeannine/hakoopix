@@ -1,8 +1,7 @@
 <?php
 
-$selectContestList = $db->prepare("SELECT * FROM contest ORDER BY title ASC");
-$selectContestList->execute();
-$contestListResult = $selectContestList->fetchAll();
+$contestListObj = new contestModel();
+$contests = $contestListObj->getAllContest();
 
 include("dashboardHead.php");
 
@@ -27,7 +26,7 @@ include("dashboardHead.php");
                     <div class="add-contest"><a href="/addContest" title="Ajouter un concours">Ajouter un nouveau concours</a></div>
                 </div>
                 <div class="row list">
-                    <?php foreach($contestListResult as $contest) :?>
+                    <?php foreach($contests as $contest) :?>
                         <div class="contest col-md-4 .col-sm-2 col-xs-12">
                             <div class="contest_img">
                                 <img src="../public/images/photo_contest.jpg" alt=""/>
