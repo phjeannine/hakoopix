@@ -104,6 +104,24 @@ class basesql{
 		}
 	}
 
+	public function getAll($value){
+		$sql = "SELECT * FROM ".$this->table;
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+		$query->setFetchMode(PDO::FETCH_ASSOC);
+		//Je retourne le résultat de la requête dans la variable data sous forme de tableau
+		$data = $query->fetchAll();
+		//Je vérifie que le tableau n'est pas vide
+		if(!empty($data))
+		{
+			//J'alimente l'enfant
+			foreach ($data as $propName => $propValue)
+			{
+			    $this->$propName = $propValue;
+			}
+		}
+	}
+
 	public function getOneByActive($value, $column = "is_active"){
 		$sql =  "SELECT * FROM ".$this->table." WHERE ".$column."=:".$column;
 		$query = $this->pdo->prepare($sql);

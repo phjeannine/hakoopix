@@ -213,6 +213,11 @@
     margin: 0 auto;
 }
 
+#user-list table tr th,
+#user-list table tr td {
+	text-align: center;
+}
+
 /*-----------------------------*/
 /*-------- ADD PRICES --------*/
 /*---------------------------*/
