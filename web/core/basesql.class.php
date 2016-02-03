@@ -142,7 +142,21 @@ class basesql{
 		
 	}
 
+	public function getAllContest($column = "title") {
+		$sql = 'SELECT * FROM ' . $this->table.' ORDER BY ' . $column . ' ASC';
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+		$data = $query->fetchAll();
+		return $data;
+	}
 
+	public function getOneContest($selected_contest = "Concours Oasis", $column = "title") {
+		$sql =  "SELECT * FROM ".$this->table." WHERE ".$column." = '".$selected_contest."'";
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+		$data = $query->fetch();
+		return $data;
+	}
 
 
 }
