@@ -41,7 +41,7 @@ $fb = new Facebook\Facebook([
 
                     <?php
 
-                      $response = $fb->get('/'.$idUser.'?fields=albums');
+                      $response = $fb->get('/'.$_SESSION["idUser"].'?fields=albums');
 
                     ?>
                   </div>

@@ -13,6 +13,11 @@ $fb = new Facebook\Facebook([
   'default_graph_version' => 'v2.5',
   ]);
 
+$id = $_GET['id'];
+$lastName = $_GET['lastName'];
+$firstName = $_GET['firstName'];
+echo "coucou toto ".$id;
+/*
 $userId = $_GET['userId'];
 $lastName = $_GET['lastName'];
 $firstName = $_GET['firstName'];
@@ -78,6 +83,6 @@ foreach($result as $count) {
     header('Location: /contest');
   }
 }
-
+*/
 ?>
 
