@@ -14,9 +14,39 @@ $fb = new Facebook\Facebook([
   ]);
 
 $id = $_GET['id'];
-$lastName = $_GET['lastName'];
-$firstName = $_GET['firstName'];
-echo "coucou toto ".$id;
+$lastName = $_GET['last_name'];
+$firstName = $_GET['first_name'];
+$token = $_GET['token'];
+
+$var = $fb->get('/me?fields=picture', $token);
+$obj = $var->getGraphNode();
+$picture = $obj['picture'];
+$photo = $picture['url'];
+
+$roles = $fb->get('/959119600818575/roles', '959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE');
+$response = $roles->getGraphEdge();
+
+//On vérifie si il est admin ou pas
+foreach($response as $data){
+  if($id == $data['user']) {
+    $_SESSION["role"] = "admin";
+    $_SESSION["name"] = $firstName." ".$lastName;
+    $_SESSION["idUser"] = $id;
+    $_SESSION["photo"] = $photo;
+    header('Location: /contest');
+    exit();
+  }else{
+    $_SESSION["role"] = "user";
+    $_SESSION["name"] = $firstName." ".$lastName;
+    $_SESSION["idUser"] = $id;
+    $_SESSION["photo"] = $photo;
+    header('Location: /contest');
+    exit();
+  }
+}
+
+
+
 /*
 $userId = $_GET['userId'];
 $lastName = $_GET['lastName'];
@@ -53,7 +83,7 @@ $result = $verif->fetchAll(PDO::FETCH_ASSOC);
 //Si le tableau est vide on enregistre le user
 if(count($result)==0) {
 
-   $_SESSION["role"] = "user";
+  $_SESSION["role"] = "user";
   $_SESSION["name"] = $firstName." ".$lastName;
   $_SESSION["idUser"] = $userId;
   $_SESSION["photo"] = $photo;

@@ -11,12 +11,10 @@
                     //var test =rep.last_name;
                     $.ajax({
                       url: '../public/traitement.php',
-                      data: {id:rep.id, last_name:rep.last_name, firstName:rep.first_name, picture:rep.picture},
-                      //data: 'id='+ rep.id + 'lastName='+rep.last_name + 'firstName='+rep.first_name,
+                      data: {id:rep.id, last_name:rep.last_name, first_name:rep.first_name, picture:rep.picture, token:response.authResponse.accessToken},
                       success: function(reponse) {
-
+                        window.location="/contest";
                         //console.log(rep.last_name);
-                        console.log("Reponse :",reponse); // reponse contient l'affichage du fichier PHP (soit echo)
                      }
 
                  });
