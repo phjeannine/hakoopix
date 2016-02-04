@@ -16,7 +16,7 @@ class basesql{
 		$this->table = str_replace("Model", "", $this->class);
 	}
 
-
+	//Fonction qui permet de se connecter à la base de donnée
 	public function connect() {
 		try{
 			$this->pdo = new PDO($this->connect, $this->user_sql, $this->pwd_sql);	
@@ -27,7 +27,7 @@ class basesql{
 
 	public function save(){
 
-		//Je récupère toutes les variables
+		//On récupère toutes les variables
 		$all_vars = array_keys(get_object_vars($this));
 		$pdo_vars = array_keys(get_class_vars(get_class()));
 		$child_vars = array_diff($all_vars, $pdo_vars);
@@ -61,6 +61,7 @@ class basesql{
 		}
 	}
 
+	// cette fonction permet de mettre à jour l'état du concour active en état inactive (false)
 	public function updateCurActive(){
 		$all_vars = array_keys(get_object_vars($this));
 		$pdo_vars = array_keys(get_class_vars(get_class()));
@@ -76,6 +77,7 @@ class basesql{
 		$query->execute($array_to_execute);
 	}
 
+	// La méthode countRow() retourne le nombre d'utilisateur enregistré dans la BDD
 	public function countRow() {
 		$sql = "SELECT count(*) FROM ".$this->table;
 		$query = $this->pdo->prepare($sql);
@@ -85,18 +87,19 @@ class basesql{
 		return $data;
 	}
 
+	// Cette méthode retourne l'objet correspondant à l'ID passé en paramètre
 	public function getOneBy($value, $column = "id"){
 		$sql = "SELECT * FROM ".$this->table." WHERE ".$column."=:".$column." limit 1";
 		$query = $this->pdo->prepare($sql);
 		$query->execute([$column=>$value]);
-		//Je précise que dans le retour j'aurai un format [id=1, name=skrzypczyk] ....
+		//On précise que dans le retour j'aurai un format [id=1, name=skrzypczyk] ....
 		$query->setFetchMode(PDO::FETCH_ASSOC);
-		//Je retourne le résultat de la requête dans la variable data sous forme de tableau
+		//On retourne le résultat de la requête dans la variable data sous forme de tableau
 		$data = $query->fetch();
-		//Je vérifie que le tableau n'est pas vide
+		//On vérifie que le tableau n'est pas vide
 		if(!empty($data))
 		{
-			//J'alimente l'enfant
+			//On alimente l'enfant
 			foreach ($data as $propName => $propValue)
 			{
 			    $this->$propName = $propValue;
@@ -104,17 +107,38 @@ class basesql{
 		}
 	}
 
+	// Cette méthode retourne l'objet correspondant à l'id_member (de facebook) passé en paramètre
+	public function getOneByIdmember($value, $column = "id_member"){
+		$sql = "SELECT * FROM ".$this->table." WHERE ".$column."=:".$column." limit 1";
+		$query = $this->pdo->prepare($sql);
+		$query->execute([$column=>$value]);
+		//On précise que dans le retour j'aurai un format [id=1, name=skrzypczyk] ....
+		$query->setFetchMode(PDO::FETCH_ASSOC);
+		//On retourne le résultat de la requête dans la variable data sous forme de tableau
+		$data = $query->fetch();
+		//On vérifie que le tableau n'est pas vide
+		if(!empty($data))
+		{
+			//On alimente l'enfant
+			foreach ($data as $propName => $propValue)
+			{
+			    $this->$propName = $propValue;
+			}
+		}
+	}
+
+	// cette méthode retourne l'ensemble des objets contenu de la table qui l'appel
 	public function getAll($value){
 		$sql = "SELECT * FROM ".$this->table;
 		$query = $this->pdo->prepare($sql);
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
-		//Je retourne le résultat de la requête dans la variable data sous forme de tableau
+		//On retourne le résultat de la requête dans la variable data sous forme de tableau
 		$data = $query->fetchAll();
-		//Je vérifie que le tableau n'est pas vide
+		//On vérifie que le tableau n'est pas vide
 		if(!empty($data))
 		{
-			//J'alimente l'enfant
+			//On alimente l'enfant
 			foreach ($data as $propName => $propValue)
 			{
 			    $this->$propName = $propValue;
@@ -122,18 +146,19 @@ class basesql{
 		}
 	}
 
+	// cette méthode retourne le concours active 
 	public function getOneByActive($value, $column = "is_active"){
 		$sql =  "SELECT * FROM ".$this->table." WHERE ".$column."=:".$column;
 		$query = $this->pdo->prepare($sql);
 		$query->execute([$column=>$value]);
-		//Je précise que dans le retour j'aurai un format [id=1, name=skrzypczyk] ....
+		//On précise que dans le retour j'aurai un format [id=1, name=skrzypczyk] ....
 		$query->setFetchMode(PDO::FETCH_ASSOC);
-		//Je retourne le résultat de la requête dans la variable data sous forme de tableau
+		//On retourne le résultat de la requête dans la variable data sous forme de tableau
 		$data = $query->fetch();
 		//Je vérifie que le tableau n'est pas vide
 		if(!empty($data))
 		{
-			//J'alimente l'enfant
+			//On alimente l'enfant
 			foreach ($data as $propName => $propValue)
 			{
 			    $this->$propName = $propValue;
@@ -142,6 +167,7 @@ class basesql{
 		
 	}
 
+	//cette fonction retourne l'ensemble des concours crées (par ordre ascendant) 
 	public function getAllContest($column = "title") {
 		$sql = 'SELECT * FROM ' . $this->table.' ORDER BY ' . $column . ' ASC';
 		$query = $this->pdo->prepare($sql);
@@ -150,6 +176,7 @@ class basesql{
 		return $data;
 	}
 
+	//cette méthode permet de retourner le oncours sélectionné
 	public function getOneContest($selected_contest = "Concours Oasis", $column = "title") {
 		$sql =  "SELECT * FROM ".$this->table." WHERE ".$column." = '".$selected_contest."'";
 		$query = $this->pdo->prepare($sql);

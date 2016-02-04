@@ -3,24 +3,18 @@
         FB.login(function(response) {
             if (response.authResponse) {
                 console.log('You are logged!');
-                console.log(response.authResponse);
+                //console.log(response.authResponse);
 
                 FB.api('/me?fields=id,last_name,first_name,picture', function(rep) {
-
-                    //console.log("test :", rep);
-                    //var test =rep.last_name;
                     $.ajax({
-                      url: '../public/traitement.php',
+                      url:'../public/createSession.php',
                       data: {id:rep.id, last_name:rep.last_name, first_name:rep.first_name, picture:rep.picture, token:response.authResponse.accessToken},
                       success: function(reponse) {
-                        window.location="/contest";
-                        //console.log(rep.last_name);
-                     }
+                        window.location="/contest/adduser";
+                      }
 
-                 });
+                   });
 
-                    //window.location="/contest";
-                    //window.location="/index/insert?userId="+rep.id+"&lastName="+rep.last_name+"&firstName="+rep.first_name+"&token="+response.authResponse.accessToken;
                 });
             }
         });
@@ -123,7 +117,7 @@ if(!empty($id_contest)) { ?>
             <hr>
            
         </div>
-       <!-- <?php foreach($contestPicture as $picture) : ?>
+       <!-- <?php //foreach($contestPicture as $picture) : ?>
             <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
                 <div class="item-contest">
@@ -135,7 +129,7 @@ if(!empty($id_contest)) { ?>
                 <hr>
                 <p class="item-description"><?php echo $picture['description']; ?></p>
             </div>
-        <?php endforeach; ?>  -->
+        <?php //endforeach; ?>  -->
     </div><!-- /.row -->
 
 </div><!-- /.container -->

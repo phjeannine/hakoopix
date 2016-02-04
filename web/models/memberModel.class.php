@@ -5,23 +5,20 @@ class memberModel extends basesql{
 	protected $lastname;
 	protected $firstname;
 	protected $picture;
+	protected $id_member;
 
-	public function __construct($id=-1, $lastname="", $firstname="", $picture=""){
+	public function __construct($lastname="", $firstname="", $picture="", $id_member=0){
 
 		parent::__construct();
 
-		$this->setId($id);
     	$this->setLastame($lastname);
     	$this->setFirstname($firstname);
     	$this->setPicture($picture);
+    	$this->setIdMember($id_member);
 	}
 
 
 	// SETTERS
-	public function setId($id){
-		if(!is_numeric($id)) die();
-		$this->id = $id;
-	}
 	public function setLastame($lastname){
 		$this->lastname = trim($lastname);
 	}
@@ -31,7 +28,9 @@ class memberModel extends basesql{
 	public function setPicture($picture){
 		$this->picture = trim($picture);
 	}
-
+	public function setIdMember($id_member){
+		$this->id_member = trim($id_member);
+	}
 
 	// GETTERS
 	public function getId(){
@@ -46,5 +45,7 @@ class memberModel extends basesql{
 	public function getPicture(){
 		return $this->picture;
 	}
-
+	public function getIdMember(){
+		return $this->id_member;
+	}
 }
