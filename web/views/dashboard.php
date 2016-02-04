@@ -26,7 +26,7 @@ $nbContest = $contestCountObj->countRow();
                             Dashboard <small>Statistics</small>
                         </h1>
                         <ol class="breadcrumb">
-                            <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+                            <li class="active"><i class="fa fa-dashboard"></i> Les Statistiques</li>
                         </ol>
                     </div>
                 </div><!-- /.row -->
@@ -85,7 +85,7 @@ $nbContest = $contestCountObj->countRow();
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Statistiques</h3>
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Autres Statistiques</h3>
                             </div>
                             <div class="panel-body">
                                 <div id="statistics-chart"></div>
