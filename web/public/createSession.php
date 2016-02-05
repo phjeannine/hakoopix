@@ -29,13 +29,15 @@ $response = $roles->getGraphEdge();
 
 //On vérifie si le user est admin ou pas
 foreach($response as $data){
-  if($id == $data['user']) {
+  $var = $data["user"];
+  if($id==$var) {
     $_SESSION["role"] = "admin";
     $_SESSION["name"] = $firstName." ".$lastName;
     $_SESSION["firstName"] = $firstName;
     $_SESSION["lastName"] = $lastName;
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
+    exit();
   }else{
     $_SESSION["role"] = "user";
     $_SESSION["name"] = $firstName." ".$lastName;
@@ -43,7 +45,7 @@ foreach($response as $data){
     $_SESSION["lastName"] = $lastName;
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
-    
+    exit();
   }
 }
 
