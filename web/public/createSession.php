@@ -26,7 +26,7 @@ $photo = $picture['url'];
 
 $roles = $fb->get('/959119600818575/roles', '959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE');
 $response = $roles->getGraphEdge();
-
+$isAdmin=false;
 //On vérifie si le user est admin ou pas
 foreach($response as $data){
   $var = $data["user"];
@@ -37,17 +37,21 @@ foreach($response as $data){
     $_SESSION["lastName"] = $lastName;
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
+    $isAdmin = true;
+    header("Location: /contest");
     exit();
-  }else{
+  }
+}
+
+if(!$isAdmin){
     $_SESSION["role"] = "user";
     $_SESSION["name"] = $firstName." ".$lastName;
     $_SESSION["firstName"] = $firstName;
     $_SESSION["lastName"] = $lastName;
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
-    exit();
+    header("Location: /contest/adduser");
   }
-}
 
 ?>
 

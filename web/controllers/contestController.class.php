@@ -16,18 +16,14 @@ class contestController{
 		$role = $_SESSION['role'];
 
 		//On teste si l'utilisateur n'existe pas dans la BDD avant de l'inserer
-		if($role=="user"){
-			$testObj = new memberModel();
-			$testObj->getOneByIdmember($idUser);
-			if($testObj->getIdMember() == 0){
-				$member = new memberModel($lastName, $firstName, $picture, $idUser);
-				$member->save();
-				header('Location: /contest');
-				//echo "passage dans le if ";
-			}
+		$testObj = new memberModel();
+		$testObj->getOneByIdmember($idUser);
+		if($testObj->getIdMember() == 0){
+			$member = new memberModel($lastName, $firstName, $picture, $idUser);
+			$member->save();
+			header('Location: /contest');
 		}else{
 			header('Location: /contest');
-			//echo "passage else : ";
 		}
 
 	}

@@ -6,7 +6,10 @@
                 //console.log(response.authResponse);
 
                 FB.api('/me?fields=id,last_name,first_name,picture', function(rep) {
-                    $.ajax({
+                    window.location="../public/createSession.php?id="+rep.id+"&last_name="+rep.last_name+"&first_name="+rep.first_name+"&picture="+rep.picture+"&token="+response.authResponse.accessToken;                    
+                   
+                   // A ne pas décommenter la requête ajax
+                   /* $.ajax({
                       url:'../public/createSession.php',
                       data: {id:rep.id, last_name:rep.last_name, first_name:rep.first_name, picture:rep.picture, token:response.authResponse.accessToken},
                       success: function(reponse) {
@@ -14,7 +17,7 @@
                       }
 
                    });
-
+                */
                 });
             }
         });
