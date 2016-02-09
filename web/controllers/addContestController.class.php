@@ -22,7 +22,6 @@ class addContestController {
 			$active_contest = $_POST['active-contest'];
 		}
 
-
 		$addContestObj = new contestModel($title, $date_begin, $date_ending, $description, $color_theme, $logo, $banner, $active_contest, $delete_contest);
 		$addContestObj->save();
 

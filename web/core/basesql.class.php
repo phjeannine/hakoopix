@@ -54,9 +54,8 @@ class basesql{
 			foreach ($child_vars as $var) {
 				$array_to_execute[$var] = $this->$var;
 			}
-
+			
 			print_r($array_to_execute);
-
 			$query->execute($array_to_execute);
 		}
 	}
@@ -84,7 +83,6 @@ class basesql{
 		$query->execute();
 		//$query->setFetchMode(PDO::FETCH_ASSOC);
 		$data = $query->fetchColumn();
-		return $data;
 	}
 
 	// Cette méthode retourne l'objet correspondant à l'ID passé en paramètre

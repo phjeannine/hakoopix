@@ -65,6 +65,7 @@
 }
 
 .form-content input[type="submit"] {
+	color: #fff;
 	margin: 0 0 30px 0;
 	background-color: #2c2e43;
 	width: 200px;
