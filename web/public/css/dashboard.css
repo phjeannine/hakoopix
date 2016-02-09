@@ -74,8 +74,7 @@
 	transition: all ease 300ms;
 }
 
-.logo-size-error p,
-.banner-size-error p {
+.error {
 	color: red;
 	margin-top: 5px;
 }
@@ -174,6 +173,10 @@
 #contest-list .contest .contest-informations p {
 	font-size: 12px;
 	margin: 0 0 5px 0;
+}
+
+#contest-list .contest .contest-informations .description {
+	height: 80px;
 }
 
 #contest-list .contest .contest-informations .color-theme span {

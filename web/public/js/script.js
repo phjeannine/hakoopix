@@ -64,10 +64,13 @@ $(document).ready(function() {
 	});
 
     // Ajout d'un concours - Champs Date
-	$("#date-first").datepicker();
-	$("#date-end").datepicker();
+    var start = $("#date-first");
+    var end = $("#date-end");
 
-    // ADD PRICES
+	$(start).datepicker();
+	$(end).datepicker();
+
+    /* -------- ADD PRICES -------- */
     // Affichage du formulaire d'ajout de prix
     $('#add-prices').hide();
     var contestName = $('#select-contest-name');
@@ -81,6 +84,16 @@ $(document).ready(function() {
         if(value == 'no-value') {
             $('#add-prices').hide();
         }
-    });    
+    });
+
+    // Control maximum chars on textarea => add contest page
+    var maxchars = 200;
+	$('#contest-description').keyup(function () {
+	    var tlength = $(this).val().length;
+	    $(this).val($(this).val().substring(0, maxchars));
+	    var tlength = $(this).val().length;
+	    remain = maxchars - parseInt(tlength);
+	    $('#remain').text(remain);
+	});  
 
 });

@@ -94,19 +94,19 @@ if(!empty($id_contest)) { ?>
             <h3 class="title">Lots à gagner</h3>
             <hr>
         </div>
-        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <img class="img-responsive" src="../public/images/price.jpg" alt="">
             <h4 style="color: #12ba74">Premier prix</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
         </div><!-- /.price-item -->
 
-        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <img class="img-responsive" src="../public/images/price.jpg" alt="">
             <h4 style="color: #12ba74">Deuxième prix</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
         </div><!-- /.price-item -->
 
-        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-">
             <img class="img-responsive" src="../public/images/price.jpg" alt="">
             <h4 style="color: #12ba74">Troisième prix</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
@@ -118,21 +118,7 @@ if(!empty($id_contest)) { ?>
         <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
             <h3 class="title">Contributions</h3>
             <hr>
-           
         </div>
-       <!-- <?php //foreach($contestPicture as $picture) : ?>
-            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                <a href="#"><img class="img-responsive" src="../public/images/photo_contest.jpg" alt=""></a>
-                <div class="item-contest">
-                    <div class="like item-contest-icon col-md-9"><span>like</span> <?php echo $picture['nb_like']; ?></div>
-                    <div class="share item-contest-icon col-md-3"><span>share</span> Partager</div>
-                </div>
-                <h3 class="item-title" style="color: #12ba74"><?php echo $picture['title']; ?></h3>
-                <p class="item-meta">par <span style="color: #12ba74">{author}</span>, le <span style="color: #12ba74"><?php echo $picture['date']; ?></span></p>
-                <hr>
-                <p class="item-description"><?php echo $picture['description']; ?></p>
-            </div>
-        <?php //endforeach; ?>  -->
     </div><!-- /.row -->
 
 </div><!-- /.container -->
