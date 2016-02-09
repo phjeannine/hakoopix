@@ -1,5 +1,5 @@
 <?php
-class usersModel extends basesql{
+class priceModel extends basesql{
 
 	protected $id;
 	protected $rank;
@@ -13,10 +13,9 @@ class usersModel extends basesql{
 
 		$this->setId($id);
     	$this->setRank($rank);
-    	$this->setSurname($surname);
-    	$this->setEmail($email);
-    	$this->setPwd($pwd);
-    	$this->setStatus($status);
+    	$this->setTitle($title);
+    	$this->setImageLink($image_link);
+    	$this->setIdContest($id_contest);
 	}
 
 
@@ -25,43 +24,35 @@ class usersModel extends basesql{
 		if(!is_numeric($id)) die();
 		$this->id = $id;
 	}
-	public function setName($name){
-		$this->name = trim($name);
+	public function setRank($rank){
+		$this->rank = trim($rank);
 	}
-	public function setSurname($surname){
-		$this->surname = trim($surname);
+	public function setTitle($title){
+		$this->title = trim($title);
 	}
-	public function setEmail($email){
-		$this->email = trim($email);
+	public function setImageLink($image_link){
+		$this->image_link = trim($image_link);
 	}
-	public function setPwd($pwd){
-		$this->pwd = md5($pwd);
+	public function setIdContest($id_contest){
+		$this->id_contest = trim($id_contest);
 	}
-	public function setStatus($status){
-		$this->status = $status;
-	}
-
 
 	// GETTERS
 	public function getId(){
 		return $this->id;
 	}
-	public function getName(){
-		return $this->name;
+	public function getRank(){
+		return $this->rank;
 	}
-	public function getSurname(){
-		return $this->surname;
+	public function getTitle(){
+		return $this->title;
 	}
-	public function getEmail(){
-		return $this->email;
+	public function getImageLink(){
+		return $this->image_link;
 	}
-	public function getPwd(){
-		return $this->pwd;
+	public function getIdContest(){
+		return $this->id_contest;
 	}
-	public function getStatus(){
-		return $this->status;
-	}
-
 
 }
 

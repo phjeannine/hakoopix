@@ -22,15 +22,10 @@ class addContestController {
 			$active_contest = $_POST['active-contest'];
 		}
 
-		if(!empty($_POST['active-contest'])) {
-			$updateContestObj = new contestModel($title, $date_begin, $date_ending, $description, $color_theme, $logo, $banner, $active_contest, $delete_contest);
-			$updateContestObj->updateCurActive();
+		$addContestObj = new contestModel($title, $date_begin, $date_ending, $description, $color_theme, $logo, $banner, $active_contest, $delete_contest);
+		$addContestObj->save();
 
-			$addContestObj = new contestModel($title, $date_begin, $date_ending, $description, $color_theme, $logo, $banner, $active_contest, $delete_contest);
-			$addContestObj->save();
-		}
-
-		header("Location: /dashboard");
+		//header("Location: /contestList");
 	}
 
 }

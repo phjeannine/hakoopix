@@ -31,55 +31,55 @@ $nbContest = $contestCountObj->countRow();
                     </div>
                 </div><!-- /.row -->
 
-            <div id="dashboard-panel">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="panel panel-violet">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-trophy fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo $nbContest; ?></div>
-                                        <div>concours créés</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-file-image-o fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo $nbPicture; ?></div>
-                                        <div>photos ajoutées</div>
+                <div id="dashboard-panel">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="panel panel-violet">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-trophy fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge"><?php echo $nbContest; ?></div>
+                                            <div>concours créés</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="panel panel-blue">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-users fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge"><?php echo $nbMember; ?></div>
-                                        <div>membres Hakoopix</div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-file-image-o fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge"><?php echo $nbPicture; ?></div>
+                                            <div>photos ajoutées</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div><!-- /.row -->
-            </div><!-- /#dashboard-panel -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="panel panel-blue">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-users fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge"><?php echo $nbMember; ?></div>
+                                            <div>membres Hakoopix</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /#dashboard-panel -->
 
                 <div class="row">
                     <div class="col-lg-12">

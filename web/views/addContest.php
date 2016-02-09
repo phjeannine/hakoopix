@@ -50,12 +50,16 @@ include("dashboardHead.php");
                             <input type="text" id="date-end" class="form-control" name="ending" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
                           </div><!-- /.input group -->
                         </div>
+                        <div class="dates-control error">
+                          <p><i class="fa fa-exclamation-triangle"></i> La date de départ ne doit pas être inférieur à la date de fin d'un concours</p>
+                        </div>
                       </div>
 
                       <div class="row">
                         <div class="form-group col-md-12">
                           <label for="description">Description</label>
                           <textarea id="contest-description" class="form-control" name="description" rows="3"></textarea>
+                          <span id="remain">200</span> caractères restants
                         </div>
                       </div>
 
@@ -96,7 +100,7 @@ include("dashboardHead.php");
                       </div>
 
                       <div class="fields-error error">
-                        <p>Vous devez renseigner tous les champs</p>
+                        <p><i class="fa fa-exclamation-triangle"></i> Vous devez renseigner tous les champs</p>
                       </div>
 
                       <input type="submit" class="btn btn-primary col-md-6" name="submit-contest">

@@ -2,10 +2,8 @@
 
 include("dashboardHead.php");
 
-$selectContest = "SELECT * FROM contest"; 
-$result = $db->prepare($selectContest); 
-$result->execute(); 
-$contestResult = $result->fetchAll();
+$contestListObj = new contestModel();
+$contests = $contestListObj->getAllContest();
 
 ?>
 
@@ -30,7 +28,7 @@ $contestResult = $result->fetchAll();
                         <label>Sélectionnez l'application afin d'ajouter un lot de prix</label>
                         <select id="select-contest-name">
                             <option value="no-value"></option>
-                            <?php foreach($contestResult as $contest) : ?>
+                            <?php foreach($contests as $contest) : ?>
                                 <option value="<?php echo $contest['title'] ?>"><?php echo $contest['title'] ?></option>
                             <?php endforeach; ?>
                         </select>
@@ -39,19 +37,19 @@ $contestResult = $result->fetchAll();
                 </div><!-- /.form-content -->
 
                 <div class="form-content">
-                  <form method="post" id="add-prices" enctype="multipart/form-data">
+                  <form method="post" action="/addPrice/insert" id="add-prices" enctype="multipart/form-data">
                     <div class="box-body">
                         <div class="price-form col-md-4">
                             <label for="first-price">Premier prix</label>
                             <div class="row">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="first-price-title" value="Premier prix" readonly>
+                                    <label for="title-price">Nom du prix</label>
+                                    <input type="text" class="form-control" name="first-price-title">
                                 </div>
                             </div><!-- /.row -->
                             <div class="row">
                                 <div class="form-group">
-                                    <input type="file" name="first-price-img" id="first-price-img" onchange="readURL(this);">
-                                    <img id="blah" src="#" alt="your image" />
+                                    <input type="file" name="first-price-img" id="first-price-img">
                                     <input type="hidden" name="MAX_FILE_SIZE" value="100000">
                                 </div>
                             </div><!-- /.row -->
@@ -66,7 +64,8 @@ $contestResult = $result->fetchAll();
                             <label for="second-price">Deuxième prix</label>
                             <div class="row">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="second-price-title" value="Deuxième prix" readonly>
+                                    <label for="title-price">Nom du prix</label>
+                                    <input type="text" class="form-control" name="second-price-title">
                                 </div>
                             </div><!-- /.row -->
                             <div class="row">
@@ -86,7 +85,8 @@ $contestResult = $result->fetchAll();
                             <label for="third-price">Troisième prix</label>
                             <div class="row">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="third-price-title" value="Troisième prix" readonly>
+                                    <label for="title-price">Nom du prix</label>
+                                    <input type="text" class="form-control" name="third-price-title">
                                 </div>
                             </div><!-- /.row -->
                             <div class="row">
@@ -102,6 +102,7 @@ $contestResult = $result->fetchAll();
                             </div><!-- /.row -->
                         </div><!-- /.price-form -->
                     </div><!-- /.box-body -->
+                    <input type="submit" name="submit-prices" id="submit-prices" class="btn btn-primary col-md-6" value="Envoyer" />
                   </form>
                 </div><!-- /.form-content -->
 
