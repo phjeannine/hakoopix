@@ -8,6 +8,8 @@ class participateController{
 	}
 
 	public function insertAction($args){
+
+
 		$title = $_POST['title'];
 		$description = $_POST['description'];
 		$idUser = $_SESSION['idUser'];
@@ -17,5 +19,8 @@ class participateController{
 		$participateObj = new pictureModel($title, $description, 0, $participation, $idContest, $idUser);
 		$participateObj->save();
 		header("Location: /contest");
+	}
+
+	public function selectAction($args){
 	}
 }

@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="navbar-header">
-      <a class="navbar-brand" href="/dashboardç">Logo</a>
+      <a class="navbar-brand" href="/dashboard">Logo</a>
   </div>
 
   <!-- Sidebar Menu Items -->

@@ -2,7 +2,7 @@
 <div class="container participate">
 <?php
 
-  require_once __DIR__ . '/../public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
+require_once __DIR__ . '/../public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
 $fb = new Facebook\Facebook([
     'app_id' => '1009248699126286',
     'app_secret' => 'f54e20be246eb9e9ec5b13ea64c1e46c',
@@ -10,6 +10,7 @@ $fb = new Facebook\Facebook([
     ]);
 
 ?>
+<?php  include('../public/index.php'); ?>
     <!-- Page Header -->
     <div class="row">
         <div class="col-lg-12 col-md-12">

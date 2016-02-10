@@ -1,0 +1,10 @@
+@media screen and (max-width:600px) {
+
+	.contest-description {
+		max-width: 250px;
+	}
+
+	h1 {
+		color: red;
+	}
+}
