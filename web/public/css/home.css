@@ -164,6 +164,7 @@
 
 .prices-container {
   background-image: url('../images/fond.png') ;
+  background-size: 100%;
 }
 
 .price {

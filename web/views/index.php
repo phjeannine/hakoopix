@@ -52,7 +52,6 @@ $id_contest = $contestObj->getId();
 $banner = $contestObj->getBanner();
 $color = $contestObj->getColorTheme();
 $_SESSION['color'] = $color;
-
             
 if(!empty($id_contest)) { ?>
 
@@ -157,10 +156,14 @@ if(!empty($id_contest)) { ?>
 </div>
 </div>
 
+<div id="homepage">
+    <div class="container">
     <!-- Gallery -->
     <div id="gallery" class="row">
             <h2>Participants</h2>
             <div class="barre"></div>
     </div><!-- /.row -->
+</div>
+</div>
 
 </div><!-- /.container -->

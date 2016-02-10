@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 $uri = $_SERVER['REQUEST_URI'];
 
 include("./include/head.php");
@@ -11,29 +10,6 @@ $contestObj = new contestModel();
       $color = $contestObj->getColorTheme();
       $_SESSION['color'] = $color;
 ?>
-    <!-- General Stylesheets
-    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
-      <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
-    <?php } ?>
-    <link href="<?php APPLICATION_PATH ?>/public/css/home.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/contest.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/login.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/addAdmin.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/participate.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/dashboard.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/style.css" rel="stylesheet">
-
-    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/sb-admin.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/plugins/morris.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <link href="<?php APPLICATION_PATH ?>/public/fonts/opensans.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/fonts/montserrat.css" rel="stylesheet">
-
-    <script src="<?php APPLICATION_PATH ?>/public/js/jquery-1.12.0.min.js" type="text/javascript"></script>
-    <script src="<?php APPLICATION_PATH ?>/public/js/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="<?php APPLICATION_PATH ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
-  -->
 
 <body cz-shortcut-listen="true">
   <div class="site-wrapper">
