@@ -20,7 +20,7 @@ class indexController{
 		$firstName = $_GET['firstName'];
 		$token = $_GET['token'];
 
-		$var = $fb->get('/me?fields=picture', $token);
+		$var = $fb->get('/me?fields=picture, albums', $token);
 		$obj = $var->getGraphNode();
 		$picture = $obj['picture'];
 		$photo = $picture['url'];

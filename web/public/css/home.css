@@ -1,10 +1,10 @@
 /* HOME STYLESHEET */
+
 #banner {
   background-repeat: no-repeat !important;
-  background-attachment: scroll !important;
   background-position: center center !important;
   background-size: cover !important;
-  height: 400px;
+  height: 600px;
   padding: 0;
 }
 
@@ -23,10 +23,10 @@
 }
 
 #banner .overlay .banner-content .holder {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 #banner .overlay .banner-content .holder .inner {
@@ -36,17 +36,20 @@
   width: 100%;
 }
 
-#banner .overlay .banner-content .holder .inner .contest-title {
-  font-family: 'Montserrat', Arial, sans-serif;
+#banner h1 {
+  font-family: 'Open Sans', Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
+  font-weight: 600;
+  font-size: 50px;
   margin-bottom: 10px;
   color: #fff;
+  letter-spacing: 5px;
 }
 
 #banner .overlay .banner-content .holder .inner .contest-description {
   font-family: 'Open Sans', Arial, sans-serif;
-  width: 450px;
+  max-width: 450px;
   text-align: center;
   margin: 0 auto 40px;
   color: #fff;
@@ -72,7 +75,7 @@
 #banner .fb-connect-button a {
   display: block;
   transition: all ease 300ms;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   color: #fff;
   text-transform: uppercase;
   font-weight: lighter;
@@ -95,10 +98,17 @@
   margin-top: 30px;
 }
 
+#homepage h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+
 #homepage .title {
   text-align: center;
   color: #6d6c6c;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 22px;
   text-transform: uppercase;
 }
@@ -106,11 +116,12 @@
 #homepage #prices .price-item h4 {
   font-family: 'Open Sans', Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 16px;
   margin: 10px 0 5px 0;
   font-weight: bold;
   text-align: center;
 }
+
 
 #homepage #prices .price-item p {
   color: #6d6c6c;
@@ -121,3 +132,50 @@
   margin-top: 40px;
 }
 
+#rules, #prices, #gallery {
+  text-align: center;
+}
+
+.barre {
+  max-width: 25px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+
+.rule, .price {
+  margin-top: 50px;
+}
+
+.rule h3 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.rule p {
+  margin-top: 20px;
+}
+
+#rules, #prices, #gallery {
+  margin: 90px 0px;
+}
+
+.prices-container {
+  background-image: url('../images/fond.png') ;
+}
+
+.price {
+  padding: 15px 7px;
+  transition: all 0.4s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.price:hover{
+  border-color: #b9b9d3;
+}
+
+#homepage p {
+  font-family: 'Open Sans', Arial, sans-serif;
+}

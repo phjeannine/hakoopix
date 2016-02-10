@@ -24,6 +24,7 @@ $obj = $var->getGraphNode();
 $picture = $obj['picture'];
 $photo = $picture['url'];
 
+
 $roles = $fb->get('/959119600818575/roles', '959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE');
 $response = $roles->getGraphEdge();
 $isAdmin=false;

@@ -50,10 +50,13 @@ $title = $contestObj->getTitle();
 $description = $contestObj->getDescription();
 $id_contest = $contestObj->getId();
 $banner = $contestObj->getBanner();
+$color = $contestObj->getColorTheme();
+$_SESSION['color'] = $color;
+
             
 if(!empty($id_contest)) { ?>
 
-<div id="banner" class="container-fluid" style="background: url(../../public/images/banner/<?php echo $banner; ?>) no-repeat center fixed;">
+<div id="banner" class="container-fluid" style="background: url(../public/images/banner/oasis.jpg) no-repeat center fixed;">
     <div class="overlay" style="background-color: rgba(0, 0, 0, 0.7)">
         <div class="banner-content row">
             <div class="holder">
@@ -88,37 +91,76 @@ if(!empty($id_contest)) { ?>
 
 <!-- Homepage Content -->
 <div id="homepage" class="container">
+    <!-- Rules -->
+    <div id="rules" class="row">
+            <h2>Hakoopix</h2>
+            <div class="barre"></div>
+            <p>Le concours photos qui te permettra de gagner de nombreux cadeaux, pour toi et tous tes amis !</p>
+            <p>Sois créatif, original, cela te permettra de te démarquer</p>
+        <!-- Rule 1 -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="rule">
+                <i class="fa fa-camera-retro fa-4x"></i>
+                <h3>Ajoute une photo</h3>
+                <p>Pour participer et avoir une chance de gagner, il te suffit simplement de publier ta photo !</p>
+            </div>
+        </div><!-- /.rule 1 -->
+        <!-- Rule 2 -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="rule">
+                <i class="fa fa-thumbs-o-up fa-4x"></i>
+                <h3>Récolte le plus de vote</h3>
+                <p>Partage ta photo avec tes amis et invite les à voter pour toi ! Le gagnant sera cela qui comptabilisera le plus de vote !</p>
+            </div>
+        </div><!-- /.rule 2 -->
+        <!-- Rule 3 -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="rule">
+                <i class="fa fa-gift fa-4x"></i>
+                <h3>Gagne un ou plusieurs cadeaux !</h3>
+                <p>Après délibération du jury, tu auras peut-être la possibilité de gagner un cadeau !</p>
+            </div>
+        </div><!-- /.rule 2 -->
+    </div>
+</div>
+<div class="prices-container" id="homepage">
+    <div class="container">
     <!-- Prices -->
     <div id="prices" class="row">
-        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
-            <h3 class="title">Lots à gagner</h3>
-            <hr>
-        </div>
+            <h2>Lots à gagner</h2>
+            <div class="barre"></div>
+            <p>Comme nous savons que tu es gourmant, nous t'avons concocté des petits cadeaux ...</p>
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <img class="img-responsive" src="../public/images/price.jpg" alt="">
-            <h4 style="color: #12ba74">Premier prix</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
+            <div class="price">
+                <img class="img-responsive" src="../public/images/price.jpg" alt="">
+                <h3>Premier prix</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
+            </div><!-- /.price -->
         </div><!-- /.price-item -->
 
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <img class="img-responsive" src="../public/images/price.jpg" alt="">
-            <h4 style="color: #12ba74">Deuxième prix</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
+            <div class="price">
+                <img class="img-responsive" src="../public/images/price.jpg" alt="">
+                <h3>Deuxième prix</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
+            </div><!-- /.price -->
         </div><!-- /.price-item -->
 
-        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-">
-            <img class="img-responsive" src="../public/images/price.jpg" alt="">
-            <h4 style="color: #12ba74">Troisième prix</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
+        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="price">
+                <img class="img-responsive" src="../public/images/price.jpg" alt="">
+                <h3>Troisième prix</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
+            </div><!-- /.price -->
         </div><!-- /.price-item -->
     </div><!-- /.row -->
+</div>
+</div>
 
     <!-- Gallery -->
     <div id="gallery" class="row">
-        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
-            <h3 class="title">Contributions</h3>
-            <hr>
-        </div>
+            <h2>Participants</h2>
+            <div class="barre"></div>
     </div><!-- /.row -->
 
 </div><!-- /.container -->
