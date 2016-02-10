@@ -2,14 +2,13 @@
 <div class="container participate">
 <?php
 
-  require_once __DIR__ . '../public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
-
-  $fb = new Facebook\Facebook([
-    'app_id' => '959119600818575',
-    'app_secret' => '9f0062f110ea6d3589e7debcb04c2268',
+  require_once __DIR__ . '/../public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
+$fb = new Facebook\Facebook([
+    'app_id' => '1009248699126286',
+    'app_secret' => 'f54e20be246eb9e9ec5b13ea64c1e46c',
     'default_graph_version' => 'v2.5',
-   ]);
-  $fb->setDefaultAccessToken($_SESSION['token']);
+    ]);
+
 ?>
     <!-- Page Header -->
     <div class="row">
@@ -39,9 +38,10 @@
                     <label for="exampleInputFile">Votre image</label>
                     <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
                     <p class="help-block">Importer une image ou sélectionnez-la parmi vos photos</p>
+
                     <?php
 
-                      $response = $fb->get('/me?fields=albums');
+                      $response = $fb->get('/'.$_SESSION["idUser"].'?fields=albums');
 
                     ?>
                   </div>
