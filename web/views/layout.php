@@ -55,7 +55,7 @@ $contestObj = new contestModel();
               </div>
 
               <div class="navbar-collapse collapse">
-                <?php  if(!empty($_SESSION)){ ?>
+                <?php  if(!empty($_SESSION['name'])){ ?>
                 <ul class="nav navbar-nav pull-right">
                   <li><img class="user-picture-profile" src="<?php echo $_SESSION['photo'];?>"/></li>
                   <li class="dropdown">
