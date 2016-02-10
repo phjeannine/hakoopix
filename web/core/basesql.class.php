@@ -19,7 +19,8 @@ class basesql{
 	//Fonction qui permet de se connecter à la base de donnée
 	public function connect() {
 		try{
-			$this->pdo = new PDO($this->connect, $this->user_sql, $this->pwd_sql);	
+			$this->pdo = new PDO($this->connect, $this->user_sql, $this->pwd_sql);
+			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch(Exception $e) {
 			die("Erreur SQL ".$e->getMessage());
 		}
@@ -41,6 +42,7 @@ class basesql{
 			}
 			$sql = "UPDATE ".$this->table." SET ".implode(",", $set_sql)." WHERE id=:id;";
 			$query = $this->pdo->prepare($sql);
+			print_r($array_to_execute);
 			$query->execute($array_to_execute);
 		} else {
 			// "Insert";

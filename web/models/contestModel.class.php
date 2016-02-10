@@ -12,23 +12,28 @@ class contestModel extends basesql{
 	protected $is_active;
 	protected $is_delete;
 
-	public function __construct($title="", $date_begin="", $date_ending="", $description="", $color_theme="", $banner="", $logo="", $is_active=false, $is_delete=false){
-		
+	public function __construct($id=-1, $title="", $date_begin="", $date_ending="", $description="", $color_theme="", $banner="", $logo="", $is_active=0, $is_delete=0){
+
 		parent::__construct();
 
-    	$this->setTitle($title);
-    	$this->setDateBegin($date_begin);
-    	$this->setDateEnding($date_ending);
-    	$this->setDescription($description);
-    	$this->setColorTheme($color_theme);
-    	$this->setBanner($banner);
-    	$this->setLogo($logo);
-    	$this->setActive($is_active);
-    	$this->setDelete($is_delete);
+		$this->setId($id);
+		$this->setTitle($title);
+		$this->setDateBegin($date_begin);
+		$this->setDateEnding($date_ending);
+		$this->setDescription($description);
+		$this->setColorTheme($color_theme);
+		$this->setBanner($banner);
+		$this->setLogo($logo);
+		$this->setActive($is_active);
+		$this->setDelete($is_delete);
 	}
 
 
 	// SETTERS
+	public function setId($id){
+		if(!is_numeric($id)) die();
+		$this->id = $id;
+	}
 	public function setTitle($title){
 		$this->title = trim($title);
 	}
