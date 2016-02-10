@@ -2,7 +2,7 @@
 
 $uri = $_SERVER['REQUEST_URI'];
 
-include_once("./include/head.php");
+require("/../include/head.php");
 
 $contestObj = new contestModel();
 
