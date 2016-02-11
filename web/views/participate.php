@@ -37,6 +37,7 @@
 
   ?>
   <!-- Page Header -->
+
   <div class="row">
     <div class="col-lg-12 col-md-12">
       <h1 class="page-header">Participez au concours !</h1>
@@ -62,6 +63,7 @@
            <textarea class="form-control" rows="3" name="description"></textarea>
          </div>
 
+  <?php echo $_SESSION['token']; ?>
          <div class="form-group">
           
             <label for="exampleInputFile">Votre image</label>

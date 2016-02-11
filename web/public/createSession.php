@@ -38,6 +38,7 @@ foreach($response as $data){
     $_SESSION["lastName"] = $lastName;
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
+    $_SESSION["token"] = $token;
     $isAdmin = true;
     header("Location: /contest");
     exit();
@@ -51,6 +52,7 @@ if(!$isAdmin){
     $_SESSION["lastName"] = $lastName;
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
+    $_SESSION["token"] = $token;
     header("Location: /contest/adduser");
   }
 
