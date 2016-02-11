@@ -1,7 +1,5 @@
 <?php
 
-	echo "test";
-
 	session_start();
 	require_once APPLICATION_PATH . '/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
 
