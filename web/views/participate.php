@@ -15,7 +15,7 @@ require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/
         unset($_SESSION['token']);
         $helper = $fb->getRedirectLoginHelper();
         $scope = ["email", "user_likes", "user_photos", "publish_actions"];
-        $loginUrl =  $helper->getLoginUrl("https://hakoopix.herokuapp.com/public/login-callback.php", $scope);
+        $loginUrl =  $helper->getLoginUrl("https://hakoopix.herokuapp.com/web/public/login-callback.php", $scope);
       }else{
         $fb->setDefaultAccessToken($_SESSION['token']);
       }
