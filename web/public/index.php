@@ -1,4 +1,4 @@
-
+<?php session_start(); ?> 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -67,7 +67,7 @@
 				unset($_SESSION['token']);
 				$helper = $fb->getRedirectLoginHelper();
 				$scope = ["email", "user_likes", "user_photos", "publish_actions"];
-				$loginUrl =  $helper->getLoginUrl("hakoopix.dev/public/login-callback.php", $scope);
+				$loginUrl =  $helper->getLoginUrl("https://hakoopix.herokuapp.com/public/login-callback.php", $scope);
 			}else{
 				$fb->setDefaultAccessToken($_SESSION['token']);
 			}

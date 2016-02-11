@@ -15,7 +15,7 @@ require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/
         unset($_SESSION['token']);
         $helper = $fb->getRedirectLoginHelper();
         $scope = ["email", "user_likes", "user_photos", "publish_actions"];
-        $loginUrl =  $helper->getLoginUrl("https://hakoopix.herokuapp.com/web/public/login-callback.php", $scope);
+        $loginUrl =  $helper->getLoginUrl("https://hakoopix.herokuapp.com/public/login-callback.php", $scope);
       }else{
         $fb->setDefaultAccessToken($_SESSION['token']);
       }
@@ -83,8 +83,8 @@ require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/
               <?php else: ?>
 
             <?php
-              $response = $fb->get('/me?fields=email');
-              $userNode = $response->getGraphUser();
+             // $response = $fb->get('/me?fields=email');
+              //$userNode = $response->getGraphUser();
               
               //Affiche toutes les photos des albums
 
@@ -125,7 +125,7 @@ require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/
 
 
 </div><!-- /container -->
-
+<!--
 <script type="text/javascript">
  function readURL(input) {
         if (input.files && input.files[0]) {
@@ -142,4 +142,4 @@ require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/
     $("#inputImage").change(function(){
         readURL(this);
     });
-</script>
+</script>-->
