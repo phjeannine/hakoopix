@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	require_once __DIR__ . '/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
+	require_once APPLICATION_PATH . '/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
 
 	
 	$fb = new Facebook\Facebook([
