@@ -10,7 +10,7 @@
     'default_graph_version' => 'v2.5',
     ]);
 
-  if(!isset($_SESSION['token']) || !verifyAccessToken())
+  if(empty($_SESSION['token']) || !verifyAccessToken())
   {
     unset($_SESSION['token']);
     $helper = $fb->getRedirectLoginHelper();
@@ -37,6 +37,7 @@
 
   ?>
   <!-- Page Header -->
+  <?php var_dump($_SESSION); ?>
 
   <div class="row">
     <div class="col-lg-12 col-md-12">
@@ -63,7 +64,6 @@
            <textarea class="form-control" rows="3" name="description"></textarea>
          </div>
 
-  <?php echo $_SESSION['token']; ?>
          <div class="form-group">
           
             <label for="exampleInputFile">Votre image</label>
