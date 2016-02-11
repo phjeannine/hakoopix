@@ -116,7 +116,7 @@ function logGetAlbum(){
 
           <?php if(empty($_SESSION['token'])):?>
 
-          <a href="<?php echo $loginUrl;?>">Se connecter à facebook</a>
+          Vous n'êtes pas connecté sur facebook : <a href="<?php echo $loginUrl;?>">cliquez pour vous connecter</a>
 
         <?php else: ?>
 
