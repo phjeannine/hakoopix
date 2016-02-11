@@ -69,7 +69,7 @@ logGetAlbum = function(){
       var photo = photos.data[i];
     });
   });
-};*/
+};
 
 
 function logGetAlbum(){
@@ -78,7 +78,7 @@ function logGetAlbum(){
     document.getElementById("albums").innerHTML=html;
 });
 };
-
+*/
 
 </script>
 
@@ -122,9 +122,9 @@ function logGetAlbum(){
 
 
 
-
-        <a href="#" onClick="logGetAlbum()">Rechercher photos depuis FB</a>
-
+        <!--
+        <a href="#" onClick="<?php echo $loginUrl;?>">Afficher mes photos Facebook</a>
+        -->
         <?php
              // $response = $fb->get('/me?fields=email');
               //$userNode = $response->getGraphUser();
@@ -132,7 +132,11 @@ function logGetAlbum(){
               //Affiche toutes les photos des albums
         $response = $fb->get('/me/albums?fields=name,photos{name,source}');
         $albums = $response->getGraphEdge()->asArray();
-
+        if(empty($albums)){ 
+          echo "<p class='msgErrorPhoto'>Aucune photo trouvé ! Assurez-vous que vous avez des photos sur votre profile et que l'application a la permission d'accéder à vos photos facebook </p>"; 
+          echo '<a href="#" onClick="'.$loginUrl.'">Cliquez pour réessayer</a>';
+        }
+        
         foreach ($albums as $album) {
                 //echo "<h2>".$album['name']."</h2>";  //affichage du nom de l'album ici
           if(isset($album["photos"])){
@@ -140,11 +144,8 @@ function logGetAlbum(){
               echo "<img class='imgParticipate' src='".$photo['source']."' width='142px'>";
 
             }
-          } else {
-            echo "aucune photo";
-          }
+          } 
         }
-
         echo "<br><br><br>";
 
         ?>

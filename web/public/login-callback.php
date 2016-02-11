@@ -28,5 +28,5 @@
 	if( isset($accessToken)){
 		
 		$_SESSION["token"] = (string) $accessToken;
-		header("Location: /participate");
+		header("Location: https://hakoopix.herokuapp.com/participate");
 	}
