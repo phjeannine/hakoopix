@@ -11,6 +11,10 @@
 
     <title>Hakoopix | Concours Photo Facebook en ligne</title>
 
+    <!-- Fonts -->
+    <link href="<?php APPLICATION_PATH ?>/public/fonts/opensans.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/fonts/montserrat.css" rel="stylesheet">
+
     <!-- CSS Stylesheets -->
     <link href="<?php APPLICATION_PATH ?>/public/css/jquery-ui.min.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/animate.min.css" rel="stylesheet">
@@ -21,19 +25,22 @@
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
     <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
-    
-    <!-- LESS -->
-    <link href="<?php APPLICATION_PATH ?>/public/css/style.php" rel="stylesheet/less">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.2/less.js"></script>
+   
 
-    <!-- General Stylesheets -->
+    <!-- CSS GENERAL -->
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
     <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
-    <!-- General Stylesheets -->
+
+    <!-- LESS -->
+    <link href="<?php APPLICATION_PATH ?>/public/css/style.php" rel="stylesheet/less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.2/less.js"></script>
+
+
+    <!-- CSS VIEWS -->
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
     <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
     <?php } ?>
@@ -51,9 +58,7 @@
     <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/plugins/morris.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Fonts -->
-    <link href="<?php APPLICATION_PATH ?>/public/fonts/opensans.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/fonts/montserrat.css" rel="stylesheet">
+
 
     <!-- SCRIPTS -->
     <script src="<?php APPLICATION_PATH ?>/public/js/jquery-1.12.0.min.js" type="text/javascript"></script>

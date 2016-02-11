@@ -105,3 +105,16 @@ span {
 .user_participate > a:hover {
 	text-decoration: none;
 }
+
+#contest, #participate {
+	text-align: center;
+}
+
+#contest h1, #participate h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #000000;
+  border-bottom: none;
+}
+

@@ -1,4 +1,4 @@
-.participate .uploaded_img {
+#participate .uploaded_img {
 	height: 250px;
 	width: 100%;
 	border: 1px solid #ddd;
@@ -6,15 +6,24 @@
 	margin: 0 auto;
 }
 
-.participate p {
+#participate p {
 	font-size: 12px;
 }
 
-.participate .uploaded_img {
+#participate .uploaded_img {
 	overflow: hidden;
 }
 
-.participate #blah {
+#participate #blah {
 	max-width: 350px;
 	max-height: 350px;
+}
+
+
+#participate label {
+	margin-top: 20px;
+}
+
+#inputImage {
+	margin: 0 auto;
 }
