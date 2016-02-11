@@ -1,6 +1,9 @@
+
+
 <!-- Page Content -->
 <div class="container" id="participate">
   <?php
+
 
   require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
 
@@ -35,80 +38,126 @@
     return true;
   }
 
+
   ?>
   <!-- Page Header -->
-  <?php var_dump($_SESSION); ?>
+  <script>
 
-  <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <h1 class="page-header">Participez au concours !</h1>
-      <div class="barre"></div>
-    </div>
-  </div><!-- /.row -->
+//TEST JAVASCRIPT POUR ALBUM
+
+ /* logGetAlbum = function() {
+    FB.login(function(response) {
+      if (response.authResponse) {
+        FB.api('/me/albums?fields=name,photos{name,source}', function(rep){
+          window.location="../public/getAlbum.php?name="+rep.name+"&photos="+rep.photos;
+
+        });
+      }
+    });
+};*/
+
+  /*logGetAlbum = function() {
+    FB.login(function(response) {
+    console.log("connecté");
+  }, {scope: 'user_photos'});
+};
+
+logGetAlbum = function(){
+  FB.api('/me/albums?fields=name', function(rep){
+    var album = rep.data[i];
+    FB.api('/'+album.id+'/photos', function(photos){
+      var photo = photos.data[i];
+    });
+  });
+};*/
 
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Main content -->
-    <div class="box box-primary">
+function logGetAlbum(){
+   FB.api('/me/albums',  function(rep) {
+    var album = resp.data;
+    document.getElementById("albums").innerHTML=html;
+});
+};
 
-      <!-- FORMULAIRE -->
-      <form role="form" class="col-md-offset-1 ol-sm-offset-1" method="POST" action="/participate/insert" enctype="multipart/form-data">
-        <div class="box-body col-md-11 col-sm-11">
 
-         <div class="form-group col-md-12">
-           <label for="exampleInputEmail1">Titre</label>
-           <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ajoutez un titre à votre photo..." name="title" required>
+</script>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <h1 class="page-header">Participez au concours !</h1>
+    <div class="barre"></div>
+  </div>
+</div><!-- /.row -->
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Main content -->
+  <div class="box box-primary">
+
+    <!-- FORMULAIRE -->
+    <form role="form" class="col-md-offset-1 ol-sm-offset-1" method="POST" action="/participate/insert" enctype="multipart/form-data">
+      <div class="box-body col-md-11 col-sm-11">
+
+       <div class="form-group col-md-12">
+         <label for="exampleInputEmail1">Titre</label>
+         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ajoutez un titre à votre photo..." name="title" required>
          
-           <label for="exampleInputEmail1">Description</label>
-           <textarea class="form-control" rows="3" name="description"></textarea>
-         </div>
+         <label for="exampleInputEmail1">Description</label>
+         <textarea class="form-control" rows="3" name="description"></textarea>
+       </div>
 
-         <div class="form-group">
-          
-            <label for="exampleInputFile">Votre image</label>
-            <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
-            <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
-            <div class="imgFbUser">
+       <div class="form-group">
 
-              <?php if(!isset($_SESSION['token'])):?>
+        <label for="exampleInputFile">Votre image</label>
+        <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
+        <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
+        <div class="imgFbUser">
 
-              <a href="<?php echo $loginUrl;?>">Se connecter à facebook</a>
+          <?php if(empty($_SESSION['token'])):?>
 
-            <?php else: ?>
+          <a href="<?php echo $loginUrl;?>">Se connecter à facebook</a>
 
-            <?php
+        <?php else: ?>
+
+
+
+
+        <a href="#" onClick="logGetAlbum()">Rechercher photos depuis FB</a>
+
+        <?php
              // $response = $fb->get('/me?fields=email');
               //$userNode = $response->getGraphUser();
 
               //Affiche toutes les photos des albums
+        $response = $fb->get('/me/albums?fields=name,photos{name,source}');
+        $albums = $response->getGraphEdge()->asArray();
 
-            $response = $fb->get('/me/albums?fields=name,photos{name,source}');
-            $albums = $response->getGraphEdge()->asArray();
-
-            foreach ($albums as $album) {
+        foreach ($albums as $album) {
                 //echo "<h2>".$album['name']."</h2>";  //affichage du nom de l'album ici
-              if(isset($album["photos"])){
-                foreach ($album["photos"] as $photo) {
-                  echo "<img class='imgParticipate' src='".$photo['source']."' width='142px'>";
+          if(isset($album["photos"])){
+            foreach ($album["photos"] as $photo) {
+              echo "<img class='imgParticipate' src='".$photo['source']."' width='142px'>";
 
-                }
-              }
             }
+          } else {
+            echo "aucune photo";
+          }
+        }
 
-            echo "<br><br><br>";
+        echo "<br><br><br>";
 
-            ?>
+        ?>
 
-          <?php endif; ?>
-        </div>
-
-      <input type="submit" class="btn btn-success btn-customize">
-
+      <?php endif; ?>
     </div>
 
+    <input type="submit" class="btn btn-success btn-customize">
 
-  </div><!-- /.box -->
+  </div>
+
+
+</div><!-- /.box -->
 </div><!-- /.box-body -->
 
 </form><!-- /. FORM -->
