@@ -176,12 +176,21 @@ class basesql{
 		return $data;
 	}
 
-	//cette méthode permet de retourner le oncours sélectionné
+	//cette méthode permet de retourner le concours sélectionné
 	public function getOneContest($selected_contest = "Concours Oasis", $column = "title") {
 		$sql =  "SELECT * FROM ".$this->table." WHERE ".$column." = '".$selected_contest."'";
 		$query = $this->pdo->prepare($sql);
 		$query->execute();
 		$data = $query->fetch();
+		return $data;
+	}
+
+	// Sélection des 8 derniers utilisateurs inscrits => page d'accueil dashboard
+	public function getUserByLimit($column = "id") {
+		$sql = 'SELECT * FROM ' . $this->table.' ORDER BY ' . $column . ' ASC';
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+		$data = $query->fetchAll();
 		return $data;
 	}
 
