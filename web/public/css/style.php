@@ -5,7 +5,6 @@ header("Content-type: text/css; charset: UTF-8");
 
 @color : <?php echo $_SESSION['color'] ?>;
 
-
 .navbar {
 	background-color: @color;
 }

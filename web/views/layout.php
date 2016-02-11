@@ -22,10 +22,12 @@ $contestObj = new contestModel();
               <div class="navbar-header">
                   <a class="navbar-brand" href="/">Home</a>
                   <span> Facebook Contest</span>
-                  <?php if(!empty($_SESSION)){
+                  <?php if(!empty($_SESSION['role'])){
+                    if($_SESSION['role'] != 'admin') {
                     echo '<div class="user_participate">';
-                    echo '<a href="/participate">Participer</a>';
+                    echo '<a href="/participate"><i class="fa fa-camera-retro"></i> Participer</a>';
                     echo '</div>';
+                    }
                   }?>
 
               </div>

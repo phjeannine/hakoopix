@@ -180,3 +180,24 @@
 #homepage p {
   font-family: 'Open Sans', Arial, sans-serif;
 }
+
+.user_participate .fa {
+  color: #fff;
+}
+
+.user_participate a {
+  margin-left: -10px;
+  transition: all 0.3s ease;
+}
+
+.user_participate a>i {
+visibility: hidden;
+}
+
+.user_participate a:hover {
+  margin-left: 0px;
+}
+
+.user_participate a:hover>i {
+  visibility: visible;
+}
