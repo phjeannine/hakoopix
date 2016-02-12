@@ -18,7 +18,6 @@ header("Content-type: text/css; charset: UTF-8");
 	border: 10px solid @color;
 }
 
-
 .barre {
 	border-top: 2px solid @color;
 

@@ -7,8 +7,10 @@ include("./include/head.php");
 $contestObj = new contestModel();
 
       $contestObj->getOneByActive(true);
+      $idContest = $contestObj->getId();
       $color = $contestObj->getColorTheme();
       $_SESSION['color'] = $color;
+      $_SESSION['idContest'] = $idContest;
 ?>
 
 <body cz-shortcut-listen="true">
@@ -61,11 +63,13 @@ $contestObj = new contestModel();
 
 		    <?php include $this->view; ?>
 
+        <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
         <div id="footer">
           <div class="container">
           <a href="/privatePolicy" title="Private Policy">Mentions légales</a>
         </div>
         </div>
+        <?php } ?>
 
     </div><!-- /.site-wrapper-inner -->
   </div><!-- /.site-wrapper -->

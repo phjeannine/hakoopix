@@ -110,7 +110,7 @@ function logGetAlbum(){
        <div class="form-group">
 
         <label for="exampleInputFile">Votre image</label>
-        <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
+        <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation">
         <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
         <div class="imgFbUser">
 
@@ -125,7 +125,7 @@ function logGetAlbum(){
         <!--
         <a href="#" onClick="<?php echo $loginUrl;?>">Afficher mes photos Facebook</a>
         -->
-        <?php
+       <!-- <?php
              // $response = $fb->get('/me?fields=email');
               //$userNode = $response->getGraphUser();
 
@@ -141,7 +141,8 @@ function logGetAlbum(){
                 //echo "<h2>".$album['name']."</h2>";  //affichage du nom de l'album ici
           if(isset($album["photos"])){
             foreach ($album["photos"] as $photo) {
-              echo "<img class='imgParticipate' src='".$photo['source']."' width='142px'>";
+              echo "<label><input type='radio' name='imgParticipation' value=".$photo['source'].">";
+              echo "<img class='imgParticipate' src='".$photo['source']."' width='142px'></label>";
 
             }
           } 
@@ -150,7 +151,7 @@ function logGetAlbum(){
 
         ?>
 
-      <?php endif; ?>
+      <?php endif; ?>-->
     </div>
 
     <input type="submit" class="btn btn-success btn-customize">

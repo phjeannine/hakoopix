@@ -96,4 +96,38 @@ $(document).ready(function() {
 	    $('#remain').text(remain);
 	});  
 
+
+
+	// Prévisulation du contest
+	$('input.preview-contest').on('click', function(e){
+		e.preventDefault();
+
+		// Ajout du titre
+		addTitle = $('input#contest-title').val();
+		if(addTitle) {
+			$('div.previewTitle').text(addTitle);
+		}
+
+		addDescription = $('textarea#contest-description').val();
+		if(addDescription){
+			$('div.previewDescription').text(addDescription);
+		}
+		// Ajout bannière
+		add = $('input#banner-theme').val();
+		if(add) {
+			$('div.preview').attr('src', e.target.result);
+		}
+
+		// Ajout couleur du thème
+		addColor = $('input#color-theme').val();
+		if(addColor) {
+			$('div.previewColor').css('background-color', addColor);
+			$('div.previewColorBarre').css('background-color', 'none');
+			$('div.previewColorBarre').css('border-color', addColor);
+			$('i.previewFa').css('color', addColor);
+		}
+
+
+	});	
+
 });
