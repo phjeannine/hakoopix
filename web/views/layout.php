@@ -62,7 +62,9 @@ $contestObj = new contestModel();
 		    <?php include $this->view; ?>
 
         <div id="footer">
-          <div class="inner"></div>
+          <div class="container">
+          <a href="/privatePolicy" title="Private Policy">Mentions légales</a>
+        </div>
         </div>
 
     </div><!-- /.site-wrapper-inner -->

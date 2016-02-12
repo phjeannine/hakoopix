@@ -44,3 +44,15 @@ header("Content-type: text/css; charset: UTF-8");
 	border: 2px solid @color;
 	color: @color;
 }
+
+#footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: @color;
+	color:#fff;
+}
+
+#footer a {
+	text-decoration: none;
+	color: #fff;
+}
