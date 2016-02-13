@@ -16,6 +16,7 @@ class participateController{
 		$idContest = $_SESSION['idContest'];
 		$nbLike = 0;
 		$id = '0';
+		$participation ="";
 		if(isset($_POST['imgSelected'])){
 			//Si ça vient d'une photo FB
 			$participation = $_POST['imgSelected'];
@@ -26,7 +27,7 @@ class participateController{
 
 		$participateObj = new pictureModel($id, $title, $description, $participation, $idContest, $idUser, $nbLike);
 		$participateObj->save();
-		
+
 		header("Location: /contest");
 	}
 
