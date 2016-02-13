@@ -26,6 +26,7 @@ class participateController{
 
 		$participateObj = new pictureModel($id, $title, $description, $participation, $idContest, $idUser, $nbLike);
 		$participateObj->save();
+		
 		header("Location: /contest");
 	}
 
