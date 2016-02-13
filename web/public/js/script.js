@@ -108,6 +108,7 @@ $(document).ready(function() {
 			$('div.previewTitle').text(addTitle);
 		}
 
+		// Ajout de la description
 		addDescription = $('textarea#contest-description').val();
 		if(addDescription){
 			$('div.previewDescription').text(addDescription);
@@ -115,7 +116,7 @@ $(document).ready(function() {
 		// Ajout bannière
 		add = $('input#banner-theme').val();
 		if(add) {
-			$('div.preview').attr('src', e.target.result);
+			$('div.previewBanner').attr('src', e.target.result);
 		}
 
 		// Ajout couleur du thème

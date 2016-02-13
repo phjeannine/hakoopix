@@ -105,8 +105,8 @@ include("dashboardHead.php");
               </div>
 
 
-              <input type="submit" class="btn btn-primary col-md-6" name="submit-contest">
-              <input type="button" class="btn btn-primary col-md-6 preview-contest" name="preview-contest" value="Prévisualiser">
+              <input type="submit" class="btn btn-primary col-md-6 btn-contest" name="submit-contest">
+              <input type="button" class="btn btn-primary col-md-6 preview-contest btn-contest" name="preview-contest" value="Prévisualiser">
             </div><!-- /.box-body -->
           </form>
         </div><!-- /.form-content -->
@@ -116,19 +116,19 @@ include("dashboardHead.php");
       <div class="box-body col-md-11">
         <div class="row">
           <p><b>Prévisualiser votre concours :</b></p>
-          <div id="preview-content" style="border:3px dashed #eee; text-align: center;">
-            <div class="previewColor" style="width: 100%; height: 30px; background-color: #317ab8;"></div>
-            <div class="previewHeader" style="background-color: #eee; padding-top: 40px; padding-bottom: 40px;">
+          <div id="preview-content">
+            <div class="previewColor"></div>
+            <div class="previewHeader previewBanner">
               <div class="previewTitle">Titre du concours</div>
-              <div class="previewDescription" style="margin-top: 10px;">Description du concours</div>
+              <div class="previewDescription">Description du concours</div>
               <!--<div class="fb-connect-button">
                 <span>Envie de jouer le jeu ?</span>
                   <a href="#">Je participe</a>
                 </div>-->
             </div>
-            <div class="previewRules" style="padding-top: 30px; padding-bottom: 30px;">
-              <p>Hakoopix</p>
-              <div class="previewColorBarre barre" style="border-top: 2px solid #317ab8;"></div>
+            <div class="previewRules">
+              <p class="previewTitle">Hakoopix</p>
+              <div class="previewColorBarre barre"></div>
               <div class="col-lg-4 col-md-4 col-sm-4">
                <i class="fa fa-camera-retro previewFa"></i>
                 <p>Ajoute une photo</p>
@@ -143,20 +143,21 @@ include("dashboardHead.php");
               </div><!-- /.rule 2 -->
             </div><!-- /. Preview Rules -->
 
-            <div class="previewPrices" style="margin-top: 60px; padding-top: 30px; padding-bottom: 80px; background-color: #eee;">
-              <p>Lots à gagner</p>
-              <div class="previewColorBarre barre" style="border-top: 2px solid #317ab8;"></div>
+            <div class="previewPrices">
+              <p class="previewTitle">Lots à gagner</p>
+              <div class="previewColorBarre barre"></div>
 
               <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="previewPrice previewColorBarre" style="width: 100%; height: 60px; border:  3px solid #317ab8; margin-top: 10px;"></div>
+                <div class="previewPrice previewColorBarre"></div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="previewPrice previewColorBarre" style="width: 100%; height: 60px; border:  3px solid #317ab8; margin-top: 10px;"></div>
+                <div class="previewPrice previewColorBarre"></div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="previewPrice previewColorBarre" style="width: 100%; height: 60px; border:  3px solid #317ab8; margin-top: 10px;"></div>
+                <div class="previewPrice previewColorBarre" ></div>
               </div>
             </div><!--/. Preview Prices -->
+            <div class="previewColor footer"></div>
           </div><!-- / Preview content -->
         </div><!-- / row -->
       </div><!-- /box -->
