@@ -18,7 +18,6 @@ header("Content-type: text/css; charset: UTF-8");
 	border: 10px solid @color;
 }
 
-
 .barre {
 	border-top: 2px solid @color;
 
@@ -43,4 +42,25 @@ header("Content-type: text/css; charset: UTF-8");
 	background-color: #fff;
 	border: 2px solid @color;
 	color: @color;
+}
+
+#footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: @color;
+	color:#fff;
+}
+
+#footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.modal-header{
+	background-color: @color !important;
+	color: white !important;
+}
+
+#myModal{
+	margin-top: 5% !important;
 }

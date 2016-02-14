@@ -1,10 +1,8 @@
 <?php
 
-class testController{
-
+class privatePolicyController {
 	public function indexAction($args){
-		$v = new view("test");
+		$v = new view("privatePolicy");
 		$v->assign("mesargs", $args);
 	}
 }
-?>

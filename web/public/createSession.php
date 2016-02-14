@@ -53,7 +53,7 @@ if(!$isAdmin){
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
     $_SESSION["token"] = $token;
-    header("Location: /contest/adduser");
+    header("Location: /participate");
   }
 
 ?>

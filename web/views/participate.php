@@ -1,5 +1,4 @@
 
-
 <!-- Page Content -->
 <div class="container" id="participate">
   <?php
@@ -109,8 +108,12 @@ function logGetAlbum(){
 
        <div class="form-group">
 
-        <label for="exampleInputFile">Votre image</label>
-        <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation" required>
+        <label for="exampleInputFile">Votre image</label><br>
+        <!-- <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation"> -->
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Charger une image</button>
+
+
         <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
         <div class="imgFbUser">
 
@@ -125,7 +128,7 @@ function logGetAlbum(){
         <!--
         <a href="#" onClick="<?php echo $loginUrl;?>">Afficher mes photos Facebook</a>
         -->
-        <?php
+       <?php 
              // $response = $fb->get('/me?fields=email');
               //$userNode = $response->getGraphUser();
 
@@ -141,7 +144,8 @@ function logGetAlbum(){
                 //echo "<h2>".$album['name']."</h2>";  //affichage du nom de l'album ici
           if(isset($album["photos"])){
             foreach ($album["photos"] as $photo) {
-              echo "<img class='imgParticipate' src='".$photo['source']."' width='142px'>";
+              echo "<div class='divImg'><img class='imgParticipate' src='".$photo['source']."' width='142px'>";
+              echo "<br><input type='radio' name='imgSelected' value=".$photo['source']."> Séléctionner</div>";
 
             }
           } 
@@ -166,7 +170,43 @@ function logGetAlbum(){
 
 </div><!-- /.content-wrapper -->
 
+<!-- Modal : code pour le pop-up qui s'affiche lorsqu'on clique sur charger une image -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ajout d'une photo </h4>
+              </div>
+              <div class="modal-body">
+                <p>Séléctionnez un album parmis la liste de vos albums ou créez-en un autre et insérer l'image : </p><br>
+                <form action="../public/upload.php" method="post" enctype="multipart/form-data">
+                  Albums : 
+                  <select name="album">
+                  <?php
+
+                    $response = $fb->get('/me/albums?fields=name,can_upload');
+                    $albums = $response->getGraphEdge()->asArray();
+                    foreach ($albums as $album) {
+                      if($album['can_upload'] == 1)
+                      echo "<option value='".$album['id']."'>".$album['name']."</option>";
+                    }
+                  ?>
+                  </select><br><br> 
+                  Ou créer un autre album : <input type="text" name="name_album"><br><br> 
+                  Séléctionnez l'image : <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+                  <input type="submit" class="btn btn-default" value="Charger l'image" name="Envoyer">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
 </div><!-- /container -->
 <!--
 <script type="text/javascript">

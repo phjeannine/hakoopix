@@ -50,6 +50,7 @@
     <link href="<?php APPLICATION_PATH ?>/public/css/addAdmin.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/participate.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/dashboard.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/addContest.css" rel="stylesheet">
 
     
 
