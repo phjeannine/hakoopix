@@ -1,5 +1,4 @@
 
-
 <!-- Page Content -->
 <div class="container" id="participate">
   <?php
