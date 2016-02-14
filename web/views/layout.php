@@ -21,7 +21,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="<?php APPLICATION_PATH ?>/public/fonts/montserrat.css" rel="stylesheet">
 
     <!-- CSS Stylesheets -->
-    <link href="<?php APPLICATION_PATH ?>/public/css/jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link href="<?php APPLICATION_PATH ?>/public/css/animate.min.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/responsive.css" rel="stylesheet" media="screen and (max-width: 600px)">
 
@@ -68,7 +68,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
     <!-- SCRIPTS -->
     <script src="<?php APPLICATION_PATH ?>/public/js/jquery-1.12.0.min.js" type="text/javascript"></script>
-    <script src="<?php APPLICATION_PATH ?>/public/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="<?php APPLICATION_PATH ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 
