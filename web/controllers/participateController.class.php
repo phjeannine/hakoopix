@@ -31,9 +31,9 @@ class participateController{
 
 		if($verifBdd->getIdMember()==0){
 			//Si non, on enregistre
-			$participateObj = new pictureModel($id, $title, $description, $image_link, $id_contest, $id_member, $nb_like);
+			$participateObj = new pictureModel($id, $title, $description, 'https://www.facebook.com/photo.php?fbid=176036639434177&set=pb.100010835258214.-2207520000.1455474961.&type=3&theater', $id_contest, $id_member, $nb_like);
 			$participateObj->save();
-			header("Location: /contest");
+			//header("Location: /contest");
 		} else {
 			header("Location: /contest");
 		}
