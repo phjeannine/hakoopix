@@ -67,8 +67,25 @@ $(document).ready(function() {
     var start = $("#date-first");
     var end = $("#date-end");
 
-	$(start).datepicker();
-	$(end).datepicker();
+	$(start).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      minDate: -0,
+      maxDate: "+1M +10D",
+      onClose: function( selectedDate ) {
+        $(end).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+
+    $(end).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $(start).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
 
     /* -------- ADD PRICES -------- */
     // Affichage du formulaire d'ajout de prix

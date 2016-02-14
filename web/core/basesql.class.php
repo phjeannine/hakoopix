@@ -82,9 +82,9 @@ class basesql{
 	public function countRow() {
 		$sql = "SELECT count(*) FROM ".$this->table;
 		$query = $this->pdo->prepare($sql);
+		$colcount = $query->columnCount();
 		$query->execute();
 		//$query->setFetchMode(PDO::FETCH_ASSOC);
-		$data = $query->fetchColumn();
 	}
 
 	// Cette méthode retourne l'objet correspondant à l'ID passé en paramètre
@@ -176,7 +176,16 @@ class basesql{
 		return $data;
 	}
 
-	//cette méthode permet de retourner le concours sélectionné
+	// Sélection des 8 derniers concours inscrits => page d'accueil dashboard
+	public function getContestByLimit($column = "id") {
+		$sql = 'SELECT * FROM ' . $this->table.' ORDER BY ' . $column . ' ASC';
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+		$data = $query->fetchAll();
+		return $data;
+	}
+
+	// Cette méthode permet de retourner le concours sélectionné
 	public function getOneContest($selected_contest = "Concours Oasis", $column = "title") {
 		$sql =  "SELECT * FROM ".$this->table." WHERE ".$column." = '".$selected_contest."'";
 		$query = $this->pdo->prepare($sql);

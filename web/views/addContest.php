@@ -50,9 +50,6 @@ include("dashboardHead.php");
                             <input type="text" id="date-end" class="form-control" name="ending" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
                           </div><!-- /.input group -->
                         </div>
-                        <div class="dates-control error">
-                          <p><i class="fa fa-exclamation-triangle"></i> La date de départ ne doit pas être inférieur à la date de fin d'un concours</p>
-                        </div>
                       </div>
 
                       <div class="row">
