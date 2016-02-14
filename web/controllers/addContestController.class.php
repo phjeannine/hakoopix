@@ -1,6 +1,6 @@
 <?php
 
-class addContestController {
+class addContestController extends basesql {
 
 	public function indexAction($args){
 		$v = new view("addContest");
@@ -24,6 +24,10 @@ class addContestController {
 		}
 
 		$addContestObj = new contestModel($id, $title, $date_begin, $date_ending, $description, $color_theme, $logo, $banner, $active_contest, $delete_contest);
+		$getActiveContest = $this->getActiveContest();
+		if (!$getActiveContest == FALSE) {
+			$this->unsetActiveContest($getActiveContest['id']);
+		}
 		$addContestObj->save();
 
 		header("Location: /contestList");

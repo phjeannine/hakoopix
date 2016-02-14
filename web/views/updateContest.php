@@ -117,6 +117,14 @@ $contests = $contestListObj->getAllContest();
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label><input type="checkbox" name="active-contest" id="active-contest"
+                                    <?php if (isset($contestResult['is_active']) && $contestResult['is_active'] == TRUE)
+                                    echo "checked"; ?>>&nbsp;Actif</label>
+                                </div>
+                            </div>
+
                             <div class="fields-error error">
                                 <p>Vous devez renseigner tous les champs</p>
                             </div>

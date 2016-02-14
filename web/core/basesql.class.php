@@ -203,5 +203,20 @@ class basesql{
 		return $data;
 	}
 
+	// Récupérer le concours actif
+	public function getActiveContest() {
+		$sql = 'SELECT * FROM contest WHERE is_active = TRUE';
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+		$data = $query->fetch();
+		return $data;
+	}
+
+	// Passe a false le concours actif
+	public function unsetActiveContest($id) {
+		$sql = "UPDATE contest SET is_active = false WHERE id = " . $id;
+		$query = $this->pdo->prepare($sql);
+		$query->execute();
+	}
 
 }
