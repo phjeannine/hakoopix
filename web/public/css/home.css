@@ -61,7 +61,7 @@
 
 #banner .fb-connect-button {
   float: none;
-  width: 338px;
+  width: 500px;
   margin: 0 auto;
 }
 
@@ -79,18 +79,27 @@
   color: #fff;
   text-transform: uppercase;
   font-weight: lighter;
-  width: 200px;
+  width: 80%;
+  max-width: 350px;
   margin: 0 auto;
   font-size: 20px;
   text-align: center;
-  border: 3px solid #fff;
+  border: 3px solid #405d9b;
+  background-color: #405d9b;
   padding: 7px;
 }
 
+.fb-align {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
 #banner .fb-connect-button a:hover {
   text-decoration: none;
-  background-color: #fff;
-  color: #444;
+  background-color: #3b5998;
+  border-color: 3px solid #3b5998;
+  color: #fff;
 }
 
 /* Homepage Content */

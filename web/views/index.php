@@ -66,7 +66,8 @@ if(!empty($id_contest)) { ?>
                         <p class="contest-description"><?php echo $description; ?></p>
                     <div class="fb-connect-button">
                         <span>Envie de jouer le jeu ?</span>
-                        <a href="#" onClick="logInWithFacebook()">Je participe</a>
+                        
+                        <a href="#" onClick="logInWithFacebook()"><div class="fb-align"><img src="../public/images/fb-logo.jpg"></div><div class="fb-align"> Connexion avec Facebook</div></a>
                     </div>
                 </div><!-- /.inner -->
             </div><!-- /.holder -->
