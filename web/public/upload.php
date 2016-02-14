@@ -81,7 +81,7 @@ if(empty($_POST["name_album"]))
 if ($error == 0) {
 
     $data = [
-	  'message' => 'A neat photo upload example. Neat.',
+	  'message' => "Photo chargé depuis l'application Hakoopix ",
 	  'source' => $fb->fileToUpload($_FILES["fileToUpload"]["tmp_name"]),
 	];
     try {
