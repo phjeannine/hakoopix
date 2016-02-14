@@ -25,6 +25,10 @@
 
 }
 
+.preview-content i {
+	font-size: 14px;
+}
+
 .previewDescription {
 	margin-top: 10px;
 }

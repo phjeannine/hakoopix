@@ -9,15 +9,38 @@
         </div>
     </div><!-- /.row -->
 
+        <?php
+
+        $participationBdd = new pictureModel();
+        $participationBdd->getAll(true);
+
+        //var_dump($participationBdd);
+
+        ?>
+
+
+
+        <?php foreach($participationBdd as $userParticipate) : ?>
+            <div class="col-lg-4">
+                <?php echo '<img class="img-responsive" src="../public/images/participation/'.$userParticipate['image_link'].'">'; 
+
+                echo $userParticipate['title'];
+                ?>
+                <div class="item-contest">
+                <div class="col-md-9"><?php echo '<a href="../public/data/updateLike.php?nbLike='.$userParticipate["nb_like"].'" class="like item-contest-icon"> <span>like</span></a> '; echo ''.$userParticipate["nb_like"];?></div>
+                <div class="share item-contest-icon col-md-3"><span>Partager</span></div>
+            </div>
+            </div>
+        <?php endforeach; ?>
     <!-- Projects Row -->
     <div class="row">
         <!-- Portfolio Item -->
-       <!-- <?php  
+      <!-- <?php  
             $results = $db->query("SELECT * FROM picture WHERE id_contest='".$_SESSION['idContest']."' ORDER BY id_picture");
             $tabResults = $results->fetchAll();
 
             foreach ($tabResults as $res) {
-        ?>-->
+        ?>
         <div class="col-md-4 col-sm-4 portfolio-item">
             <a href="#"><?php echo '<img class="img-responsive" src="../public/images/participation/'.$res["image_link"].'" alt="">'; ?></a>
             <div class="item-contest">
@@ -31,7 +54,10 @@
         </div>
         <?php  
             };
-        ?>
+        ?>-->
+
+
+
     </div><!-- /.row -->
 
     <hr>

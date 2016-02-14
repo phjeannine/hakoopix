@@ -25,6 +25,7 @@ class pictureModel extends basesql{
 
 	// SETTERS
 	public function setId($id){
+		if(!is_numeric($id)) die();
 		$this->id = $id;
 	}
 	public function setTitle($title){

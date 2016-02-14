@@ -12,23 +12,33 @@ class participateController{
 
 		$title = $_POST['title'];
 		$description = $_POST['description'];
-		$idUser = $_SESSION['idUser'];
-		$idContest = $_SESSION['idContest'];
-		$nbLike = 0;
+		$id_member = $_SESSION['idUser'];
+		$id_contest = $_SESSION['idContest'];
+		$nb_like = 0;
 		$id = '0';
-		$participation ="";
+		$image_link ="";
 		if(isset($_POST['imgSelected'])){
 			//Si ça vient d'une photo FB
-			$participation = $_POST['imgSelected'];
+			$image_link = $_POST['imgSelected'];
 		} else if (isset($_FILES['imgParticipation']['name'])) {
 			//Ou si ça vient du desktop
-			$participation = $_FILES['imgParticipation']['name'];
+			$image_link = $_FILES['imgParticipation']['name'];
 		}
 
-		$participateObj = new pictureModel($id, $title, $description, $participation, $idContest, $idUser, $nbLike);
-		$participateObj->save();
+		//On vérifie si l'utilisateur a déjà participé ou pas
+		$verifBdd = new pictureModel();
+		$verifBdd->getOneByIdMember($id_member);
 
-		header("Location: /contest");
+		if($verifBdd->getIdMember()==0){
+			//Si non, on enregistre
+			$participateObj = new pictureModel($id, $title, $description, $image_link, $id_contest, $id_member, $nb_like);
+			$participateObj->save();
+			header("Location: /contest");
+		} else {
+			header("Location: /contest");
+		}
+
+
 	}
 
 }

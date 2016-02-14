@@ -21,9 +21,9 @@ class contestController{
 		if($testObj->getIdMember() == 0){
 			$member = new memberModel($lastName, $firstName, $picture, $idUser);
 			$member->save();
-			header('Location: /contest');
+			//header('Location: /contest');
 		}else{
-			header('Location: /contest');
+			//header('Location: /contest');
 		}
 
 	}

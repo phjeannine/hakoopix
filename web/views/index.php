@@ -52,7 +52,9 @@ $id_contest = $contestObj->getId();
 $banner = $contestObj->getBanner();
 $color = $contestObj->getColorTheme();
 $_SESSION['color'] = $color;
+ $_SESSION['idContest'] = $idContest;
             
+
 if(!empty($id_contest)) { ?>
 
 <div id="banner" class="container-fluid" style="background: url(../public/images/banner/oasis.jpg) no-repeat center fixed;">
