@@ -64,7 +64,11 @@
     clear: both;
 }
 
-.form-content input[type="submit"] {
+.form-content form {
+	margin: 0;
+}
+
+.form-content form input[type="submit"] {
 	color: #fff;
 	margin: 0 0 30px 0;
 	background-color: #2c2e43;
@@ -268,5 +272,94 @@ input[type="submit"]:focus {
 
 #add-prices textarea:focus {
 	outline: none;
+}
+
+/*------------------------------------*/
+/*---- PRÉVISUALITATION CONCOURS ----*/
+/*----------------------------------*/
+#preview-content {
+	border:3px dashed #eee;
+	text-align: center;
+	font-family: 'Open Sans', Arial, sans serif;
+	font-size: 12px;
+}
+
+.previewTitle {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+
+.previewColor {
+	width: 100%;
+	height: 30px;
+	background-color: #317ab8;
+}
+
+.previewHeader {
+	background-color: #eee;
+	height: 130px;
+	padding-top: 40px;
+
+}
+
+.preview-content i {
+	font-size: 14px;
+}
+
+.previewDescription {
+	margin-top: 10px;
+}
+
+.previewRules {
+	padding-top: 30px;
+	height: 200px;
+}
+
+.previewColorBarre {
+	border-top: 2px solid #317ab8;
+}
+
+.previewPrices {
+	padding-top:30px;
+	min-height: 180px;
+	background-image: url('../images/fond.png') ;
+	background-size: cover;
+	padding-bottom: 30px;
+}
+
+.previewPrice {
+	margin-top:30px;
+	width: 100%;
+	min-height: 60px;
+	border:  3px solid #317ab8;
+	margin-top: 10px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.previewColor.footer {
+	height: 10px;
+}
+
+.btn-contest {
+	display: inline-block;
+	margin-left: 10px;
+	vertical-align:top;
+	border-radius: 0px;
+	width: 40%;
+	border: 2px solid #eb5e92;
+	background-color: #eb5e92;
+	transition: all 0.4s ease;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.btn-contest:hover, .btn-contest:target {
+	background-color: #fff;
+	color: #eb5e92;
+	border-color: #eb5e92;
 }
 
