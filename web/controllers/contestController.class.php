@@ -22,10 +22,21 @@ class contestController{
 			$member = new memberModel($lastName, $firstName, $picture, $idUser);
 			$member->save();
 			//header('Location: /contest');
-		}else{
-			//header('Location: /contest');
 		}
 
+	}
+
+	public function updatelikeAction($args){
+		$idPhoto = $args['0'];
+		$nbLike = $args['1'];
+		$nbLike = $nbLike+1;
+
+		$contestObj = new memberModel();
+		$contestObj->getOneBy($idPhoto);
+
+		// appel de la méthode save() ici 
+
+		header('Location: /contest');
 	}
 
 }

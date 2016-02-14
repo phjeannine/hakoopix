@@ -1,8 +1,10 @@
 <?php
 	session_start();
+	
+	include("../include/connexion.php");
+
 	require_once __DIR__ . '/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
 
-	
 	$fb = new Facebook\Facebook([
 	  'app_id' => '959119600818575',
 	  'app_secret' => '9f0062f110ea6d3589e7debcb04c2268',
@@ -12,7 +14,7 @@
 
 	if(!isset($_SESSION['token']))
 	{
-		header("Location: http://hakoopix.dev:8888/public/index.php");
+		header("Location: /participate");
 	}else{
 		$fb->setDefaultAccessToken($_SESSION['token']);
 	}
@@ -20,7 +22,7 @@
 
 
 
-$target_dir = "uploads/";
+$target_dir = "images/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -84,12 +86,11 @@ if ($error == 0) {
 	];
     try {
 	  	$response = $fb->post('/'.$_POST['album'].'/photos', $data);
-		header("Location: index.php");
+		header("Location: /participate");
 	} catch(FacebookSDKException $e) {
 	  	$error_msg = 'Error: ' . $e->getMessage();
 	  	
 	}
 }
 
-
-header("Location: /?error_msg=".$error_msg);
+header("Location: /participate");

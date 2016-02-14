@@ -55,3 +55,12 @@ header("Content-type: text/css; charset: UTF-8");
 	text-decoration: none;
 	color: #fff;
 }
+
+.modal-header{
+	background-color: @color !important;
+	color: white !important;
+}
+
+#myModal{
+	margin-top: 5% !important;
+}

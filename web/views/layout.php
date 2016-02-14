@@ -117,6 +117,7 @@ $contestObj = new contestModel();
                       <?php } else { ?>
                         <li><a href="/participate" title="Administration">Participer</a></li>
                         <li><a href="/participate" title="Administration">Mes photos</a></li>
+                        <li><a href="/contest" title="Administration">Concours</a></li>
                         <hr>
                         <li><a href="<?php APPLICATION_PATH ?>/public/data/disconnect.php">Déconnexion</a></li>
                       <?php } ?>
