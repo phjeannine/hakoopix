@@ -137,7 +137,7 @@ function logGetAlbum(){
         $albums = $response->getGraphEdge()->asArray();
         if(empty($albums)){ 
           echo "<p class='msgErrorPhoto'>Aucune photo trouvé ! Assurez-vous que vous avez des photos sur votre profile et que l'application a la permission d'accéder à vos photos facebook </p>"; 
-          echo '<a href="#" onClick="'.$loginUrl.'">Cliquez pour réessayer</a>';
+          //echo '<a href="#" onClick="'.$loginUrl.'">Cliquez pour réessayer</a>';
         }
         
         foreach ($albums as $album) {
