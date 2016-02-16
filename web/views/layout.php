@@ -77,6 +77,9 @@ $contestObj = new contestModel();
       $color = $contestObj->getColorTheme();
       $_SESSION['color'] = $color;
       $_SESSION['idContest'] = $idContest;
+      $activeContest = $contestObj->getActiveContest();
+      $logo = $activeContest['logo'];
+      $banner = $activeContest['banner'];
 ?>-->
 
 <body cz-shortcut-listen="true">
@@ -88,7 +91,7 @@ $contestObj = new contestModel();
           <nav class="navbar navbar-fixed-top" role="navigation">
             <div class="container">
               <div class="navbar-header">
-                  <a class="navbar-brand" href="/">Home</a>
+                  <a class="navbar-brand" href="/"><img src="../public/images/logo/<?php echo $logo?>" width="40px" height="40px"></a>
                   <span> Facebook Contest</span>
                   <?php if(!empty($_SESSION['role'])){
                     if($_SESSION['role'] != 'admin') {

@@ -52,12 +52,12 @@ $id_contest = $contestObj->getId();
 $banner = $contestObj->getBanner();
 $color = $contestObj->getColorTheme();
 $_SESSION['color'] = $color;
- $_SESSION['idContest'] = $idContest;
+$_SESSION['idContest'] = $idContest;
             
 
 if(!empty($id_contest)) { ?>
 
-<div id="banner" class="container-fluid" style="background: url(../public/images/banner/oasis.jpg) no-repeat center fixed;">
+<div id="banner" class="container-fluid" style="background: url(../public/images/banner/<?php echo $banner ?>) no-repeat center fixed;">
     <div class="overlay" style="background-color: rgba(0, 0, 0, 0.7)">
         <div class="banner-content row">
             <div class="holder">
@@ -66,7 +66,6 @@ if(!empty($id_contest)) { ?>
                         <p class="contest-description"><?php echo $description; ?></p>
                     <div class="fb-connect-button">
                         <span>Envie de jouer le jeu ?</span>
-                        
                         <a href="#" onClick="logInWithFacebook()"><div class="fb-align"><img src="../public/images/fb-logo.jpg"></div><div class="fb-align"> Connexion avec Facebook</div></a>
                     </div>
                 </div><!-- /.inner -->
