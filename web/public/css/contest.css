@@ -1,45 +1,33 @@
 /* CONTEST STYLESHEET */
-.portfolio-item .item-contest {
-	margin: 10px 0;
+.contribution {
+	margin-bottom: 10px;
+}
+
+.contribution h3 {
+	text-align: left;
+	font-family: 'Montserrat', Arial, sans-serif;
+	margin: 10px 0 5px 0;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.contribution .item-contest {
 	overflow: auto;
 }
 
-.portfolio-item .item-contest .like,
-.portfolio-item .item-contest .share {
+.contribution .item-contest .like {
+	float: left;
 	padding: 0;
-	font-size: 12px;
 }
 
-.portfolio-item .item-contest .item-contest-icon > span {
-    width: 19px;
-    height: 17px;
-    text-indent: -99999px;
-    display: inline-block;
-}
-
-.portfolio-item .item-contest .like > span {
-	background: url("../../public/images/like.svg") 0 1px no-repeat;
+.contribution .item-contest .like span {
+	background: url("../../public/images/like.png") 0 0 no-repeat;
 	background-size: 100%;
-}
-
-.portfolio-item .item-contest .share > span {
-	background: url("../../public/images/share.svg") 0 1px no-repeat;
-	background-size: 100%;
-}
-
-.portfolio-item .item-title {
-	font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-    padding: 0;
-    margin: 15px 0 0 0;
-}
-
-.portfolio-item .item-meta {
-	color: #6d6c6c;
-}
-
-.portfolio-item .item-description {
-	font-family: 'Open-Sans', Arial, sans-serif;
-	color: #6d6c6c;
+	display: block;
+	float: left;
+	text-indent: -99999px;
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
 }

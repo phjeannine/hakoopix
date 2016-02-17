@@ -91,6 +91,28 @@ include("dashboardHead.php");
                 </div>
               </div>
 
+              <div id="add-price" class="row">
+                <div class="add-price-informations form-group col-md-12">
+                  <label>Associer des lots</label>
+                  <p>L'ajout de un lot minimum est obligatoire.
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="banner">Lot #1</label>
+                  <input type="file" name="first-price" id="first-price">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="banner">Lot #2</label>
+                  <input type="file" name="second-price" id="second-price">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="banner">Lot #3</label>
+                  <input type="file" name="third-price" id="third-price">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+                </div>
+              </div>
+
               <div class="row">
                 <div class="form-group col-md-12">
                   <label><input type="checkbox" name="active-contest" id="active-contest">&nbsp;Actif</label>
@@ -101,61 +123,57 @@ include("dashboardHead.php");
                 <p><i class="fa fa-exclamation-triangle"></i> Vous devez renseigner tous les champs</p>
               </div>
 
-
               <input type="submit" class="btn btn-primary col-md-6 btn-contest" name="submit-contest">
               <input type="button" class="btn btn-primary col-md-6 preview-contest btn-contest" name="preview-contest" value="Prévisualiser">
             </div><!-- /.box-body -->
           </form>
         </div><!-- /.form-content -->
-    </div><!-- /.colonne de gauche-->
+      </div><!-- /.colonne de gauche-->
 
-    <div class="col-lg-6">
-      <div class="box-body col-md-11">
-        <div class="row">
-          <p><b>Prévisualiser votre concours :</b></p>
-          <div id="preview-content">
-            <div class="previewColor"></div>
-            <div class="previewHeader previewBanner">
-              <div class="previewTitle">Titre du concours</div>
-              <div class="previewDescription">Description du concours</div>
-            </div>
-            <!-- /.row -->
-            <div class="previewRules">
-              <p class="previewTitle">Hakoopix</p>
-              <div class="previewColorBarre barre"></div>
-              <div class="col-lg-4 col-md-4 col-sm-4">
-               <i class="fa fa-camera-retro previewFa"></i>
-                <p>Ajoute une photo</p>
+      <div class="col-lg-6">
+        <div class="box-body col-md-11">
+          <div class="row">
+            <p><b>Prévisualiser votre concours :</b></p>
+            <div id="preview-content">
+              <div class="previewColor">
+                <img class="previewLogo" src="#" alt="Mon logo" />
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <i class="fa fa-thumbs-o-up previewFa"></i>
-                <p>Récolte le plus de vote</p>
-              </div><!-- /.rule 2 -->
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <i class="fa fa-gift previewFa"></i>
-                <p>Gagne un ou plusieurs cadeaux !</p>
-              </div><!-- /.rule 2 -->
-            </div><!-- /. Preview Rules -->
+              <div class="previewHeader previewBanner">
+                <div class="previewTitle">Titre du concours</div>
+                <div class="previewDescription">Description du concours</div>
+              </div><!-- /.previewHeader -->
+              <div class="previewRules">
+                <p class="previewTitle">Hakoopix</p>
+                <div class="previewColorBarre barre"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <i class="fa fa-camera-retro previewFa"></i><p>Ajoute une photo</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <i class="fa fa-thumbs-o-up previewFa"></i><p>Récolte le plus de vote</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <i class="fa fa-gift previewFa"></i><p>Gagne un ou plusieurs cadeaux !</p>
+                </div>
+              </div><!-- /. Preview Rules -->
 
-            <div class="previewPrices">
-              <p class="previewTitle">Lots à gagner</p>
-              <div class="previewColorBarre barre"></div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="previewPrice previewColorBarre"></div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="previewPrice previewColorBarre"></div>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <div class="previewPrice previewColorBarre" ></div>
-              </div>
-            </div><!--/. Preview Prices -->
-            <div class="previewColor footer"></div>
-          </div><!-- / Preview content -->
-        </div><!-- / row -->
-      </div><!-- /box -->
-    </div><!-- / col lg 6 -->
+              <div class="previewPrices">
+                <p class="previewTitle">Lots à gagner</p>
+                <div class="previewColorBarre barre"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <div class="previewPrice previewColorBarre"></div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <div class="previewPrice previewColorBarre"></div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <div class="previewPrice previewColorBarre" ></div>
+                </div>
+              </div><!--/. Preview Prices -->
+              <div class="previewColor footer"></div>
+            </div><!-- / Preview content -->
+          </div><!-- / row -->
+        </div><!-- /box -->
+      </div><!-- / col lg 6 -->
 
     </div><!-- /.container-fluid -->
   </div><!-- /#page-wrapper -->

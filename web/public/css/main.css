@@ -22,6 +22,10 @@ span {
 	display: inline-block;
 }
 
+hr {
+	margin: 5px 0 5px 0;
+}
+
 /* General */
 .navbar-fixed-top {
 	position: fixed;

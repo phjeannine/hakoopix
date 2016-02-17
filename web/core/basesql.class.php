@@ -82,9 +82,9 @@ class basesql{
 	public function countRow() {
 		$sql = "SELECT count(*) FROM ".$this->table;
 		$query = $this->pdo->prepare($sql);
-		$colcount = $query->columnCount();
 		$query->execute();
-		//$query->setFetchMode(PDO::FETCH_ASSOC);
+		$data = $query->fetchColumn();
+		return $data;
 	}
 
 	// Cette méthode retourne l'objet correspondant à l'ID passé en paramètre

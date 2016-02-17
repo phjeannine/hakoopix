@@ -116,6 +116,39 @@ $(document).ready(function() {
 
 
 	// Prévisulation du contest
+	//Ajout du logo
+	function readImage(input) {
+    	if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('.previewLogo').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+    	}
+	}
+
+    $("#logo-theme").change(function(){
+        readImage(this);
+    });
+
+    function readBanner(input) {
+    	if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('.previewBanner').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+    	}
+	}
+
+    $("#banner-theme").change(function(){
+        readBanner(this);
+    });
+
 	$('input.preview-contest').on('click', function(e){
 		e.preventDefault();
 
@@ -144,8 +177,10 @@ $(document).ready(function() {
 			$('div.previewColorBarre').css('border-color', addColor);
 			$('i.previewFa').css('color', addColor);
 		}
-
-
 	});	
+
+	// INFINITE LOADER
+
+
 
 });
