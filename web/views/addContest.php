@@ -76,7 +76,7 @@ include("dashboardHead.php");
                   <div class="logo-size-error error">
                     <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 150 x 100</p>
                   </div>
-                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
                 </div>
               </div>
 
@@ -87,7 +87,7 @@ include("dashboardHead.php");
                   <div class="banner-size-error error">
                     <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 1250 x 400</p>
                   </div>
-                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
                 </div>
               </div>
 
@@ -97,19 +97,19 @@ include("dashboardHead.php");
                   <p>L'ajout de un lot minimum est obligatoire.
                 </div>
                 <div class="form-group col-md-12">
-                  <label for="banner">Lot #1</label>
+                  <label for="lot1">Lot #1</label>
                   <input type="file" name="first-price" id="first-price">
-                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
                 </div>
                 <div class="form-group col-md-12">
-                  <label for="banner">Lot #2</label>
+                  <label for="lot2">Lot #2</label>
                   <input type="file" name="second-price" id="second-price">
-                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
                 </div>
                 <div class="form-group col-md-12">
-                  <label for="banner">Lot #3</label>
+                  <label for="lot3">Lot #3</label>
                   <input type="file" name="third-price" id="third-price">
-                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
                 </div>
               </div>
 

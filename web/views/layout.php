@@ -69,7 +69,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <script src="<?php APPLICATION_PATH ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 
-<!--<?php
+<?php
 $contestObj = new contestModel();
 
       $contestObj->getOneByActive(true);
@@ -80,7 +80,7 @@ $contestObj = new contestModel();
       $activeContest = $contestObj->getActiveContest();
       $logo = $activeContest['logo'];
       $banner = $activeContest['banner'];
-?>-->
+?>
 
 <body cz-shortcut-listen="true">
   <div class="site-wrapper">
@@ -91,7 +91,7 @@ $contestObj = new contestModel();
           <nav class="navbar navbar-fixed-top" role="navigation">
             <div class="container">
               <div class="navbar-header">
-                  <a class="navbar-brand" href="/"><img alt="Logo" src="../public/images/logo/<?php echo $logo?>" width="40px" height="40px"></a>
+                  <a class="navbar-brand" href="/"><img alt="Logo" src="<?php echo $logo?>" width="40px" height="40px"></a>
                   <span> Facebook Contest</span>
                   <?php if(!empty($_SESSION['role'])){
                     if($_SESSION['role'] != 'admin') {
