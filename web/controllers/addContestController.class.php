@@ -58,11 +58,22 @@ class addContestController extends basesql
 				'default_graph_version' => 'v2.5',
 		]);
 
-//        $response = $fb->get('/196951203980314?fields=access_token');
-//        $token = $response->getGraphEdge()->asArray();
-//        $tokenId = $token['access_token'];
+		//Récupère token Admin
+		$fb->setDefaultAccessToken($_SESSION['token']);
+		try {
+			$response = $fb->get('/196951203980314?fields=access_token');
+			$token = $response->getGraphNode()->asArray();
+			$tokenId = $token['access_token'];
+		}
+		catch (Facebook\Exceptions\FacebookResponseException $e) {
+			// After you're done debugging, comment out the below lines
+			$result = $e->getMessage();
+			echo "<pre>";
+			print_r($result);
+			echo "</pre>";
+		}
 
-		$fb->setDefaultAccessToken('CAANoUG8amY8BAH6sDevgswtessSlCCZB1sLGgVpXCgZA9Yf0zOMZAJHgGZC068ZCHV2K8zbHHzClaCqLo2Ff8QxMFBtzAbc5eBNPxjSTo9uvotZBD8pbVo4gvCYxRuNedvWCWZCGcz39CwXvuAg2BO0Wp6XilOqpxHuz4o5SgIIzCDpYIHvcxf32MVSE2XahDPagqN2S2k2ZAwZDZD');
+		$fb->setDefaultAccessToken($tokenId);
 
 		$target_dir = "images/";
 		$target_file = $target_dir . basename($_FILES['banner']['name']);
@@ -155,7 +166,22 @@ class addContestController extends basesql
 				'default_graph_version' => 'v2.5',
 		]);
 
-		$fb->setDefaultAccessToken('CAANoUG8amY8BAH6sDevgswtessSlCCZB1sLGgVpXCgZA9Yf0zOMZAJHgGZC068ZCHV2K8zbHHzClaCqLo2Ff8QxMFBtzAbc5eBNPxjSTo9uvotZBD8pbVo4gvCYxRuNedvWCWZCGcz39CwXvuAg2BO0Wp6XilOqpxHuz4o5SgIIzCDpYIHvcxf32MVSE2XahDPagqN2S2k2ZAwZDZD');
+		//Récupère token Admin
+		$fb->setDefaultAccessToken($_SESSION['token']);
+		try {
+			$response = $fb->get('/196951203980314?fields=access_token');
+			$token = $response->getGraphNode()->asArray();
+			$tokenId = $token['access_token'];
+		}
+		catch (Facebook\Exceptions\FacebookResponseException $e) {
+			// After you're done debugging, comment out the below lines
+			$result = $e->getMessage();
+			echo "<pre>";
+			print_r($result);
+			echo "</pre>";
+		}
+
+		$fb->setDefaultAccessToken($tokenId);
 
 		try {
 			$response = $fb->get('/196951203980314/albums?fields=name');
@@ -183,7 +209,22 @@ class addContestController extends basesql
 				'default_graph_version' => 'v2.5',
 		]);
 
-		$fb->setDefaultAccessToken('CAANoUG8amY8BAH6sDevgswtessSlCCZB1sLGgVpXCgZA9Yf0zOMZAJHgGZC068ZCHV2K8zbHHzClaCqLo2Ff8QxMFBtzAbc5eBNPxjSTo9uvotZBD8pbVo4gvCYxRuNedvWCWZCGcz39CwXvuAg2BO0Wp6XilOqpxHuz4o5SgIIzCDpYIHvcxf32MVSE2XahDPagqN2S2k2ZAwZDZD');
+		//Récupère token Admin
+		$fb->setDefaultAccessToken($_SESSION['token']);
+		try {
+			$response = $fb->get('/196951203980314?fields=access_token');
+			$token = $response->getGraphNode()->asArray();
+			$tokenId = $token['access_token'];
+		}
+		catch (Facebook\Exceptions\FacebookResponseException $e) {
+			// After you're done debugging, comment out the below lines
+			$result = $e->getMessage();
+			echo "<pre>";
+			print_r($result);
+			echo "</pre>";
+		}
+
+		$fb->setDefaultAccessToken($tokenId);
 
 		try {
 			$response = $fb->get('/'.$albumId.'?fields=name,photos{name,source}');
