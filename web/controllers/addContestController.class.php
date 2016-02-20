@@ -137,7 +137,7 @@ class addContestController extends basesql
 			];
 			try {
 				$response = $fb->post('/' . $_POST['album'] . '/photos', $data);
-			} catch (FacebookSDKException $e) {
+			} catch (Facebook\Exceptions\FacebookResponseException $e) {
 				$error_msg = 'Error: ' . $e->getMessage();
 			}
 		}
