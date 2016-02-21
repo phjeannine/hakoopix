@@ -89,7 +89,7 @@ $(document).ready(function() {
 
     /* -------- ADD PRICES -------- */
     // Affichage du formulaire d'ajout de prix
-    $('#add-prices').hide();
+ /*   $('#add-prices').hide();
     var contestName = $('#select-contest-name');
 
     $(contestName).on('change', function() {
@@ -112,7 +112,7 @@ $(document).ready(function() {
 	    remain = maxchars - parseInt(tlength);
 	    $('#remain').text(remain);
 	});  
-
+*/
 
 
 	// Prévisulation du contest
@@ -162,11 +162,6 @@ $(document).ready(function() {
 		addDescription = $('textarea#contest-description').val();
 		if(addDescription){
 			$('div.previewDescription').text(addDescription);
-		}
-		// Ajout bannière
-		add = $('input#banner-theme').val();
-		if(add) {
-			$('div.previewBanner').attr('src', e.target.result);
 		}
 
 		// Ajout couleur du thème
