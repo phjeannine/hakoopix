@@ -1,5 +1,4 @@
 /* HOME STYLESHEET */
-
 #banner {
   background-repeat: no-repeat !important;
   background-position: center center !important;
@@ -65,41 +64,20 @@
   margin: 0 auto;
 }
 
-#banner .fb-connect-button span {
+#banner .fb-connect-button .want-to-play {
   text-align: center;
   color: #fff;
   display: block;
   margin-bottom: 10px;
 }
 
-#banner .fb-connect-button a {
-  display: block;
-  transition: all ease 300ms;
-  font-family: 'Open Sans', Arial, sans-serif;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: lighter;
-  width: 80%;
-  max-width: 350px;
-  margin: 0 auto;
-  font-size: 20px;
-  text-align: center;
-  border: 3px solid #405d9b;
-  background-color: #405d9b;
-  padding: 7px;
-}
-
-.fb-align {
-  display: inline-block;
-  vertical-align: top;
-}
-
-
 #banner .fb-connect-button a:hover {
-  text-decoration: none;
-  background-color: #3b5998;
-  border-color: 3px solid #3b5998;
   color: #fff;
+}
+
+#banner .fb-connect-button .btn-social {
+  margin: 0 auto;
+  width: 70%;
 }
 
 /* Homepage Content */
