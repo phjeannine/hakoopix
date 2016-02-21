@@ -1,5 +1,5 @@
 <?php 
-class basesql{
+class basesql {
 
 	private $pdo;
 	private $connect = "pgsql:host=ec2-54-204-8-224.compute-1.amazonaws.com;dbname=d5p9s6nvf6ggtq";
@@ -217,6 +217,12 @@ class basesql{
 		$sql = "UPDATE contest SET is_active = false WHERE id = " . $id;
 		$query = $this->pdo->prepare($sql);
 		$query->execute();
+	}
+
+	function redirect($url, $permanent = false)
+	{
+    	header('Location: ' . $url, true, $permanent ? 301 : 302);
+    	exit();
 	}
 
 }

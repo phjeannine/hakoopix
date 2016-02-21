@@ -26,6 +26,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php APPLICATION_PATH ?>/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/bootstrap-social.css" rel="stylesheet">
     <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
     <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
