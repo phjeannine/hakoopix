@@ -156,3 +156,9 @@ textarea {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
+
+#imgLogo {
+	margin-top: -10px;
+    border: 1px solid;
+    border-radius: 2px;
+}

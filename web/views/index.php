@@ -57,7 +57,7 @@ $_SESSION['idContest'] = $idContest;
 
 if(!empty($id_contest)) { ?>
 
-<div id="banner" class="container-fluid" style="background: url(../public/images/banner/<?php echo $banner ?>) no-repeat center fixed;">
+<div id="banner" class="container-fluid" style="background: url(<?php echo $banner ?>) no-repeat center fixed;">
     <div class="overlay" style="background-color: rgba(0, 0, 0, 0.7)">
         <div class="banner-content row">
             <div class="holder">
@@ -164,6 +164,16 @@ if(!empty($id_contest)) { ?>
     <div id="gallery" class="row">
             <h2>Participants</h2>
             <div class="barre"></div>
+            <?php
+                $participationBdd = new pictureModel();
+                $participationBdd->getAll(true);
+
+                foreach($participationBdd as $userParticipate) : 
+            ?>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 contributionIndex">
+                    <?php echo '<img class="img-responsive" src="'.$userParticipate['image_link'].'">'; ?>
+                </div>
+            <?php endforeach; ?>
     </div><!-- /.row -->
 </div>
 </div>

@@ -64,3 +64,8 @@ header("Content-type: text/css; charset: UTF-8");
 #myModal{
 	margin-top: 5% !important;
 }
+
+.contributionIndex:hover {
+	border: 6px solid @color;
+	box-shadow: 0 0 3px #ccc;
+}

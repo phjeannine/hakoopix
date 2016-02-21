@@ -102,7 +102,7 @@ $contests = $contestListObj->getAllContest();
                                     <div class="logo-size-error error">
                                         <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 150 x 100</p>
                                     </div>
-                                    <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
                                 </div>
                             </div>
 
@@ -113,7 +113,7 @@ $contests = $contestListObj->getAllContest();
                                     <div class="banner-size-error error">
                                         <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 1250 x 400</p>
                                     </div>
-                                    <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+<!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
                                 </div>
                             </div>
 
