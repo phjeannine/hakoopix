@@ -69,19 +69,6 @@ $uri = $_SERVER['REQUEST_URI'];
     <script src="<?php APPLICATION_PATH ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 
-<!--<?php
-$contestObj = new contestModel();
-
-      $contestObj->getOneByActive(true);
-      $idContest = $contestObj->getId();
-      $color = $contestObj->getColorTheme();
-      $_SESSION['color'] = $color;
-      $_SESSION['idContest'] = $idContest;
-      $activeContest = $contestObj->getActiveContest();
-      $logo = $activeContest['logo'];
-      $banner = $activeContest['banner'];
-?>-->
-
 <body cz-shortcut-listen="true">
   <div class="site-wrapper">
     <div class="site-wrapper-inner">
@@ -93,18 +80,16 @@ $contestObj = new contestModel();
               <div class="navbar-header">
                   <a class="navbar-brand" href="/"><img alt="Logo" src="../public/images/logo/<?php echo $logo?>" width="40px" height="40px"></a>
                   <span> Facebook Contest</span>
-                  <?php if(!empty($_SESSION['role'])){
-                    if($_SESSION['role'] != 'admin') {
-                    echo '<div class="user_participate">';
-                    echo '<a href="/participate"><i class="fa fa-camera-retro"></i> Participer</a>';
-                    echo '</div>';
-                    }
-                  }?>
-
+                  <?php if(!empty($_SESSION['name'])){ ?>
+                      <ul class="nav navbar-nav">
+                        <li><a href="/participate"><i class="fa fa-trophy"></i> Participer</a></li>
+                        <li><a href="/contest"><i class="fa fa-camera-retro"></i> Galerie photos</a></li>
+                    </ul>
+                  <?php } ?>
               </div>
 
               <div class="navbar-collapse collapse">
-                <?php  if(!empty($_SESSION['name'])){ ?>
+                <?php if(!empty($_SESSION['name'])){ ?>
                 <ul class="nav navbar-nav pull-right">
                   <li><img class="user-picture-profile" src="<?php echo $_SESSION['photo'];?>"/></li>
                   <li class="dropdown">

@@ -1,11 +1,12 @@
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="navbar-header">
-      <a class="navbar-brand" href="/dashboard">Logo</a>
+      <a class="navbar-brand" href="/dashboard">Administration</a>
   </div>
 
   <!-- Sidebar Menu Items -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <a href="/" class="view-app"><i class="fa fa-bars"></i></a>
       <ul class="nav navbar-nav side-nav">
           <div id="admin-bar">
             <img src="<?php echo $_SESSION['photo'];?>" class="user-picture-profile"  alt="Photo profil" />

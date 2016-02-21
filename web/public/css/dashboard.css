@@ -3,7 +3,13 @@
 	border: none;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .view-app {
+	color: #fff;
+	padding: 15px;
+	float: right;
+}
+
+.navbar-inverse .navbar-nav > li > a {
 	color: #fff;
 }
 

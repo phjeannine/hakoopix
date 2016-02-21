@@ -26,6 +26,10 @@ hr {
 	margin: 5px 0 5px 0;
 }
 
+textarea {
+	resize: none;
+}
+
 /* General */
 .navbar-fixed-top {
 	position: fixed;
@@ -47,6 +51,7 @@ hr {
 	padding-bottom: 15px;
 	display: inline-block;
 	text-transform: uppercase;
+	float: left;
 	margin-right: 20px;
 }
 
@@ -139,15 +144,6 @@ hr {
 	margin-left: 2%;
 	display: inline;
 	margin-bottom: 4%;
-}
-
-.imgFbUser {
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	max-height: 300px;
-	overflow: auto;
-	padding:2% 1% 1% 1%; 
-	margin-bottom: 3%;
 }
 
 .msgErrorPhoto{

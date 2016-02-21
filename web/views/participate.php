@@ -1,9 +1,6 @@
 
 <!-- Page Content -->
-<div class="container" id="participate">
   <?php
-
-
   require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
 
   $fb = new Facebook\Facebook([
@@ -81,132 +78,118 @@ function logGetAlbum(){
 
 </script>
 
-<div class="row">
-  <div class="col-lg-12 col-md-12">
-    <h1 class="page-header">Participez au concours !</h1>
-    <div class="barre"></div>
-  </div>
-</div><!-- /.row -->
-
-
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-  <!-- Main content -->
-  <div class="box box-primary">
-
-    <!-- FORMULAIRE -->
-    <form role="form" class="col-md-offset-1 ol-sm-offset-1" method="POST" action="/participate/insert" enctype="multipart/form-data">
-      <div class="box-body col-md-11 col-sm-11">
-
-       <div class="form-group col-md-12">
-         <label for="exampleInputEmail1">Titre</label>
-         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ajoutez un titre à votre photo..." name="title" required>
-         
-         <label for="exampleInputEmail1">Description</label>
-         <textarea class="form-control" rows="3" name="description"></textarea>
-       </div>
-
-       <div class="form-group">
-
-        <label for="exampleInputFile">Votre image</label><br>
-        <!-- <input type="file"  class="btn btn-default" id="inputImage" name="imgParticipation"> -->
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Charger une image</button>
-
-
-        <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
-        <div class="imgFbUser">
-
-          <?php if(empty($_SESSION['token'])):?>
-
-          Vous n'êtes pas connecté sur facebook : <a href="<?php echo $loginUrl;?>">cliquez pour vous connecter</a>
-
-        <?php else: ?>
-
-
-
-        <!--
-        <a href="#" onClick="<?php echo $loginUrl;?>">Afficher mes photos Facebook</a>
-        -->
-       <?php 
-             // $response = $fb->get('/me?fields=email');
-              //$userNode = $response->getGraphUser();
-
-              //Affiche toutes les photos des albums
-        $response = $fb->get('/me/albums?fields=name,photos{name,source}');
-        $albums = $response->getGraphEdge()->asArray();
-        if(empty($albums)){ 
-          echo "<p class='msgErrorPhoto'>Aucune photo trouvé ! Assurez-vous que vous avez des photos sur votre profile et que l'application a la permission d'accéder à vos photos facebook </p>"; 
-          //echo '<a href="#" onClick="'.$loginUrl.'">Cliquez pour réessayer</a>';
-        }
-        
-        foreach ($albums as $album) {
-                //echo "<h2>".$album['name']."</h2>";  //affichage du nom de l'album ici
-          if(isset($album["photos"])){
-            foreach ($album["photos"] as $photo) {
-              echo "<div class='divImg'><img class='imgParticipate' src='".$photo['source']."' width='142px'>";
-              echo "<br><input type='radio' name='imgSelected' value=".$photo['source']."> Séléctionner</div>";
-
-            }
-          } 
-        }
-        echo "<br><br><br>";
-
-        ?>
-
-      <?php endif; ?>
+<div class="container" id="participate">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <h1 class="page-header">Participez au concours !</h1>
+      <div class="barre"></div>
     </div>
-
-    <input type="submit" class="btn btn-success btn-customize">
-
-  </div>
+  </div><!-- /.row -->
 
 
-</div><!-- /.box -->
-</div><!-- /.box-body -->
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <div class="box box-primary">
 
-</form><!-- /. FORM -->
-</div><!-- /.box -->
+      <!-- FORMULAIRE -->
+      <form role="form" class="col-md-offset-1 col-sm-offset-1" method="POST" action="/participate/insert" enctype="multipart/form-data">
+        <div class="box-body col-md-11 col-sm-11">
 
-</div><!-- /.content-wrapper -->
-
-<!-- Modal : code pour le pop-up qui s'affiche lorsqu'on clique sur charger une image -->
-        <div id="myModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Ajout d'une photo </h4>
-              </div>
-              <div class="modal-body">
-                <p>Séléctionnez un album parmis la liste de vos albums ou créez-en un autre et insérer l'image : </p><br>
-                <form action="../public/upload.php" method="post" enctype="multipart/form-data">
-                  Albums : 
-                  <select name="album">
-                  <?php
-
-                    $response = $fb->get('/me/albums?fields=name,can_upload');
-                    $albums = $response->getGraphEdge()->asArray();
-                    foreach ($albums as $album) {
-                      if($album['can_upload'] == 1)
-                      echo "<option value='".$album['id']."'>".$album['name']."</option>";
-                    }
-                  ?>
-                  </select><br><br> 
-                  Ou créer un autre album : <input type="text" name="name_album"><br><br> 
-                  Séléctionnez l'image : <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
-                  <input type="submit" class="btn btn-default" value="Charger l'image" name="Envoyer">
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-
+          <div class="form-group col-md-6 col-md-offset-3">
+            <label for="title">Titre</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ajoutez un titre à votre photo..." name="title" required>
           </div>
+
+          <div class="form-group col-md-6 col-md-offset-3">
+            <label for="exampleInputEmail1">Description</label>
+            <textarea class="form-control" rows="3" name="description"></textarea>
+          </div>
+
+          <div class="form-group col-md-11 col-md-offset-1">
+            <label for="exampleInputFile">Votre image</label><br>
+            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Charger une image</button>
+            <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
+            
+            <div class="imgFbUser">
+            <?php if(empty($_SESSION['token'])):?>
+              <p>Vous n'êtes pas connecté sur facebook :</p> <a href="<?php echo $loginUrl;?>">cliquez pour vous connecter</a>
+            <?php else: ?>
+
+            <?php      
+              //Affiche toutes les photos des albums
+              $response = $fb->get('/me/albums?fields=name,photos{name,source}');
+              $albums = $response->getGraphEdge()->asArray();
+              if(empty($albums)){ 
+                echo "<p class='msgErrorPhoto'>Aucune photo trouvé ! Assurez-vous que vous avez des photos sur votre profile et que l'application a la permission d'accéder à vos photos facebook </p>"; 
+                //echo '<a href="#" onClick="'.$loginUrl.'">Cliquez pour réessayer</a>';
+              }
+              
+              foreach ($albums as $album) {
+                      //echo "<h2>".$album['name']."</h2>";  //affichage du nom de l'album ici
+                if(isset($album["photos"])){
+                  foreach ($album["photos"] as $photo) {
+                    echo "<div class='divImg'><img class='imgParticipate' src='".$photo['source']."' width='142px'>";
+                    echo "<br><input type='radio' name='imgSelected' value=".$photo['source']."> Séléctionner</div>";
+
+                  }
+                } 
+              }
+              echo "<br><br><br>";
+
+              endif;
+            ?>
+            </div><!-- /.imgFbUser -->
+
+            <input type="submit" class="btn btn-customize">
+
+          </div><!-- /.form-group -->
+        </div><!-- /.box-body -->
+      </form><!-- /.form -->
+    </div><!-- /.box -->
+  </div><!-- /.content-wrapper -->
+
+  <!-- Modal : code pour le pop-up qui s'affiche lorsqu'on clique sur charger une image -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ajout d'une photo </h4>
         </div>
+        <div class="modal-body">
+          <p>Séléctionnez un album parmis la liste de vos albums ou créez-en un autre et insérer l'image : </p><br>
+          <form action="../public/upload.php" method="post" enctype="multipart/form-data">
+            <label for="album">Albums : </label>
+            <select name="album">
+            <?php
+
+              $response = $fb->get('/me/albums?fields=name,can_upload');
+              $albums = $response->getGraphEdge()->asArray();
+              foreach ($albums as $album) {
+                if($album['can_upload'] == 1)
+                echo "<option value='".$album['id']."'>".$album['name']."</option>";
+              }
+            ?>
+            </select>
+
+            <br />
+            <br /> 
+
+            <p>Ou créer un autre album :</p> <input type="text" name="name_album" />
+            Séléctionnez l'image : <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+            <input type="submit" class="btn btn-default" value="Charger l'image" name="Envoyer">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div><!-- /container -->
 <!--
 <script type="text/javascript">
