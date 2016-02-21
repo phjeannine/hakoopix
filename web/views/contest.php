@@ -22,7 +22,7 @@
                 <h3><center><?php echo $userParticipate['title']; ?></center></h3>
                 <small><center><?php echo $userParticipate['description']; ?></center></small>
                 <div class="item-contest">
-                    <div class="like"><?php echo '&nbsp;<a href="/updatelike/'.$userParticipate["id"].'/'.$userParticipate["nb_like"].'"><span>like</span></a> '; echo ''.$userParticipate["nb_like"];?></div>
+                    <div class="like"><?php echo '&nbsp;<a href="/contest/updatelike/'.$userParticipate["id"].'"><span>like</span></a> '; echo ''.$userParticipate["nb_like"];?></div>
                 </div>
             </div>
         <?php endforeach; ?>

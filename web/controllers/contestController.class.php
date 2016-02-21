@@ -18,30 +18,38 @@ class contestController{
 		//On teste si l'utilisateur n'existe pas dans la BDD avant de l'inserer
 		$testObj = new memberModel();
 		$testObj->getOneByIdmember($idUser);
-		/*
+		
 		// Insertion d'un utilisateur seulement
 		// A commenter pour que les admins puissent participer
 		if($testObj->getIdMember() == 0){
-		*/
+		
 			$member = new memberModel($lastName, $firstName, $picture, $idUser);
 			$member->save();
-			//header('Location: /contest');
-		/*
+			header('Location: /contest');
+		
 		}
-		*/
+		
 		
 
 	}
 
 	public function updatelikeAction($args){
 		$idPhoto = $args['0'];
-		$nbLike = $args['1'];
-		$nbLike = $nbLike+1;
 
-		$contestObj = new memberModel();
-		$contestObj->getOneBy($idPhoto);
+		$pictureGet = new pictureModel();
+		$pictureGet->getOneBy($idPhoto);
 
-		// appel de la méthode save() ici 
+		$nbLike = $pictureGet->getNbLike();
+		$title = $pictureGet->getTitle();
+		$description = $pictureGet->getDescription();
+		$image_link = $pictureGet->getImageLink();
+		$id_contest = $pictureGet->getIdContest();
+		$id_member = $pictureGet->getIdMember();
+
+		$like = $nbLike+1;
+
+		$pictureObj = new pictureModel($idPhoto,$title,$description,$image_link,$id_contest,$id_member,$like);
+		$pictureObj->save();
 
 		header('Location: /contest');
 	}
