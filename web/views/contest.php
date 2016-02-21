@@ -12,19 +12,32 @@
     <?php
         $participationBdd = new pictureModel();
         $participationBdd->getAll(true);
+
+        $listLikes = new voteModel();
+        $listLikes->getAll(true);
+
+        $hasParticipate = false;
+
+        foreach ($listLikes as $obj) {
+            if($obj['id_member']==$_SESSION['idUser'] && $obj['id_contest']==$_SESSION['idContest']){
+                $hasParticipate = true;
+            }
+        }
     ?>
 
     <div class="row">
         <!-- Galerie photos -->
-        <?php foreach($participationBdd as $userParticipate) : ?>
+        <?php foreach($participationBdd as $userParticipate) : 
+          if($userParticipate['id_contest'] == $_SESSION['idContest']) { ?>
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 contribution">
                 <?php echo '<img class="img-responsive" src="'.$userParticipate['image_link'].'">'; ?>
                 <h3><center><?php echo $userParticipate['title']; ?></center></h3>
                 <small><center><?php echo $userParticipate['description']; ?></center></small>
                 <div class="item-contest">
-                    <div class="like"><?php echo '&nbsp;<a href="/contest/updatelike/'.$userParticipate["id"].'"><span>like</span></a> '; echo ''.$userParticipate["nb_like"];?></div>
+                    <div class="like"><?php if(!$hasParticipate) { echo '&nbsp;<a href="/contest/updatelike/'.$userParticipate["id"].'"><span>like</span></a> '; } echo ' &nbsp;&nbsp;<b style="color:green">&nbsp;votes : '.$userParticipate["nb_like"].'</b>';?></div>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php } 
+        endforeach; ?>
     </div><br>
 </div><!-- /.container -->

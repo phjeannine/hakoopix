@@ -169,13 +169,15 @@ if(!empty($id_contest)) { ?>
             <?php
                 $participationBdd = new pictureModel();
                 $participationBdd->getAll(true);
-
+                $cpt=0;
                 foreach($participationBdd as $userParticipate) : 
+                  $cpt +=1;
+                  if($userParticipate['id_contest']==$_SESSION['idContest'] && $cpt<7){
             ?>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 contributionIndex">
                     <?php echo '<img class="img-responsive" src="'.$userParticipate['image_link'].'">'; ?>
                 </div>
-            <?php endforeach; ?>
+            <?php } endforeach; ?>
     </div><!-- /.row -->
 </div>
 </div>
