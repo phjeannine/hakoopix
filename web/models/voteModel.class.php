@@ -1,5 +1,5 @@
 <?php
-class contestModel extends basesql{
+class voteModel extends basesql{
 
 	protected $id;
 	protected $nb_vote;

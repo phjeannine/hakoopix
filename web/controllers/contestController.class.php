@@ -47,9 +47,13 @@ class contestController{
 		$id_member = $pictureGet->getIdMember();
 
 		$like = $nbLike+1;
+		$idVote = 0;
 
 		$pictureObj = new pictureModel($idPhoto,$title,$description,$image_link,$id_contest,$id_member,$like);
 		$pictureObj->save();
+
+		$voteObj = new voteModel($idVote,$like,$id_contest,$_SESSION['idUser'],$idPhoto);
+		$voteObj->save();
 
 		header('Location: /contest');
 	}
