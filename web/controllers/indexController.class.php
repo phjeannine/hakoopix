@@ -80,5 +80,7 @@ class indexController{
 		    header('Location: /contest');
 		  }
 		}
+
+
 	}
 }

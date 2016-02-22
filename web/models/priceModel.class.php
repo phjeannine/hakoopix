@@ -7,7 +7,7 @@ class priceModel extends basesql{
 	protected $image_link;
 	protected $id_contest;
 
-	public function __construct($id=-1, $rank="", $title="", $image_link="", $id_contest=""){
+	public function __construct($id=-1, $rank="", $title="", $image_link="", $description="", $id_contest=""){
 		
 		parent::__construct();
 
@@ -15,6 +15,7 @@ class priceModel extends basesql{
     	$this->setRank($rank);
     	$this->setTitle($title);
     	$this->setImageLink($image_link);
+    	$this->setDescription($description);
     	$this->setIdContest($id_contest);
 	}
 
@@ -25,22 +26,25 @@ class priceModel extends basesql{
 		$this->id = $id;
 	}
 	public function setRank($rank){
-		$this->rank = trim($rank);
+		$this->rank = $rank;
 	}
 	public function setTitle($title){
 		$this->title = trim($title);
 	}
 	public function setImageLink($image_link){
-		$this->image_link = trim($image_link);
+		$this->image_link = $image_link;
+	}
+	public function setDescription($description){
+		$this->description = $description;
 	}
 	public function setIdContest($id_contest){
-		$this->id_contest = trim($id_contest);
+		$this->id_contest = $id_contest;
 	}
 
 	// GETTERS
-	public function getId(){
+	/*public function getId(){
 		return $this->id;
-	}
+	}*/
 	public function getRank(){
 		return $this->rank;
 	}
@@ -49,6 +53,9 @@ class priceModel extends basesql{
 	}
 	public function getImageLink(){
 		return $this->image_link;
+	}
+	public function getDescription(){
+		return $this->description;
 	}
 	public function getIdContest(){
 		return $this->id_contest;

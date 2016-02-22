@@ -25,20 +25,25 @@ $contests = $contestListObj->getAllContest();
                 <div class="form-content">
                   <form method="post" class="search-contest col-md-6">
                     <div class="box-body">
-                        <label>Sélectionnez l'application afin d'ajouter un lot de prix</label>
-                        <select id="select-contest-name">
-                            <option value="no-value"></option>
-                            <?php foreach($contests as $contest) : ?>
-                                <option value="<?php echo $contest['title'] ?>"><?php echo $contest['title'] ?></option>
-                            <?php endforeach; ?>
-                        </select>
+                       
                     </div><!-- /.box-body -->
                   </form>
                 </div><!-- /.form-content -->
 
                 <div class="form-content">
-                  <form method="post" action="/addPrice/insert" id="add-prices" enctype="multipart/form-data">
+                  <form  role="form" method="POST" action="/addPrice/insert" id="add-prices" enctype="multipart/form-data">
                     <div class="box-body">
+                        <div class="col-md-12">
+                            <label>Sélectionnez l'application afin d'ajouter un lot de prix</label>
+                            <select id="select-contest-name" name="id_cont">
+                                <option value="no-value"></option>
+                                <?php foreach($contests as $contest) {
+                                 echo  "<option value='".$contest['id']."'>".$contest['title']."</option>";
+                                    }
+                                 ?>
+
+                            </select>
+                        </div>
                         <div class="price-form col-md-4">
                             <label for="first-price">Premier prix</label>
                             <div class="row">
@@ -101,6 +106,8 @@ $contests = $contestListObj->getAllContest();
                                 </div>
                             </div><!-- /.row -->
                         </div><!-- /.price-form -->
+
+                        
                     </div><!-- /.box-body -->
                     <input type="submit" name="submit-prices" id="submit-prices" class="btn btn-primary col-md-6" value="Envoyer" />
                   </form>
