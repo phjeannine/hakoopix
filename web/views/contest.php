@@ -18,11 +18,7 @@
 
         $hasParticipate = false;
 
-        foreach ($listLikes as $obj) {
-            if($obj['id_member']==$_SESSION['idUser'] && $obj['id_contest']==$_SESSION['idContest']){
-                $hasParticipate = true;
-            }
-        }
+
     ?>
 
     <div class="row">
@@ -34,10 +30,19 @@
                 <h3><center><?php echo $userParticipate['title']; ?></center></h3>
                 <small><center><?php echo $userParticipate['description']; ?></center></small>
                 <div class="item-contest">
+                <?php
+                  foreach ($listLikes as $obj) {
+                    if($obj['id_member']==$_SESSION['idUser'] && $obj['id_contest']==$_SESSION['idContest'] && $obj['id_picture']==$userParticipate['id']){
+                        $hasParticipate = true;
+                        break;
+                    }
+                }
+                    ?>
                     <div class="like"><?php if(!$hasParticipate) { echo '&nbsp;<a href="/contest/updatelike/'.$userParticipate["id"].'"><span>like</span></a> '; } echo ' &nbsp;&nbsp;<b style="color:green">&nbsp;votes : '.$userParticipate["nb_like"].'</b>';?></div>
                 </div>
             </div>
         <?php } 
         endforeach; ?>
     </div><br>
+
 </div><!-- /.container -->
