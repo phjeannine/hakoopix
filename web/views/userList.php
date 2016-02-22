@@ -28,7 +28,7 @@ $memberObj->getAll(true);
                           <tr>
                             <th>Nom</th>
                             <th>Prénom</th>
-                            <th>Suppression</th>
+                            <th>Profil Facebook</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -36,7 +36,11 @@ $memberObj->getAll(true);
                             <tr>
                                 <td><?php echo $member['lastname']; ?></td>
                                 <td><?php echo $member['firstname']; ?></td>
-                                <td><a href="javascript:void(0);" title="Supprimer un utilisateur">Supprimer</td>
+                                <td>
+                                    <a href="http://www.facebook.com/<?php echo $member['id_member'] ?>" target="_blank">
+                                        Lien
+                                    </a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                         </tbody>
