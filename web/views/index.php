@@ -175,9 +175,10 @@ if(!empty($id_contest)) { ?>
                   $cpt +=1;
                   if($userParticipate['id_contest']==$_SESSION['idContest'] && $cpt<7){
             ?>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 contributionIndex">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="contributionIndex">
                     <?php echo '<img class="img-responsive" src="'.$userParticipate['image_link'].'">'; ?>
-                </div>
+                </div></div>
             <?php } endforeach; ?>
     </div><!-- /.row -->
 </div>

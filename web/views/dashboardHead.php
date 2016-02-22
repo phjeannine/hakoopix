@@ -6,7 +6,7 @@
 
   <!-- Sidebar Menu Items -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <a href="/" class="view-app"><i class="fa fa-bars"></i></a>
+      <a href="/contest" class="view-app">Voir mon concours actif <i class="fa fa-star"></i></a>
       <ul class="nav navbar-nav side-nav">
           <div id="admin-bar">
             <img src="<?php echo $_SESSION['photo'];?>" class="user-picture-profile"  alt="Photo profil" />
@@ -19,6 +19,8 @@
           <li><a href="/updateContest"><i class="fa fa-fw fa-pencil"></i> Modifier un concours</a></li>
           <li><a href="/addPrice"><i class="fa fa-fw fa-gift"></i> Ajouter des prix</a></li>
           <li><a href="/userList"><i class="fa fa-fw fa-user"></i> Utilisateurs</a></li>
+          <li><a href="/"><i class="fa fa-star"></i> Voir mon concours</a></li>
+          <li><a href="/contest"><i class="fa fa-camera-retro"></i> Voir les participations</a></li>
       </ul>
   </div>
   <!-- /.navbar-collapse -->

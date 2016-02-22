@@ -38,7 +38,7 @@ $memberObj->getAll(true);
                                 <td><?php echo $member['firstname']; ?></td>
                                 <td>
                                     <a href="http://www.facebook.com/<?php echo $member['id_member'] ?>" target="_blank">
-                                        Lien
+                                        Accéder à son profil
                                     </a>
                                 </td>
                             </tr>

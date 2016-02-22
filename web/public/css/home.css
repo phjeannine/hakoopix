@@ -79,6 +79,8 @@
   color: #fff;
   margin: 0 auto;
   width: 70%;
+  border-radius: 0px;
+  transition: all 0.3s ease;
 }
 
 /* Homepage Content */
