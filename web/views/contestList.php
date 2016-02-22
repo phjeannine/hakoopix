@@ -29,7 +29,9 @@ include("dashboardHead.php");
                     <?php foreach($contests as $contest) :?>
                         <div class="contest col-md-4 .col-sm-2 col-xs-12">
                             <div class="contest_img">
-                                <img src="../public/images/photo_contest.jpg" alt=""/>
+                                <img src="<?php if ($contest['banner'] != '') : echo $contest['banner'];
+                                else : echo '../public/images/banner/photo_contest.jpg';
+                                endif ?>" alt=""/>
                             </div>
                             <div class="contest-informations">
                                 <h3><?php echo $contest['title'] ?></h3>
