@@ -68,6 +68,12 @@ $uri = $_SERVER['REQUEST_URI'];
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="<?php APPLICATION_PATH ?>/public/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php APPLICATION_PATH ?>/public/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'contest-description');
+        CKEDITOR.replace( 'first-price-desc');
+        CKEDITOR.replace( 'second-price-desc');
+        CKEDITOR.replace( 'third-price-desc');
+    </script>
 </head>
 
 <?php

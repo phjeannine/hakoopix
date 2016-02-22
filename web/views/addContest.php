@@ -144,11 +144,5 @@ include("dashboardHead.php");
   </div><!-- /#page-wrapper -->
 </div><!-- /#wrapper -->
 
-<script>
-  // Replace the <textarea id="editor1"> with a CKEditor
-  // instance, using default configuration.
-  CKEDITOR.replace( 'contest-description' );
-</script>
-
 
 
