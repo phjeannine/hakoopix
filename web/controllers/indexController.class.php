@@ -1,9 +1,18 @@
 <?php
 
-class indexController{
+class indexController extends basesql {
 	public function indexAction($args){
-		$v = new view("index");
-		$v->assign("mesargs", $args);
+
+		if ($this->getActiveContest()== FALSE) {
+			$v = new view("nocontest");
+			$v->assign("mesargs", $args);
+		}
+		else {
+			$v = new view("index");
+			$v->assign("mesargs", $args);
+		}
+
+
 	}
 
 	public function insertAction($args){
