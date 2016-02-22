@@ -116,3 +116,11 @@ $contests = $contestListObj->getAllContest();
         </div><!-- /.container-fluid -->
     </div><!-- /#page-wrapper -->
 </div><!-- /#wrapper -->
+
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace( 'first-price-desc');
+    CKEDITOR.replace( 'second-price-desc');
+    CKEDITOR.replace( 'third-price-desc');
+</script>
