@@ -55,6 +55,7 @@ $uri = $_SERVER['REQUEST_URI'];
     <link href="<?php APPLICATION_PATH ?>/public/css/addAdmin.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/participate.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/dashboard.css" rel="stylesheet">
+    <link href="<?php APPLICATION_PATH ?>/public/css/nocontest.css" rel="stylesheet">
 
     <!-- SB Admin -->
     <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/sb-admin.css" rel="stylesheet">

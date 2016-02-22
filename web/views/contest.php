@@ -18,7 +18,6 @@
 
         $hasParticipate = false;
 
-
     ?>
 
     <div class="row">
