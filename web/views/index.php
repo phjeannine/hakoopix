@@ -134,7 +134,7 @@ if(!empty($id_contest)) { ?>
     <div id="prices" class="row">
             <h2>Lots à gagner</h2>
             <div class="barre"></div>
-<<<<<<< HEAD
+
             <p class="prices-description">Comme nous savons que tu es gourmant, nous t'avons concocté des petits cadeaux ...</p>
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="price">
@@ -143,7 +143,6 @@ if(!empty($id_contest)) { ?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
             </div><!-- /.price -->
         </div><!-- /.price-item -->
-=======
             <p>Comme nous savons que tu es gourmant, nous t'avons concocté des petits cadeaux ...</p>
         
             <!-- Parcourir tous les prix -->
@@ -152,7 +151,6 @@ if(!empty($id_contest)) { ?>
                 <?php if(isset($priceObj['id'])) : ?>
                     <!-- Prendre que les prix avec id contest en cours -->
                     <?php if($priceObj['id_contest'] == $id_contest) : ?>
->>>>>>> 0fb87ca26ccf5477e00a9f15e505bd5292fabf54
 
                     <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="price">
