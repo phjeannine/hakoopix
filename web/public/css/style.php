@@ -15,7 +15,7 @@ header("Content-type: text/css; charset: UTF-8");
 
 
 .price {
-	border: 10px solid @color;
+	border: 5px solid @color;
 }
 
 .barre {

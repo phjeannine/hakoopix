@@ -132,7 +132,7 @@ if(!empty($id_contest)) { ?>
     <div id="prices" class="row">
             <h2>Lots à gagner</h2>
             <div class="barre"></div>
-            <p>Comme nous savons que tu es gourmant, nous t'avons concocté des petits cadeaux ...</p>
+            <p class="prices-description">Comme nous savons que tu es gourmant, nous t'avons concocté des petits cadeaux ...</p>
         <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <div class="price">
                 <img class="img-responsive" src="../public/images/price.jpg" alt="">

@@ -36,7 +36,7 @@
 }
 
 #banner h1 {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
@@ -76,6 +76,7 @@
 }
 
 #banner .fb-connect-button .btn-social {
+  color: #fff;
   margin: 0 auto;
   width: 70%;
 }
@@ -88,9 +89,13 @@
 #homepage h2 {
   font-weight: bold;
   text-transform: uppercase;
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 30px;
 }
 
+#homepage p {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
 
 #homepage .title {
   text-align: center;
@@ -153,22 +158,27 @@
 }
 
 .prices-container {
-  background-image: url('../images/fond.png') ;
+  background-image: url('../images/prices-container.png') ;
   background-size: 100%;
 }
 
-.price {
+.prices-container #prices h2 {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.prices-container #prices .prices-description {
+  color: #fff;
+}
+
+.prices-container #prices .price {
   padding: 15px 7px;
   transition: all 0.4s ease;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
 }
 
-.price:hover{
+.prices-container #prices .price:hover{
   border-color: #b9b9d3;
-}
-
-#homepage p {
-  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .user_participate .fa {
