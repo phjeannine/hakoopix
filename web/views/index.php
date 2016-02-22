@@ -55,7 +55,10 @@ $_SESSION['color'] = $color;
 $_SESSION['idContest'] = $idContest;
       
 $priceObj1 = new priceModel();
-$priceObj1->getAll(true);      
+$priceObj1->getAll(true);  
+
+$priceCountObj = new priceModel();
+$nbPrice = $priceCountObj->countRow();    
 
 if(!empty($id_contest)) { ?>
 
@@ -134,17 +137,8 @@ if(!empty($id_contest)) { ?>
     <div id="prices" class="row">
             <h2>Lots à gagner</h2>
             <div class="barre"></div>
-
-            <p class="prices-description">Comme nous savons que tu es gourmant, nous t'avons concocté des petits cadeaux ...</p>
-        <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="price">
-                <img class="img-responsive" src="../public/images/price.jpg" alt="">
-                <h3>Premier prix</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ligula mi, cursus non euismod ut, scelerisque ut ligula.</p>
-            </div><!-- /.price -->
-        </div><!-- /.price-item -->
-            <p>Comme nous savons que tu es gourmant, nous t'avons concocté des petits cadeaux ...</p>
-        
+            <p class="prices-description">Comme nous savons que tu es gourmand, nous t'avons concocté des petits cadeaux ...</p>
+            
             <!-- Parcourir tous les prix -->
             <?php foreach($priceObj1 as $priceObj) : ?>
                 <!-- Exclure le prix qui a un id = 0 -->
@@ -152,14 +146,13 @@ if(!empty($id_contest)) { ?>
                     <!-- Prendre que les prix avec id contest en cours -->
                     <?php if($priceObj['id_contest'] == $id_contest) : ?>
 
-                    <div class="price-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="price">
-                            <!--<img class="img-responsive" src="../public/images/price.jpg" alt="">-->
-                            
+                        <div class="price-item col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                            <div class="price">                            
                                 <h3><?php echo $priceObj['title']; ?></h3>
                                 <p><?php echo $priceObj['description']; ?></p>
-                        </div><!-- /.price -->
-                    </div><!-- /.price-item -->
+                            </div><!-- /.price -->
+                        </div><!-- /.price-item -->
+
                     <?php endif; ?><!-- / si l'objet a bien un id -->
                 <?php endif; ?><!-- / si id concours -->
             <?php endforeach; ?>

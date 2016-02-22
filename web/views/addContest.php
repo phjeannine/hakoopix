@@ -74,7 +74,7 @@ include("dashboardHead.php");
                   <label for="logo">Logo</label>
                   <input type="file" name="logo" id="logo-theme">
                   <div class="logo-size-error error">
-                    <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 150 x 100</p>
+                    <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 150 x 100 et/ou être de format jpg ou png</p>
                   </div>
                   <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
                 </div>
@@ -85,31 +85,9 @@ include("dashboardHead.php");
                   <label for="banner">Bannière</label>
                   <input type="file" name="banner" id="banner-theme">
                   <div class="banner-size-error error">
-                    <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 1250 x 400</p>
+                    <p><i class="fa fa-exclamation-triangle"></i> Votre image doit faire 1250 x 400 et/ou être de format jpg ou png</p>
                   </div>
-<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
-                </div>
-              </div>
-
-              <div id="add-price" class="row">
-                <div class="add-price-informations form-group col-md-12">
-                  <label>Associer des lots</label>
-                  <p>L'ajout de un lot minimum est obligatoire.
-                </div>
-                <div class="form-group col-md-12">
-                  <label for="lot1">Lot #1</label>
-                  <input type="file" name="first-price" id="first-price">
-<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
-                </div>
-                <div class="form-group col-md-12">
-                  <label for="lot2">Lot #2</label>
-                  <input type="file" name="second-price" id="second-price">
-<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
-                </div>
-                <div class="form-group col-md-12">
-                  <label for="lot3">Lot #3</label>
-                  <input type="file" name="third-price" id="third-price">
-<!--                  <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
+                  <!--<input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
                 </div>
               </div>
 
@@ -156,19 +134,6 @@ include("dashboardHead.php");
                 </div>
               </div><!-- /. Preview Rules -->
 
-              <div class="previewPrices">
-                <p class="previewTitle">Lots à gagner</p>
-                <div class="previewColorBarre barre"></div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <div class="previewPrice previewColorBarre"></div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <div class="previewPrice previewColorBarre"></div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <div class="previewPrice previewColorBarre" ></div>
-                </div>
-              </div><!--/. Preview Prices -->
               <div class="previewColor footer"></div>
             </div><!-- / Preview content -->
           </div><!-- / row -->
