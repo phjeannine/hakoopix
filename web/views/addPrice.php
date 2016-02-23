@@ -29,7 +29,6 @@ $contests = $contestListObj->getAllContest();
                     </div><!-- /.box-body -->
                   </form>
                 </div><!-- /.form-content -->
-
                 <div class="form-content">
                   <form  role="form" method="POST" action="/addPrice/insert" id="add-prices" enctype="multipart/form-data">
                     <div class="box-body">

@@ -5,6 +5,9 @@ include("dashboardHead.php");
 $contestListObj = new contestModel();
 $contests = $contestListObj->getAllContest();
 
+$pricesListObj = new priceModel();
+$pricesListObj->getAll(true);
+
 ?>
 
 <div id="wrapper">
@@ -28,7 +31,7 @@ $contests = $contestListObj->getAllContest();
                         <select name="contest-name" id="select-contest-name">
                             <option value="no-value"></option>
                             <?php foreach($contests as $contest) : ?>
-                                <option value="<?php echo $contest['title'] ?>"><?php echo $contest['title'] ?></option>
+                                <option value="<?php echo $contest['title']; ?>"><?php echo $contest['title'] ?><div id="select-contest-id"></div></option>
                             <?php endforeach; ?>
                         </select>
                         <input type="submit" name="choose-contest-name" class="choose-contest-name" value="Rechercher" />
@@ -40,13 +43,20 @@ $contests = $contestListObj->getAllContest();
             if(isset($_POST['choose-contest-name'])) {
                 $selected_contest = $_POST['contest-name'];
 
+
                 $contestObj = new contestModel();
                 $contestResult = $contestObj->getOneContest($selected_contest);
+
+
             }
             ?>
 
             <!-- Main content -->
             <?php if(isset($_POST['choose-contest-name'])) { ?>
+
+                      
+
+
                 <div class="form-content" style="margin-top: 50px;">
                     <form method="post" id="update-contest" action="updateContest/update/<?php echo $contestResult['id']?>" enctype="multipart/form-data">
                         <input type="hidden" name="choosen-contest" value="<?php echo $_POST['contest-name']; ?>" />
@@ -116,6 +126,29 @@ $contests = $contestListObj->getAllContest();
 <!--                                    <input type="hidden" name="MAX_FILE_SIZE" value="100000">-->
                                 </div>
                             </div>
+                            <?php foreach($pricesListObj as $prices) {
+                    if(isset($prices['id'])) {
+                        if($prices['id_contest'] == $contestResult['id']) {
+                            echo '
+                            <div class="price-form col-md-4">
+                            <div class="row">
+                                <div class="form-group">
+                                <label for="price">Prix</label>
+                                <p>'.$prices['title'].'</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                <label for="description">Description</label>
+                                <p>'.$prices['description'].'</p> 
+                                
+                                </div>
+                            </div></div>';
+                        }
+
+                    }
+                }
+            ?>
 
                             <div class="row">
                                 <div class="form-group col-md-12">
