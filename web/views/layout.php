@@ -94,9 +94,7 @@ $contestObj = new contestModel();
             <div class="container">
               <div class="navbar-header">
                   <a class="navbar-brand" href="/"><img alt="Logo" src="<?php echo $logo?>" id="imgLogo" width="40px" height="40px"></a>
-                  <a href="#" onClick="logInWithFacebook()">
-                      Connexion Admin
-                  </a>
+                  <?php if ($contestObj->getActiveContest() == FALSE) :?><a href="#" onClick="logInWithFacebook()">Connexion Admin</a><?php endif; ?>
                       <span> Facebook Contest</span>
                   <?php if(!empty($_SESSION['role'])){
                     if($_SESSION['role'] != 'admin') {
