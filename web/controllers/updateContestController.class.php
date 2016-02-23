@@ -49,6 +49,11 @@ class updateContestController extends basesql
             $logo = $URLs['1'];
             $banner = $URLs['0'];
         }
+        else {
+            $oldBannerLogo = $this->getContest($title);
+            $logo = $oldBannerLogo['logo'];
+            $banner = $oldBannerLogo['banner'];
+        }
 
         // On vérifie si tous les champs ne sont pas null
         if (empty($title) OR empty($date_begin) OR empty($date_ending) OR empty($description)) {
@@ -58,7 +63,7 @@ class updateContestController extends basesql
             try {
                 $updateContestObj = new contestModel($id, $title, $date_begin, $date_ending, $description, $color_theme, $banner, $logo, $active_contest);
                 $getActiveContest = $this->getActiveContest();
-				if (!$getActiveContest == FALSE) {
+				if (!$getActiveContest == FALSE & isset($_POST['active-contest'])) {
 					$this->unsetActiveContest($getActiveContest['id']);
 				}
                 $updateContestObj->save();
@@ -278,5 +283,11 @@ class updateContestController extends basesql
             echo "</pre>";
         }
         return $bannerlogo;
+    }
+
+    function getContest($title) {
+        $contestObj = new contestModel();
+        $contestResult = $contestObj->getOneContest($title);
+        return $contestResult;
     }
 }
