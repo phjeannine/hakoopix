@@ -31,21 +31,24 @@ class updateContestController extends basesql
             $active_contest = 0;
         }
 
-        $albumId = $this->getAlbum();
-        //Récupération des IDs du logo et du banner
-        $IDs = $this->getBannerLogo($albumId);
+        if ($logo != NULL || $banner != NULL)
+        {
+            $albumId = $this->getAlbum();
+            //Récupération des IDs du logo et du banner
+            $IDs = $this->getBannerLogo($albumId);
 
-        //Supprimer les photos existantes dans l'album
-        $this->deleteBannerLogo($IDs);
+            //Supprimer les photos existantes dans l'album
+            $this->deleteBannerLogo($IDs);
 
-        //Upload banner & logo
-        $this->updateAlbum($albumId);
+            //Upload banner & logo
+            $this->updateAlbum($albumId);
 
-        //Récupération des URL du logo et du banner
-        $URLs = $this->getSourceBannerLogo($albumId);
+            //Récupération des URL du logo et du banner
+            $URLs = $this->getSourceBannerLogo($albumId);
 
-        $logo = $URLs['1'];
-        $banner = $URLs['0'];
+            $logo = $URLs['1'];
+            $banner = $URLs['0'];
+        }
 
         // On vérifie si tous les champs ne sont pas null
         if (empty($title) OR empty($date_begin) OR empty($date_ending) OR empty($description)) {
