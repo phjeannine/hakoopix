@@ -80,14 +80,14 @@ function verifyAccessToken()
                 <div class="box-body col-md-11 col-sm-11">
 
                     <div class="form-group col-md-6 col-md-offset-3">
-                        <label for="title">Titre</label>
+                        <label for="title">Titre (20 caractères max)</label>
                         <input type="text" class="form-control" id="exampleInputEmail1"
-                               placeholder="Ajoutez un titre à votre photo..." name="title" required>
+                               placeholder="Ajoutez un titre à votre photo..." name="title" maxlength="20" required>
                     </div>
 
                     <div class="form-group col-md-6 col-md-offset-3">
-                        <label for="exampleInputEmail1">Description</label>
-                        <textarea class="form-control" rows="3" name="description"></textarea>
+                        <label for="exampleInputEmail1">Description (150 caractères max)</label>
+                        <textarea class="form-control" rows="3" name="description" maxlength="100"></textarea>
                     </div>
 
                     <div class="form-group col-md-11 col-md-offset-1">

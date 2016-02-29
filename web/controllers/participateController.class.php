@@ -12,9 +12,16 @@ class participateController
     public function insertAction($args)
     {
 
-
-        $title = $_POST['title'];
-        $description = $_POST['description'];
+        if(strlen($_POST['title']<=20)){
+            $title = htmlentities(trim($_POST['title']));
+        } else {
+            echo "Le titre est trop long";
+        }
+        if(strlen($_POST['description']<=100)){
+            $description = htmlentities(trim($_POST['description']));
+        } else {
+            echo "La description est trop longue";
+        }
         $id_member = $_SESSION['idUser'];
         $id_contest = $_SESSION['idContest'];
         $nb_like = 0;

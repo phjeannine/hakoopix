@@ -89,3 +89,8 @@
 .home_contest {
 	width: 80%;
 }
+
+#contest-desc {
+	width: 100%;
+	word-wrap:break-word;
+}

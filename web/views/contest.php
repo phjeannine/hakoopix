@@ -27,7 +27,7 @@
                 </div>
                 <div class="txt_contest">
                     <h3><center><?php echo $userParticipate['title']; ?></center></h3>
-                    <small><center><?php echo $userParticipate['description']; ?></center></small>
+                    <div id="contest-desc"><small><?php echo $userParticipate['description']; ?></small></div>
                     <div class="item-contest">
                         <div class="like"><?php if(!$hasParticipate) { echo '&nbsp;<a href="/contest/updatelike/'.$userParticipate["id"].'"><span>like</span></a> '; } echo ' &nbsp;&nbsp;<b style="color:green">&nbsp;votes : '.$userParticipate["nb_like"].'</b>';?>
                         </div>
