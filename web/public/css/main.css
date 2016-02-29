@@ -102,6 +102,7 @@ textarea {
 	display: inline-block;
 	transition: all 0.6s ease;
 	color: #000;
+	padding-top: 15px;
 }
 
 .user_participate > a {

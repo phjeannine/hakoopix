@@ -47,6 +47,8 @@ $memberObj->getAll(true);
                         <?php endforeach; ?>
                         </tbody>
                     </table>
+                    <div id="export-user">
+                    <a href="/userList/export" title="exporter">Exporter</a></div>
                 </div>
             </div><!-- /#contest_list -->
                 
