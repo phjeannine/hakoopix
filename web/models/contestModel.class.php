@@ -13,7 +13,7 @@ class contestModel extends basesql{
 	protected $is_delete;
 
 	public function __construct($id=-1, $title="", $date_begin="", $date_ending="", $description="", $color_theme="", $banner="", $logo="", $is_active=0, $is_delete=0){
-
+ 
 		parent::__construct();
 
 		$this->setId($id);
