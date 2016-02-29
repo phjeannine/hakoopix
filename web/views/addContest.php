@@ -27,8 +27,6 @@ include("dashboardHead.php");
               <div class="row">
                 <div class="form-group col-md-12">
                   <label for="title">Titre</label>
-
-            <?php var_dump($_SESSION); ?>
                   <input type="text" class="form-control" id="contest-title" name="title">
                 </div>
                 <div class="col-md-3 col-md-offset-3"></div>

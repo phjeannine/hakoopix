@@ -104,7 +104,6 @@ if(!empty($id_contest)) { ?>
         <!-- Rules -->
         <div id="rules" class="row">
             <h2>Hakoopix</h2>
-            <?php var_dump($_SESSION); ?>
             <div class="barre"></div>
             <p>Le concours photos qui te permettra de gagner de nombreux cadeaux, pour toi et tous tes amis !</p>
             <p>Sois créatif, original, cela te permettra de te démarquer</p>
