@@ -14,6 +14,7 @@ class contestController{
 		$firstName = $_SESSION['firstName'];
 		$picture = $_SESSION['photo'];
 		$role = $_SESSION['role'];
+		$email = $_SESSION['email'];
 
 		//On teste si l'utilisateur n'existe pas dans la BDD avant de l'inserer
 		$testObj = new memberModel();
@@ -23,7 +24,7 @@ class contestController{
 		// A commenter pour que les admins puissent participer
 		if($testObj->getIdMember() == 0){
 		
-			$member = new memberModel($lastName, $firstName, $picture, $idUser);
+			$member = new memberModel($lastName, $firstName, $picture, $idUser, $email);
 			$member->save();
 			header('Location: /contest');
 		}else{

@@ -28,6 +28,7 @@ $memberObj->getAll(true);
                           <tr>
                             <th>Nom</th>
                             <th>Prénom</th>
+                            <th>Adresse Email</th>
                             <th>Profil Facebook</th>
                           </tr>
                         </thead>
@@ -36,6 +37,7 @@ $memberObj->getAll(true);
                             <tr>
                                 <td><?php echo $member['lastname']; ?></td>
                                 <td><?php echo $member['firstname']; ?></td>
+                                <td><?php echo $member['email']; ?></td>
                                 <td>
                                     <a href="http://www.facebook.com/<?php echo $member['id_member']; ?>" target="_blank">
                                         Accéder à son profil
