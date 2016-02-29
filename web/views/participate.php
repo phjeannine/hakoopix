@@ -153,7 +153,7 @@ function verifyAccessToken()
                     <p>Séléctionnez un album parmis la liste de vos albums ou créez-en un autre et insérer l'image
                         : </p><br>
 
-                    <form action="../public/upload.php" method="post" enctype="multipart/form-data">
+                    <form action="participate/upload" method="post" enctype="multipart/form-data">
                         <label for="album">Albums : </label>
                         <select name="album">
                             <?php
