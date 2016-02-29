@@ -72,9 +72,9 @@ class OAuth2Client
     protected $lastRequest;
 
     /**
-     * @param FacebookApp    $app
+     * @param FacebookApp $app
      * @param FacebookClient $client
-     * @param string|null    $graphVersion The version of the Graph API to use.
+     * @param string|null $graphVersion The version of the Graph API to use.
      */
     public function __construct(FacebookApp $app, FacebookClient $client, $graphVersion = null)
     {
@@ -125,10 +125,10 @@ class OAuth2Client
      * Generates an authorization URL to begin the process of authenticating a user.
      *
      * @param string $redirectUrl The callback URL to redirect to.
-     * @param array  $scope       An array of permissions to request.
-     * @param string $state       The CSPRNG-generated CSRF value.
-     * @param array  $params      An array of parameters to generate URL.
-     * @param string $separator   The separator to use in http_build_query().
+     * @param array $scope An array of permissions to request.
+     * @param string $state The CSPRNG-generated CSRF value.
+     * @param array $params An array of parameters to generate URL.
+     * @param string $separator The separator to use in http_build_query().
      *
      * @return string
      */
@@ -190,7 +190,7 @@ class OAuth2Client
      * Get a valid code from an access token.
      *
      * @param AccessToken|string $accessToken
-     * @param string             $redirectUri
+     * @param string $redirectUri
      *
      * @return AccessToken
      *
@@ -250,8 +250,8 @@ class OAuth2Client
     /**
      * Send a request to Graph with an app access token.
      *
-     * @param string      $endpoint
-     * @param array       $params
+     * @param string $endpoint
+     * @param array $params
      * @param string|null $accessToken
      *
      * @return FacebookResponse

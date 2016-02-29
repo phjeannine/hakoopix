@@ -15,7 +15,7 @@ $memberObj->getAll(true);
                 <div class="col-lg-12">
                     <h1 class="page-header">Gestion des utilisateurs</h1>
                     <ol class="breadcrumb">
-                        <li><i class="fa fa-dashboard"></i>  <a href="/dashboard">Dashboard</a></li>
+                        <li><i class="fa fa-dashboard"></i> <a href="/dashboard">Dashboard</a></li>
                         <li class="active"><i class="fa fa-edit"></i> Gestion des utilisateurs</li>
                     </ol>
                 </div>
@@ -25,21 +25,22 @@ $memberObj->getAll(true);
                 <div class="col-md-10 col-md-offset-1">
                     <table class="table">
                         <thead>
-                          <tr>
+                        <tr>
                             <th>Nom</th>
                             <th>Prénom</th>
                             <th>Adresse Email</th>
                             <th>Profil Facebook</th>
-                          </tr>
+                        </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($memberObj as $member) : ?>
+                        <?php foreach ($memberObj as $member) : ?>
                             <tr>
                                 <td><?php echo $member['lastname']; ?></td>
                                 <td><?php echo $member['firstname']; ?></td>
                                 <td><?php echo $member['email']; ?></td>
                                 <td>
-                                    <a href="http://www.facebook.com/<?php echo $member['id_member']; ?>" target="_blank">
+                                    <a href="http://www.facebook.com/<?php echo $member['id_member']; ?>"
+                                       target="_blank">
                                         Accéder à son profil
                                     </a>
                                 </td>
@@ -48,10 +49,10 @@ $memberObj->getAll(true);
                         </tbody>
                     </table>
                     <div id="export-user">
-                    <a href="/userList/export" title="exporter">Exporter</a></div>
+                        <a href="/userList/export" title="exporter">Exporter</a></div>
                 </div>
             </div><!-- /#contest_list -->
-                
+
         </div><!-- /.container-fluid -->
     </div><!-- /#page-wrapper -->
 </div><!-- /#wrapper -->

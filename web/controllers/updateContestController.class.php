@@ -31,8 +31,7 @@ class updateContestController extends basesql
             $active_contest = 0;
         }
 
-        if ($logo != NULL || $banner != NULL)
-        {
+        if ($logo != NULL || $banner != NULL) {
             $albumId = $this->getAlbum();
             //Récupération des IDs du logo et du banner
             $IDs = $this->getBannerLogo($albumId);
@@ -48,8 +47,7 @@ class updateContestController extends basesql
 
             $logo = $URLs['1'];
             $banner = $URLs['0'];
-        }
-        else {
+        } else {
             $oldBannerLogo = $this->getContest($title);
             $logo = $oldBannerLogo['logo'];
             $banner = $oldBannerLogo['banner'];
@@ -63,15 +61,15 @@ class updateContestController extends basesql
             try {
                 $updateContestObj = new contestModel($id, $title, $date_begin, $date_ending, $description, $color_theme, $banner, $logo, $active_contest);
                 $getActiveContest = $this->getActiveContest();
-				if (!$getActiveContest == FALSE & isset($_POST['active-contest'])) {
-					$this->unsetActiveContest($getActiveContest['id']);
-				}
+                if (!$getActiveContest == FALSE & isset($_POST['active-contest'])) {
+                    $this->unsetActiveContest($getActiveContest['id']);
+                }
                 $updateContestObj->save();
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
             }
 
-			header("Location: /contestList");
+            header("Location: /contestList");
 
         }
     }
@@ -285,7 +283,8 @@ class updateContestController extends basesql
         return $bannerlogo;
     }
 
-    function getContest($title) {
+    function getContest($title)
+    {
         $contestObj = new contestModel();
         $contestResult = $contestObj->getOneContest($title);
         return $contestResult;

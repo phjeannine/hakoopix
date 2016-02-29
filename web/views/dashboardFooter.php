@@ -1,7 +1,9 @@
-    <footer class="main-footer">
-      <div class="pull-right hidden-xs"><b>Version</b> 2.3.0</div><strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-    </footer>
-  </div><!-- ./wrapper -->
+<footer class="main-footer">
+    <div class="pull-right hidden-xs"><b>Version</b> 2.3.0</div>
+    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+</footer>
+</div><!-- ./wrapper -->
 </div>
 
 <!-- SCRIPTS -->
@@ -11,7 +13,7 @@
 <script src="../public/js/jscolor.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-  $.widget.bridge('uibutton', $.ui.button);
+    $.widget.bridge('uibutton', $.ui.button);
 </script>
 <script src="../templates/admin/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>

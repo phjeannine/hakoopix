@@ -68,8 +68,8 @@ class AccessTokenMetadata
     /**
      * Returns a value from the metadata.
      *
-     * @param string $field   The property to retrieve.
-     * @param mixed  $default The default to return if the property doesn't exist.
+     * @param string $field The property to retrieve.
+     * @param mixed $default The default to return if the property doesn't exist.
      *
      * @return mixed
      */
@@ -85,8 +85,8 @@ class AccessTokenMetadata
     /**
      * Returns a value from the metadata.
      *
-     * @param string $field   The property to retrieve.
-     * @param mixed  $default The default to return if the property doesn't exist.
+     * @param string $field The property to retrieve.
+     * @param mixed $default The default to return if the property doesn't exist.
      *
      * @return mixed
      *
@@ -102,8 +102,8 @@ class AccessTokenMetadata
      * Returns a value from a child property in the metadata.
      *
      * @param string $parentField The parent property.
-     * @param string $field       The property to retrieve.
-     * @param mixed  $default     The default to return if the property doesn't exist.
+     * @param string $field The property to retrieve.
+     * @param mixed $default The default to return if the property doesn't exist.
      *
      * @return mixed
      */
@@ -123,8 +123,8 @@ class AccessTokenMetadata
     /**
      * Returns a value from the error metadata.
      *
-     * @param string $field   The property to retrieve.
-     * @param mixed  $default The default to return if the property doesn't exist.
+     * @param string $field The property to retrieve.
+     * @param mixed $default The default to return if the property doesn't exist.
      *
      * @return mixed
      */
@@ -136,8 +136,8 @@ class AccessTokenMetadata
     /**
      * Returns a value from the "metadata" metadata. *Brain explodes*
      *
-     * @param string $field   The property to retrieve.
-     * @param mixed  $default The default to return if the property doesn't exist.
+     * @param string $field The property to retrieve.
+     * @param mixed $default The default to return if the property doesn't exist.
      *
      * @return mixed
      */

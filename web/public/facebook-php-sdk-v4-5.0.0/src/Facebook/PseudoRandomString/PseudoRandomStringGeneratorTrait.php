@@ -47,7 +47,7 @@ trait PseudoRandomStringGeneratorTrait
      * Converts binary data to hexadecimal of arbitrary length.
      *
      * @param string $binaryData The binary data to convert to hex.
-     * @param int    $length     The length of the string to return.
+     * @param int $length The length of the string to return.
      *
      * @return string
      */

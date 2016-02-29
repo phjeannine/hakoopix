@@ -56,7 +56,7 @@ class GraphObjectFactory extends GraphNodeFactory
     {
         return $this->makeGraphNode($subclassName);
     }
-    
+
     /**
      * Convenience method for creating a GraphEvent collection.
      *
@@ -73,7 +73,7 @@ class GraphObjectFactory extends GraphNodeFactory
      * Tries to convert a FacebookResponse entity into a GraphEdge.
      *
      * @param string|null $subclassName The GraphNode sub class to cast the list items to.
-     * @param boolean     $auto_prefix  Toggle to auto-prefix the subclass name.
+     * @param boolean $auto_prefix Toggle to auto-prefix the subclass name.
      *
      * @return GraphEdge
      *

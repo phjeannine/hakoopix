@@ -6,9 +6,9 @@ include("../../include/connexion.php");
 
 $idPhoto = $_GET['image'];
 $nbLike = $_GET['nbLike'];
-$nbLike = $nbLike+1;
+$nbLike = $nbLike + 1;
 
-$results = $db->query("UPDATE picture SET nb_like=".$nbLike." WHERE id_picture=".$idPhoto);
+$results = $db->query("UPDATE picture SET nb_like=" . $nbLike . " WHERE id_picture=" . $idPhoto);
 
 header('Location: /contest');
 ?>

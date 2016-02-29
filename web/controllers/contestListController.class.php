@@ -1,10 +1,12 @@
 <?php
 
-class contestListController{
+class contestListController
+{
 
-	public function indexAction($args){
-		$v = new view("contestList");
-		$v->assign("mesargs", $args);
-	}
+    public function indexAction($args)
+    {
+        $v = new view("contestList");
+        $v->assign("mesargs", $args);
+    }
 
 }

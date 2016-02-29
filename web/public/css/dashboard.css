@@ -1,30 +1,30 @@
 .navbar-inverse {
-	background-color: #2c2e43;
-	border: none;
+    background-color: #2c2e43;
+    border: none;
 }
 
 .navbar-inverse .view-app {
-	color: #fff;
-	padding: 15px;
-	float: right;
+    color: #fff;
+    padding: 15px;
+    float: right;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-	color: #fff;
+    color: #fff;
 }
 
 .navbar-inverse .navbar-brand {
-	color: #fff;
-	background: #232639;
-	width: 225px;
+    color: #fff;
+    background: #232639;
+    width: 225px;
 }
 
 .navbar-inverse .navbar-brand:hover {
-	background-color: #232639;
+    background-color: #232639;
 }
 
 .page-header {
-	font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 90px 0 20px;
     font-weight: bold;
     text-transform: uppercase;
@@ -32,62 +32,62 @@
 }
 
 .form-control:focus {
-	outline: none;
-	box-shadow: none;
-	border-color: #999;
+    outline: none;
+    box-shadow: none;
+    border-color: #999;
 }
 
 .side-nav #admin-bar {
-	background: url("../../public/images/patterns/footer_lodyas.png");
-	padding: 20px 0;
+    background: url("../../public/images/patterns/footer_lodyas.png");
+    padding: 20px 0;
 }
 
 .side-nav #admin-bar img {
-	width: 50px;
-	height: 50px;
-	display: block;
-	margin: 0 auto 10px auto;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 .side-nav #admin-bar .admin-name {
-	font-family: 'Montserrat', Arial, sans-serif;
-	color: #fff;
-	font-size: 13px;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
 }
 
 .side-nav #admin-bar .admin-role {
-	color: #fff;
-	font-size: 10px;
-	text-transform: uppercase;
-	text-align: center;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .form-content {
-	overflow: auto;
+    overflow: auto;
     clear: both;
 }
 
 .form-content form {
-	margin: 0;
+    margin: 0;
 }
 
 .form-content form input[type="submit"] {
-	color: #fff;
-	margin: 0 0 30px 0;
-	background-color: #2c2e43;
-	width: 200px;
-	outline: none;
-	border: none;
-	padding: 8px;
-	transition: all ease 300ms;
+    color: #fff;
+    margin: 0 0 30px 0;
+    background-color: #2c2e43;
+    width: 200px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    transition: all ease 300ms;
 }
 
 .error {
-	color: red;
-	margin-top: 5px;
+    color: red;
+    margin-top: 5px;
 }
 
 /*----------------------*/
@@ -103,42 +103,41 @@
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
 }
 
-
 /*--------------------*/
 /*---- DASHBOARD ----*/
 /*------------------*/
 #dashboard-panel .violet {
-	background-color: #603cba;
-	overflow: auto;
+    background-color: #603cba;
+    overflow: auto;
 }
 
 #dashboard-panel .panel {
-	color: #fff;
+    color: #fff;
 }
 
 #dashboard-panel .panel p {
-	color: #fff;
-	margin-top: 30px;
+    color: #fff;
+    margin-top: 30px;
 }
 
 /*----------------------*/
 /*---- AJOUT ADMIN ----*/
 /*--------------------*/
 #add-contest textarea {
-	resize: none;
+    resize: none;
 }
 
 /*-----------------------------*/
 /*---- LISTE DES CONCOURS ----*/
 /*---------------------------*/
 #contest-list {
-	margin: 0 auto;
-	padding-top: 30px;
+    margin: 0 auto;
+    padding-top: 30px;
 }
 
 #contest-list .add-contest a {
-	background-color: #f25f93;
-	border: 3px solid #f25f93;
+    background-color: #f25f93;
+    border: 3px solid #f25f93;
     padding: 10px;
     color: #fff;
     width: 260px;
@@ -151,78 +150,78 @@
     transition: all ease 300ms;
 }
 
-#contest-list .add-contest a:hover{
-	text-decoration: none;
-	background: transparent;
-	color: #f25f93;
+#contest-list .add-contest a:hover {
+    text-decoration: none;
+    background: transparent;
+    color: #f25f93;
 }
 
 #contest-list .list img {
-	width: 100%;
+    width: 100%;
 }
 
 #contest-list .contest {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 #contest-list .contest .contest-informations {
-	background: #eee;
-	padding: 10px;
-	overflow: auto;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
+    background: #eee;
+    padding: 10px;
+    overflow: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 #contest-list .contest .contest-informations .logo img {
-	width: 60px;
+    width: 60px;
 }
 
 #contest-list .contest .contest-informations h3 {
-	margin-top: 0;
-	font-size: 15px;
-	font-family: 'Montserrat', Arial, sans-serif;
+    margin-top: 0;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 #contest-list .contest .contest-informations p {
-	font-size: 12px;
-	margin: 0 0 5px 0;
+    font-size: 12px;
+    margin: 0 0 5px 0;
 }
 
 #contest-list .contest .contest-informations .description {
-	height: 80px;
+    height: 80px;
 }
 
 #contest-list .contest .contest-informations .color-theme span {
-	width: 15px;
+    width: 15px;
     height: 15px;
     border-radius: 100%;
     display: inline-block;
 }
 
 #contest-list #contest-table tr > th {
-	background: #ccc;
-	color: #777;
-	text-align: center;
-	font-weight: normal;
-	font-family: 'Montserrat', Arial, sans-serif;
-	text-transform: uppercase;
-	font-size: 12px;
+    background: #ccc;
+    color: #777;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
 #contest-list #contest-table tr > td {
-	color: #777;
-	text-align: center;
-	font-weight: normal;
-	vertical-align: middle;
-	font-size: 11px;
+    color: #777;
+    text-align: center;
+    font-weight: normal;
+    vertical-align: middle;
+    font-size: 11px;
 }
 
 #contest-list #contest-table tr > td > img {
-	width: 50px;
+    width: 50px;
 }
 
 #contest-list #contest-table tr > td > span {
-	width: 15px;
+    width: 15px;
     height: 15px;
     border-radius: 100%;
     display: block;
@@ -231,54 +230,53 @@
 
 #user-list table tr th,
 #user-list table tr td {
-	text-align: center;
+    text-align: center;
 }
 
 /*-----------------------------*/
 /*-------- ADD PRICES --------*/
 /*---------------------------*/
 #add-price {
-	background: #eee;
-	margin-bottom: 10px;
+    background: #eee;
+    margin-bottom: 10px;
 }
 
 #add-price .add-price-informations {
-	margin: 20px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 #add-price .add-price-informations label {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 #add-price .add-price-informations p {
-	font-size: 11px;
+    font-size: 11px;
 }
 
 /*------------------------------------*/
 /*---- PRÉVISUALITATION CONCOURS ----*/
 /*----------------------------------*/
 #preview-content {
-	border:3px dashed #eee;
-	text-align: center;
-	font-family: 'Open Sans', Arial, sans serif;
-	font-size: 12px;
+    border: 3px dashed #eee;
+    text-align: center;
+    font-family: 'Open Sans', Arial, sans serif;
+    font-size: 12px;
 }
 
 .previewTitle {
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
-
 .previewColor {
-	width: 100%;
-	background-color: #317ab8;
-	overflow: auto;
+    width: 100%;
+    background-color: #317ab8;
+    overflow: auto;
 }
 
 .previewColor .previewLogo {
-	padding: 10px;
+    padding: 10px;
     height: 60px;
     background-size: 100%;
     display: block;
@@ -290,73 +288,73 @@
 }
 
 .previewHeader {
-	background-color: #eee;
-	height: 130px;
-	padding-top: 40px;
+    background-color: #eee;
+    height: 130px;
+    padding-top: 40px;
 
 }
 
 .preview-content i {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .previewDescription {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 .previewRules {
-	padding-top: 30px;
-	height: 200px;
+    padding-top: 30px;
+    height: 200px;
 }
 
 .previewColorBarre {
-	border-top: 2px solid #317ab8;
+    border-top: 2px solid #317ab8;
 }
 
 .previewPrices {
-	padding-top:30px;
-	min-height: 180px;
-	background-image: url('../images/fond.png') ;
-	background-size: cover;
-	padding-bottom: 30px;
+    padding-top: 30px;
+    min-height: 180px;
+    background-image: url('../images/fond.png');
+    background-size: cover;
+    padding-bottom: 30px;
 }
 
 .previewPrice {
-	margin-top:30px;
-	width: 100%;
-	min-height: 60px;
-	border:  3px solid #317ab8;
-	margin-top: 10px;
-	background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 30px;
+    width: 100%;
+    min-height: 60px;
+    border: 3px solid #317ab8;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .previewColor.footer {
-	height: 10px;
+    height: 10px;
 }
 
 .btn-contest {
-	display: inline-block;
-	margin-left: 10px;
-	vertical-align:top;
-	border-radius: 0px;
-	width: 40%;
-	border: 2px solid #eb5e92;
-	background-color: #eb5e92;
-	transition: all 0.4s ease;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 12px;
-	font-family: 'Helvetica', Arial, sans-serif;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    border-radius: 0px;
+    width: 40%;
+    border: 2px solid #eb5e92;
+    background-color: #eb5e92;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Helvetica', Arial, sans-serif;
 }
 
 .btn-contest:hover, .btn-contest:target {
-	background-color: #fff;
-	color: #eb5e92;
-	border-color: #eb5e92;
+    background-color: #fff;
+    color: #eb5e92;
+    border-color: #eb5e92;
 }
 
 #export-user a {
-background-color: #f25f93;
+    background-color: #f25f93;
     border: 3px solid #f25f93;
     padding: 10px;
     color: #fff;

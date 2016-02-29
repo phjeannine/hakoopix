@@ -1,80 +1,80 @@
 /* MAIN STYLESHEET */
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 img {
-	display: block;
+    display: block;
 }
 
 span {
-	display: inline-block;
+    display: inline-block;
 }
 
 hr {
-	margin: 5px 0 5px 0;
+    margin: 5px 0 5px 0;
 }
 
 textarea {
-	resize: none;
+    resize: none;
 }
 
 /* General */
 .navbar-fixed-top {
-	position: fixed;
+    position: fixed;
 }
 
 .navbar {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar .navbar-header > a {
-	color: #fff;
+    color: #fff;
 }
 
 .navbar .navbar-header > span {
-	font-family: 'Open Sans', Arial, sans-serif;
-	color: #fff;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	display: inline-block;
-	text-transform: uppercase;
-	float: left;
-	margin-right: 20px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    float: left;
+    margin-right: 20px;
 }
 
 .navbar .nav > li > a {
-	color: #fff;
+    color: #fff;
 }
 
 .navbar .nav > li > a:focus, .nav > li > a:hover {
-	background: none;
+    background: none;
 }
 
 .navbar .navbar-right > li > a {
-	border: 1px solid #fff;
-	border-radius: 5px;
-	padding: 3px 10px;
-	margin-top: 11px;
-	margin-bottom: 11px;
-	transition: all ease 300ms;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 3px 10px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    transition: all ease 300ms;
 }
 
 .navbar .navbar-right > li > a:hover {
-	background-color: #fff;
-	color: #12ba74;
+    background-color: #fff;
+    color: #12ba74;
 }
 
 .navbar .navbar-right > li > a:hover, a:focus {
@@ -82,54 +82,54 @@ textarea {
 }
 
 .page-header {
-	color: #6d6c6c;
+    color: #6d6c6c;
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 22px;
     text-transform: uppercase;
 }
 
 .navbar-right li {
-	margin-right: 2%;
+    margin-right: 2%;
 }
 
 .user-picture-profile {
-	border-radius: 100%;
-	padding: 5px 0;
-	width: 38px;
+    border-radius: 100%;
+    padding: 5px 0;
+    width: 38px;
 }
 
 .user_participate {
-	display: inline-block;
-	transition: all 0.6s ease;
-	color: #000;
-	padding-top: 15px;
+    display: inline-block;
+    transition: all 0.6s ease;
+    color: #000;
+    padding-top: 15px;
 }
 
 .user_participate > a {
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .user_participate > a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 #contest, #participate {
-	text-align: center;
+    text-align: center;
 }
 
 #contest h1, #participate h1 {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 30px;
-  color: #000000;
-  border-bottom: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #000000;
+    border-bottom: none;
 }
 
-.divImg{
-	border: 0px solid;
+.divImg {
+    border: 0px solid;
     width: 157px;
     margin-bottom: 3%;
     margin-left: 1%;
@@ -137,29 +137,29 @@ textarea {
 }
 
 .imgParticipate {
-	border:0px solid gray;
-	border-radius: 5px; 
-	width: 145px;
-	height: 140px;
-	box-shadow: 0px 0px 4px gray;
-	margin-left: 2%;
-	display: inline;
-	margin-bottom: 4%;
+    border: 0px solid gray;
+    border-radius: 5px;
+    width: 145px;
+    height: 140px;
+    box-shadow: 0px 0px 4px gray;
+    margin-left: 2%;
+    display: inline;
+    margin-bottom: 4%;
 }
 
-.msgErrorPhoto{
-	color:red;
-	margin-top: 4%;
-	margin-bottom: 3%;
+.msgErrorPhoto {
+    color: red;
+    margin-top: 4%;
+    margin-bottom: 3%;
 }
 
 #privatePolicy {
-	padding-top: 100px;
-	padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #imgLogo {
-	margin-top: -10px;
+    margin-top: -10px;
     border: 1px solid;
     border-radius: 2px;
 }

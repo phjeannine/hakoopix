@@ -1,39 +1,39 @@
 #participate p {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 #participate .form-group {
-	clear: both;
+    clear: both;
 }
 
 #participate .form-group label {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 #participate .form-group .imgFbUser {
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	max-height: 300px;
-	overflow: auto;
-	padding:2% 1% 1% 1%; 
-	margin-bottom: 3%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow: auto;
+    padding: 2% 1% 1% 1%;
+    margin-bottom: 3%;
 }
 
 #participate .form-group .btn {
-	width: 200px;
-	outline: none;
+    width: 200px;
+    outline: none;
 }
 
 #participate .form-group .btn:active {
-	outline: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .btn-customize {
-	color: #fff;
+    color: #fff;
 }
 
 #participate-label {
-	margin-left: ;
+    margin-left:;
 }

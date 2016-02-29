@@ -68,21 +68,21 @@ class RequestBodyMultipartTest extends \PHPUnit_Framework_TestCase
     public function testSupportsMultidimensionalParams()
     {
         $message = new RequestBodyMultipart([
-          'foo' => 'bar',
-          'faz' => [1,2,3],
-          'targeting' => [
-            'countries' => 'US,GB',
-            'age_min' => 13,
-          ],
-          'call_to_action' => [
-            'type' => 'LEARN_MORE',
-            'value' => [
-              'link' => 'http://example.com',
-              'sponsorship' => [
-                'image' => 'http://example.com/bar.jpg',
-              ],
+            'foo' => 'bar',
+            'faz' => [1, 2, 3],
+            'targeting' => [
+                'countries' => 'US,GB',
+                'age_min' => 13,
             ],
-          ],
+            'call_to_action' => [
+                'type' => 'LEARN_MORE',
+                'value' => [
+                    'link' => 'http://example.com',
+                    'sponsorship' => [
+                        'image' => 'http://example.com/bar.jpg',
+                    ],
+                ],
+            ],
         ], [], 'foo_boundary');
         $body = $message->getBody();
 

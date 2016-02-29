@@ -1,205 +1,202 @@
 /* HOME STYLESHEET */
 #banner {
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: cover !important;
-  height: 600px;
-  padding: 0;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    height: 600px;
+    padding: 0;
 }
 
 #banner .overlay {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
 }
 
 #banner .overlay .banner-content {
-  height: 100%;
-  min-height: 100%;
-  position: relative;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
 }
 
 #banner .overlay .banner-content .holder {
-  display: table;
-  position: relative;
-  width: 100%;
-  height: 100%;
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 #banner .overlay .banner-content .holder .inner {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-  width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
 }
 
 #banner h1 {
-  font-family: 'Montserrat', Arial, sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
-  font-size: 50px;
-  margin-bottom: 10px;
-  color: #fff;
-  letter-spacing: 5px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #fff;
+    letter-spacing: 5px;
 }
 
 #banner .overlay .banner-content .holder .inner .contest-description {
-  font-family: 'Open Sans', Arial, sans-serif;
-  max-width: 450px;
-  text-align: center;
-  margin: 0 auto 40px;
-  color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    max-width: 450px;
+    text-align: center;
+    margin: 0 auto 40px;
+    color: #fff;
 }
 
 #banner .overlay .banner-content .holder .inner .contest-description a {
-  color: #fff;
+    color: #fff;
 }
 
 #banner .fb-connect-button {
-  float: none;
-  width: 500px;
-  margin: 0 auto;
+    float: none;
+    width: 500px;
+    margin: 0 auto;
 }
 
 #banner .fb-connect-button .want-to-play {
-  text-align: center;
-  color: #fff;
-  display: block;
-  margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
 }
 
 #banner .fb-connect-button a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 #banner .fb-connect-button .btn-social {
-  color: #fff;
-  margin: 0 auto;
-  width: 70%;
-  border-radius: 0px;
-  transition: all 0.3s ease;
+    color: #fff;
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 0px;
+    transition: all 0.3s ease;
 }
 
 /* Homepage Content */
 #homepage {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 #homepage h2 {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 30px;
 }
 
 #homepage p {
-  font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
 #homepage .title {
-  text-align: center;
-  color: #6d6c6c;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 22px;
-  text-transform: uppercase;
+    text-align: center;
+    color: #6d6c6c;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 #homepage #prices .price-item h4 {
-  font-family: 'Open Sans', Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 16px;
-  margin: 10px 0 5px 0;
-  font-weight: bold;
-  text-align: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    text-align: center;
 }
 
-
 #homepage #prices .price-item p {
-  color: #6d6c6c;
-  text-align: center;
+    color: #6d6c6c;
+    text-align: center;
 }
 
 #homepage #gallery {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 #rules, #prices, #gallery {
-  text-align: center;
+    text-align: center;
 }
 
 .barre {
-  max-width: 25px;
-  height: 20px;
-  margin: 0 auto;
+    max-width: 25px;
+    height: 20px;
+    margin: 0 auto;
 }
 
-
 .rule, .price {
-  margin-top: 25px;
+    margin-top: 25px;
 }
 
 .rule h3 {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .rule p {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 /* ANIMATION RULES */
 
-
 #rules, #prices, #gallery {
-  margin: 90px 0px;
+    margin: 90px 0px;
 }
 
 .prices-container {
-  background-image: url('../images/prices-container.png') ;
-  background-size: 100%;
+    background-image: url('../images/prices-container.png');
+    background-size: 100%;
 }
 
 .prices-container #prices h2 {
-  color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .prices-container #prices .prices-description {
-  color: #fff;
+    color: #fff;
 }
 
 .prices-container #prices .price {
-  padding: 15px 7px;
-  transition: all 0.4s ease;
-  background-color: #fff;
+    padding: 15px 7px;
+    transition: all 0.4s ease;
+    background-color: #fff;
 }
 
-.prices-container #prices .price:hover{
-  border-color: #b9b9d3;
+.prices-container #prices .price:hover {
+    border-color: #b9b9d3;
 }
 
 .user_participate .fa {
-  color: #fff;
+    color: #fff;
 }
 
 .user_participate a {
-  margin-left: -10px;
-  transition: all 0.3s ease;
+    margin-left: -10px;
+    transition: all 0.3s ease;
 }
 
-.user_participate a>i {
-visibility: hidden;
+.user_participate a > i {
+    visibility: hidden;
 }
 
 .user_participate a:hover {
-  margin-left: 0px;
+    margin-left: 0px;
 }
 
-.user_participate a:hover>i {
-  visibility: visible;
+.user_participate a:hover > i {
+    visibility: visible;
 }

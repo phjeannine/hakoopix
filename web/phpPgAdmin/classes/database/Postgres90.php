@@ -8,26 +8,30 @@
 
 include_once('./classes/database/Postgres91.php');
 
-class Postgres90 extends Postgres91 {
+class Postgres90 extends Postgres91
+{
 
-	var $major_version = 9.0;
+    var $major_version = 9.0;
 
-	/**
-	 * Constructor
-	 * @param $conn The database connection
-	 */
-	function Postgres90($conn) {
-		$this->Postgres($conn);
-	}
+    /**
+     * Constructor
+     * @param $conn The database connection
+     */
+    function Postgres90($conn)
+    {
+        $this->Postgres($conn);
+    }
 
-	// Help functions
+    // Help functions
 
-	function getHelpPages() {
-		include_once('./help/PostgresDoc90.php');
-		return $this->help_page;
-	}
+    function getHelpPages()
+    {
+        include_once('./help/PostgresDoc90.php');
+        return $this->help_page;
+    }
 
-	// Capabilities
+    // Capabilities
 
 }
+
 ?>

@@ -1,96 +1,94 @@
 /* CONTEST STYLESHEET */
 .contribution {
-	margin-bottom: 18px;
-	border:0px solid #eee;
-	margin-left: 2%;
-	padding: 0.1%;
-	background: #fff;
-	height: 470px;
-	width: 340px;
-	box-shadow: 0 0 3px #ccc;
+    margin-bottom: 18px;
+    border: 0px solid #eee;
+    margin-left: 2%;
+    padding: 0.1%;
+    background: #fff;
+    height: 470px;
+    width: 340px;
+    box-shadow: 0 0 3px #ccc;
 }
 
 .contribution img {
-	min-height: 350px;
-	height: auto;
-	width: 100% !important;
+    min-height: 350px;
+    height: auto;
+    width: 100% !important;
 }
 
 .contribution h3 {
-	text-align: left;
-	font-family: 'Montserrat', Arial, sans-serif;
-	margin: 10px 0 5px 0;
-	font-size: 16px;
-	text-transform: uppercase;
-	font-weight: bold;
+    text-align: left;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .contribution .item-contest {
-	overflow: auto;
+    overflow: auto;
 }
 
 .contribution .item-contest .like {
-	float: left;
-	margin-left: 2%;
-	padding: 0;
-	position: absolute;
-	bottom: 10px;
+    float: left;
+    margin-left: 2%;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
 }
 
 .contribution .item-contest .like span {
-	background: url("../../public/images/like.png") 0 0 no-repeat;
-	background-size: 100%;
-	display: block;
-	float: left;
-	text-indent: -99999px;
-	height: 20px;
-	width: 20px;
-	margin-right: 5px;
+    background: url("../../public/images/like.png") 0 0 no-repeat;
+    background-size: 100%;
+    display: block;
+    float: left;
+    text-indent: -99999px;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
 }
 
 .img_contest {
-	height: 350px;
-	overflow: hidden;
+    height: 350px;
+    overflow: hidden;
 }
 
 .txt_contest {
-	margin: 3px;
+    margin: 3px;
 }
-
 
 /*   ---- Pop up ----    */
 
 .popupimg {
-	max-width: 100%;
-	max-height: 100%;
-	margin:0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
 }
-
 
 /* ----------- page index ---------- */
 
 .contributionIndex {
-	margin-bottom: 10px;
-	border: 6px solid #eee;
-	padding: 0%;
-	background: #fff;
-	box-shadow: 0 0 3px #ccc;
-	transition: all 0.4s ease;
-	height: 350px;
-	overflow: hidden;
+    margin-bottom: 10px;
+    border: 6px solid #eee;
+    padding: 0%;
+    background: #fff;
+    box-shadow: 0 0 3px #ccc;
+    transition: all 0.4s ease;
+    height: 350px;
+    overflow: hidden;
 }
 
 .contributionIndex img {
-	min-height: 350px;
-	height: auto;
-	width: 100% !important;
+    min-height: 350px;
+    height: auto;
+    width: 100% !important;
 }
 
 .home_contest {
-	width: 80%;
+    width: 80%;
 }
 
 #contest-desc {
-	width: 100%;
-	word-wrap:break-word;
+    width: 100%;
+    word-wrap: break-word;
 }

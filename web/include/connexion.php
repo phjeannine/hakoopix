@@ -13,15 +13,14 @@ if (!$db) {
 */
 
 try {
-  $db = new PDO("pgsql:host=ec2-54-204-8-224.compute-1.amazonaws.com; dbname=d5p9s6nvf6ggtq", "bjcjnkzygeqlza", "zmXSRzTXA2OWa_KOCJTbD53g82");
-}
-catch(PDOException $e) {
-  $db = null;
-  echo 'ERREUR DB: ' . $e->getMessage();
+    $db = new PDO("pgsql:host=ec2-54-204-8-224.compute-1.amazonaws.com; dbname=d5p9s6nvf6ggtq", "bjcjnkzygeqlza", "zmXSRzTXA2OWa_KOCJTbD53g82");
+} catch (PDOException $e) {
+    $db = null;
+    echo 'ERREUR DB: ' . $e->getMessage();
 }
 
 //session_start();
 
-define("__ROOT__", __DIR__ ."/");
+define("__ROOT__", __DIR__ . "/");
 
 ?>

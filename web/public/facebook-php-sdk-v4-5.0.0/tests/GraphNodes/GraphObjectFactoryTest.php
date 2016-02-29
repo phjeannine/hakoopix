@@ -76,22 +76,22 @@ class GraphObjectFactoryTest extends \PHPUnit_Framework_TestCase
     public function testAListFromGraphWillBeCastAsAGraphEdge()
     {
         $data = json_encode([
-          'data' => [
-            [
-              'id' => '123',
-              'name' => 'Foo McBar',
-              'link' => 'http://facebook/foo',
+            'data' => [
+                [
+                    'id' => '123',
+                    'name' => 'Foo McBar',
+                    'link' => 'http://facebook/foo',
+                ],
+                [
+                    'id' => '1337',
+                    'name' => 'Bar McBaz',
+                    'link' => 'http://facebook/bar',
+                ],
             ],
-            [
-              'id' => '1337',
-              'name' => 'Bar McBaz',
-              'link' => 'http://facebook/bar',
+            'paging' => [
+                'next' => 'http://facebook/next',
+                'previous' => 'http://facebook/prev',
             ],
-          ],
-          'paging' => [
-            'next' => 'http://facebook/next',
-            'previous' => 'http://facebook/prev',
-          ],
         ]);
         $res = new FacebookResponse($this->request, $data);
 
@@ -101,14 +101,14 @@ class GraphObjectFactoryTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf('\Facebook\GraphNodes\GraphList', $graphList);
         $this->assertEquals([
-          'id' => '123',
-          'name' => 'Foo McBar',
-          'link' => 'http://facebook/foo',
+            'id' => '123',
+            'name' => 'Foo McBar',
+            'link' => 'http://facebook/foo',
         ], $graphData[0]);
         $this->assertEquals([
-          'id' => '1337',
-          'name' => 'Bar McBaz',
-          'link' => 'http://facebook/bar',
+            'id' => '1337',
+            'name' => 'Bar McBaz',
+            'link' => 'http://facebook/bar',
         ], $graphData[1]);
     }
 }

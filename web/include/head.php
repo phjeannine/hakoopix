@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,20 +17,21 @@
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link href="<?php APPLICATION_PATH ?>/public/css/animate.min.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/responsive.css" rel="stylesheet" media="screen and (max-width: 600px)">
+    <link href="<?php APPLICATION_PATH ?>/public/css/responsive.css" rel="stylesheet"
+          media="screen and (max-width: 600px)">
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php APPLICATION_PATH ?>/public/css/bootstrap.min.css" rel="stylesheet">
-    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
-    <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
+    <?php if ($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
+        <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
-   
+
 
     <!-- CSS GENERAL -->
-    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
-    <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
+    <?php if ($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
+        <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
+        <link href="<?php APPLICATION_PATH ?>/public/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php APPLICATION_PATH ?>/public/css/3-col-portfolio.css" rel="stylesheet">
     <?php } ?>
 
 
@@ -41,8 +41,8 @@
 
 
     <!-- CSS VIEWS -->
-    <?php if($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
-    <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
+    <?php if ($uri != "/dashboard" && $uri != "/addContest" && $uri != "/addAdmin" && $uri != "/contestList" && $uri != "/addPrice" && $uri != "/updateContest" && $uri != "/userList") { ?>
+        <link href="<?php APPLICATION_PATH ?>/public/css/main.css" rel="stylesheet">
     <?php } ?>
     <link href="<?php APPLICATION_PATH ?>/public/css/home.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/contest.css" rel="stylesheet">
@@ -52,13 +52,12 @@
     <link href="<?php APPLICATION_PATH ?>/public/css/dashboard.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/public/css/addContest.css" rel="stylesheet">
 
-    
 
     <!-- SB Admin -->
     <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/sb-admin.css" rel="stylesheet">
     <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/css/plugins/morris.css" rel="stylesheet">
-    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <link href="<?php APPLICATION_PATH ?>/templates/sb-admin/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
 
 
     <!-- SCRIPTS -->
