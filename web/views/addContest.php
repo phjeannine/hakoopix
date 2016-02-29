@@ -27,6 +27,8 @@ include("dashboardHead.php");
               <div class="row">
                 <div class="form-group col-md-12">
                   <label for="title">Titre</label>
+
+            <?php var_dump($_SESSION); ?>
                   <input type="text" class="form-control" id="contest-title" name="title">
                 </div>
                 <div class="col-md-3 col-md-offset-3"></div>
@@ -57,7 +59,7 @@ include("dashboardHead.php");
                 <div class="form-group col-md-12">
                   <label for="description">Description</label>
                   <textarea id="contest-description" class="form-control" name="description" rows="3"></textarea>
-                  <span id="remain">200</span> caractères restants
+                  <!--<span id="remain">200</span> caractères restants-->
                 </div>
               </div>
 
@@ -97,9 +99,9 @@ include("dashboardHead.php");
                 </div>
               </div>
 
-              <div class="fields-error error">
+             <!-- <div class="fields-error error">
                 <p><i class="fa fa-exclamation-triangle"></i> Vous devez renseigner tous les champs</p>
-              </div>
+              </div>-->
 
               <input type="submit" class="btn btn-primary col-md-6 btn-contest" name="submit-contest">
               <input type="button" class="btn btn-primary col-md-6 preview-contest btn-contest" name="preview-contest" value="Prévisualiser">
@@ -108,6 +110,8 @@ include("dashboardHead.php");
         </div><!-- /.form-content -->
       </div><!-- /.colonne de gauche-->
 
+
+      <!-- PREVISUALISATION CONCOURS -->
       <div class="col-lg-6">
         <div class="box-body col-md-11">
           <div class="row">

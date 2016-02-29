@@ -20,7 +20,7 @@ logInWithFacebook = function() {
                 */
             });
             }
-        },{scope: 'user_photos'});
+        },{scope: 'user_photos,manage_pages, publish_pages'});
 return false;
 };
 
@@ -104,6 +104,7 @@ if(!empty($id_contest)) { ?>
         <!-- Rules -->
         <div id="rules" class="row">
             <h2>Hakoopix</h2>
+            <?php var_dump($_SESSION); ?>
             <div class="barre"></div>
             <p>Le concours photos qui te permettra de gagner de nombreux cadeaux, pour toi et tous tes amis !</p>
             <p>Sois créatif, original, cela te permettra de te démarquer</p>
@@ -163,27 +164,31 @@ if(!empty($id_contest)) { ?>
         </div>
     </div>
 
-<div class="container">
-    <!-- Gallery -->
-    <div id="gallery" class="row">
-        <h2>Participants</h2>
-        <div class="barre"></div>
-        <?php
-        $participationBdd = new pictureModel();
-        $participationBdd->getAll(true);
-        $cpt=0;
-        foreach($participationBdd as $userParticipate) : 
-          $cpt +=1;
-      if($userParticipate['id_contest']==$_SESSION['idContest'] && $cpt<7):
-        ?>
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <div class="contributionIndex">
-            <?php echo '<img class="img-responsive" src="'.$userParticipate['image_link'].'">'; ?>
-        </div>
+    <div class="container">
+        <!-- Gallery -->
+        <div id="gallery" class="row">
+            <h2>Nos derniers participants</h2>
+            <div class="barre"></div>
+            <?php
+            $participationBdd = new pictureModel();
+            $participationBdd->getAll(true);
+            $cpt=0;
+            foreach($participationBdd as $userParticipate) : 
+              if($userParticipate['id_contest']==$_SESSION['idContest']):
+                if($cpt=5):
+                ?>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="contributionIndex">
+                        <?php echo '<img class="img-responsive" src="'.$userParticipate['image_link'].'">';?>
+                    </div>
+                </div>
+             <?php
+
+              $cpt +=1;
+             endif; // Fin condition compteur
+             endif; // Fin condition participants 
+            endforeach; // Fin boucle participants ?>
+         </div><!-- /.row -->
     </div>
-    <?php endif;
-    endforeach; ?>
-</div><!-- /.row -->
-</div>
 
 </div><!-- /.container -->

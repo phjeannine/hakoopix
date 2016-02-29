@@ -2,20 +2,20 @@ $(document).ready(function() {
 
 	// Si un des champs dul  formulaire d'ajout d'un concours
 	// est vide, on affiche une erreur
-	$(".fields-error").hide();
+/*	$(".fields-error").hide();
     $("#add-contest").on("submit", function(e) {
     	var title = $("#contest-title").val();
     	var date_begin = $("#date-first").val();
     	var date_ending = $("#date-end").val();
     	var description = $("#contest-description").val();
-    	var logo = $("#logo-theme").val();
-    	var banner = $("#banner-theme").val();
+    	//var logo = $("#logo-theme").val();
+    	//var banner = $("#banner-theme").val();
 
-		if(title == "" || date_begin == "" || date_ending == "" || description == "" || logo == "" || banner == "") {
+		if(title == "" || date_begin == "" || date_ending == "" || description == "") {
 			e.preventDefault();
  			$(".fields-error").addClass('animated bounceInRight').show();
 		}
-	});
+	});*/
 
 	// On vérifie les dimensions
     // de l'image bannière à uploader
@@ -27,10 +27,10 @@ $(document).ready(function() {
 		if ((file = this.files[0])) {
 	        img = new Image();
 	        img.onload = function() {
-	            if(this.width != 1250 && this.height != 400) {
+	            /*if(this.width != 1250 && this.height != 400) {
 	            	$(".banner-size-error").addClass("animated bounceInRight").show().delay(3000).fadeOut("slow");
 	            	$("#banner-theme").val("");
-	            }
+	            }*/
 	        };
 	        img.onerror = function() {
 	            alert("L'extension de votre fichier n'est pas valide : " + file.type);
@@ -50,7 +50,7 @@ $(document).ready(function() {
 		if ((file = this.files[0])) {
 	        img = new Image();
 	        img.onload = function() {
-	            if(this.width != 200 && this.height != 200) {
+	            if(this.width != 150 && this.height != 150) {
 	            	$(".logo-size-error").addClass("animated bounceInRight").show().delay(3000).fadeOut("slow");
 	            	$("#logo-theme").val("");
 	            }

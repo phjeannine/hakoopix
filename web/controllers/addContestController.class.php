@@ -1,5 +1,4 @@
 <?php
-
 class addContestController extends basesql
 {
 	public function indexAction($args)
@@ -7,11 +6,9 @@ class addContestController extends basesql
 		$v = new view("addContest");
 		$v->assign("mesargs", $args);
 	}
-
 	public function insertAction($args)
 	{
 		require_once APPLICATION_PATH . '/public/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
-
 		//Variables sans Logo & Banner
 		$id = '0';
 		$title = $_POST['title'];
@@ -21,26 +18,19 @@ class addContestController extends basesql
 		$color_theme = $_POST['color-theme'];
 		$active_contest = 0;
 		$delete_contest = 0;
-
 		if (!empty($_POST['active-contest'])) {
 			$active_contest = $_POST['active-contest'];
 		}
-
 		//Création de l'album avec le logo et le banner
 		$this->createAlbum();
-
 		//Récupération de l'album ID
 		$albumId = $this->getAlbum();
-
 		//Récupération des URL du logo et du banner
 		$template = $this->getBannerLogo($albumId);
-
 		//Logo & Banner
 		$logo = $template[0];
 		$banner = $template[1];
-
 		$addContestObj = new contestModel($id, $title, $date_begin, $date_ending, $description, $color_theme, $logo, $banner, $active_contest, $delete_contest);
-
         $getActiveContest = $this->getActiveContest();
         if (!$getActiveContest == FALSE & isset ($_POST['active-contest'])) {
             $this->unsetActiveContest($getActiveContest['id']);
@@ -48,7 +38,6 @@ class addContestController extends basesql
 		$addContestObj->save();
         header("Location: /contestList");
 	}
-
 	//Créé l'album
 	function createAlbum()
 	{
@@ -57,7 +46,6 @@ class addContestController extends basesql
 				'app_secret' => '9f0062f110ea6d3589e7debcb04c2268',
 				'default_graph_version' => 'v2.5',
 		]);
-
 		//Récupère token Admin
 		$fb->setDefaultAccessToken($_SESSION['token']);
 		try {
@@ -72,9 +60,7 @@ class addContestController extends basesql
 			print_r($result);
 			echo "</pre>";
 		}
-
 		$fb->setDefaultAccessToken($tokenId);
-
 		$target_dir = "images/";
 		$target_file = $target_dir . basename($_FILES['banner']['name']);
 		$uploadOk = 1;
@@ -93,12 +79,10 @@ class addContestController extends basesql
 				$error = 1;
 			}
 		}
-
         if ($_FILES["banner"]["size"] > 500000) {
             $error_msg = "Sorry, your file is too large.";
             $error = 1;
         }
-
 		if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 				&& $imageFileType != "gif"
 		) {
@@ -129,7 +113,6 @@ class addContestController extends basesql
 			$graphNode = $response->getGraphNode();
 			$_POST['album'] = $graphNode['id'];
 		}
-
 		if ($error == 0) {
 			$data = [
 					'message' => "Logo",
@@ -141,7 +124,6 @@ class addContestController extends basesql
 				$error_msg = 'Error: ' . $e->getMessage();
 			}
 		}
-
 		if ($error == 0) {
 			$data = [
 					'message' => "Banner",
@@ -149,14 +131,11 @@ class addContestController extends basesql
 			];
 			try {
 				$response = $fb->post('/' . $_POST['album'] . '/photos', $data);
-
 			} catch (Facebook\Exceptions\FacebookResponseException $e) {
 				$error_msg = 'Error: ' . $e->getMessage();
 			}
 		}
 	}
-
-
 	//Récupère le banner et la photo pour renseigné dans la BDD les URLs
 	function getAlbum()
 	{
@@ -165,7 +144,6 @@ class addContestController extends basesql
 				'app_secret' => '9f0062f110ea6d3589e7debcb04c2268',
 				'default_graph_version' => 'v2.5',
 		]);
-
 		//Récupère token Admin
 		$fb->setDefaultAccessToken($_SESSION['token']);
 		try {
@@ -180,9 +158,7 @@ class addContestController extends basesql
 			print_r($result);
 			echo "</pre>";
 		}
-
 		$fb->setDefaultAccessToken($tokenId);
-
 		try {
 			$response = $fb->get('/196951203980314/albums?fields=name');
 			$albums = $response->getGraphEdge()->asArray();
@@ -201,14 +177,12 @@ class addContestController extends basesql
 		}
 		return $albumId;
 	}
-
 	function getBannerLogo($albumId) {
 		$fb = new Facebook\Facebook([
 				'app_id' => '959119600818575',
 				'app_secret' => '9f0062f110ea6d3589e7debcb04c2268',
 				'default_graph_version' => 'v2.5',
 		]);
-
 		//Récupère token Admin
 		$fb->setDefaultAccessToken($_SESSION['token']);
 		try {
@@ -223,16 +197,13 @@ class addContestController extends basesql
 			print_r($result);
 			echo "</pre>";
 		}
-
 		$fb->setDefaultAccessToken($tokenId);
-
 		try {
 			$response = $fb->get('/'.$albumId.'?fields=name,photos{name,source}');
 			$items = $response->getGraphNode()->asArray();
 			foreach ($items['photos'] as $item) {
 				$bannerlogo[] = $item['source'];
 			}
-
 		}
 		catch (Facebook\Exceptions\FacebookResponseException $e) {
 			// After you're done debugging, comment out the below lines

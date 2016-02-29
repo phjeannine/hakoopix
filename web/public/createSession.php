@@ -19,10 +19,11 @@ $lastName = $_GET['last_name'];
 $firstName = $_GET['first_name'];
 $token = $_GET['token'];
 
-$var = $fb->get('/me?fields=picture', $token);
+$var = $fb->get('/me?fields=picture, email', $token);
 $obj = $var->getGraphNode();
 $picture = $obj['picture'];
 $photo = $picture['url'];
+$email = $obj['email'];
 
 
 $roles = $fb->get('/959119600818575/roles', '959119600818575|NrwTVp41hp0a8XVklYVvKLOKAzE');
@@ -39,6 +40,7 @@ foreach($response as $data){
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
     $_SESSION["token"] = $token;
+    $_SESSION["email"] = $email;
     $isAdmin = true;
     header("Location: /contest");
     exit();
@@ -53,6 +55,7 @@ if(!$isAdmin){
     $_SESSION["idUser"] = $id;
     $_SESSION["photo"] = $photo;
     $_SESSION["token"] = $token;
+    $_SESSION["email"] = $email;
     header("Location: /contest/adduser");
   }
 

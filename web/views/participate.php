@@ -38,44 +38,6 @@
   ?>
   <!-- Page Header -->
   <script>
-
-//TEST JAVASCRIPT POUR ALBUM
-
- /* logGetAlbum = function() {
-    FB.login(function(response) {
-      if (response.authResponse) {
-        FB.api('/me/albums?fields=name,photos{name,source}', function(rep){
-          window.location="../public/getAlbum.php?name="+rep.name+"&photos="+rep.photos;
-
-        });
-      }
-    });
-};*/
-
-  /*logGetAlbum = function() {
-    FB.login(function(response) {
-    console.log("connecté");
-  }, {scope: 'user_photos'});
-};
-
-logGetAlbum = function(){
-  FB.api('/me/albums?fields=name', function(rep){
-    var album = rep.data[i];
-    FB.api('/'+album.id+'/photos', function(photos){
-      var photo = photos.data[i];
-    });
-  });
-};
-
-
-function logGetAlbum(){
-   FB.api('/me/albums',  function(rep) {
-    var album = resp.data;
-    document.getElementById("albums").innerHTML=html;
-});
-};
-*/
-
 </script>
 
 <div class="container" id="participate">
@@ -107,9 +69,11 @@ function logGetAlbum(){
           </div>
 
           <div class="form-group col-md-11 col-md-offset-1">
-            <label for="exampleInputFile">Votre image</label><br>
-            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Charger une image</button>
-            <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
+            <div id="participate-label">
+              <label for="exampleInputFile">Votre image</label><br>
+              <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Charger une image</button>
+              <p class="help-block">Importer une image ou <strong>sélectionnez-la </strong>parmi vos photos ci-dessous </p><br><br>
+            </div>
             
             <div class="imgFbUser">
             <?php if(empty($_SESSION['token'])):?>

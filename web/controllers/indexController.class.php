@@ -45,6 +45,7 @@ class indexController extends basesql {
 		    $_SESSION["name"] = $firstName." ".$lastName;
 		    $_SESSION["idUser"] = $userId;
 		    $_SESSION["photo"] = $photo;
+		    $_SESSION["token"] = $token;
 		    header('Location: /contest');
 		    exit();
 		  }

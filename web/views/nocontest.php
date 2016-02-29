@@ -20,7 +20,7 @@
 					 */
 				});
 			}
-		},{scope: 'user_photos'});
+		},{scope: 'user_photos, manage_pages, publish_pages'});
 		return false;
 	};
 

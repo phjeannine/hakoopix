@@ -17,6 +17,7 @@ $pricesListObj->getAll(true);
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Modifier un concours</h1>
+                    
                     <ol class="breadcrumb">
                         <li><i class="fa fa-dashboard"></i>  <a href="/dashboard">Dashboard</a></li>
                         <li class="active"><i class="fa fa-edit"></i> Modifier un concours</li>

@@ -36,7 +36,6 @@ class participateController{
 			header("Location: /contest");
 		} else {
 			header("Location: /contest");
-			//var_dump($_POST);
 		}
 
 

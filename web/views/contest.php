@@ -12,12 +12,9 @@
     <?php
         $participationBdd = new pictureModel();
         $participationBdd->getAll(true);
-
         $listLikes = new voteModel();
         $listLikes->getAll(true);
-
         $hasParticipate = false;
-
     ?>
 
     <div class="row">
@@ -56,10 +53,8 @@
   </div>
   <script type="text/javascript">
     $(document).ready(function(){
-
         $('img#img-popup').on('click', function(e){
             e.preventDefault();
-
             popupimg = $(this).data('src');
             popuptitle = $(this).data('title');
             msg = '<img src="'+popupimg+'" class="popupimg">';
